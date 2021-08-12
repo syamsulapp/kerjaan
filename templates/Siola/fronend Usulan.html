@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>ULA Kemendagri</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link href="assets/css/loader.css" rel="stylesheet" type="text/css" />
+    <script src="assets/js/loader.js"></script>
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/structure.css" rel="stylesheet" type="text/css" class="structure" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!--  BEGIN CUSTOM STYLE FILE  -->
+    <link href="assets/css/scrollspyNav.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="plugins/jquery-step/jquery.steps.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/forms/theme-checkbox-radio.css">
+    <link rel="stylesheet" type="text/css" href="plugins/select2/select2.min.css">
+    <link href="plugins/file-upload/file-upload-with-preview.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        #formValidate .wizard>.content {
+            min-height: 25em;
+        }
+
+        #example-vertical.wizard>.content {
+            min-height: 24.5em;
+        }
+    </style>
+    <!--  END CUSTOM STYLE FILE  -->
+
+    <!-- END PAGE LEVEL STYLES -->
+
+    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+
+    <style>
+        /* 
+            Note: If you are using this demo without activity sidebar then you have to make some changes by applying the .admin-data-content css inside structure.css
+        */
+
+        .admin-data-content {
+            height: calc(100vh - 132px);
+            max-width: 100%;
+            margin: 0;
+        }
+
+        .admin-header .header-container {
+            margin: 0;
+            max-width: 100%;
+        }
+
+        .footer-wrapper {
+            max-width: 100%;
+            margin: 0;
+        }
+
+
+        /* User Profile Dropdown*/
+        .admin-header .header-container .nav-item.user-profile-dropdown {
+            align-self: center;
+            padding: 0;
+            border-radius: 8px;
+            margin-left: 22px;
+            margin-right: 0;
+        }
+
+        .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-toggle {
+            display: flex;
+            justify-content: flex-end;
+            padding: 0 20px 0 16px;
+            transition: .5s;
+        }
+
+        .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-toggle:after {
+            display: none;
+        }
+
+        .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-toggle svg {
+            color: #515365;
+            width: 15px;
+            height: 15px;
+            align-self: center;
+            margin-left: 6px;
+            stroke-width: 1.7px;
+            -webkit-transition: -webkit-transform .2s ease-in-out;
+            transition: -webkit-transform .2s ease-in-out;
+            transition: transform .2s ease-in-out;
+            transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+        }
+
+        .admin-header .header-container .nav-item.user-profile-dropdown.show .dropdown-toggle svg {
+            -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+
+        .admin-header .header-container .nav-item.user-profile-dropdown a.user .media {
+            margin: 0;
+        }
+
+        .admin-header .header-container .nav-item.user-profile-dropdown a.user .media img {
+            width: 33px;
+            height: 33px;
+            border-radius: 6px;
+            box-shadow: 0 0px 0.9px rgba(0, 0, 0, 0.07), 0 0px 7px rgba(0, 0, 0, 0.14);
+            margin-right: 13px;
+            border: none;
+        }
+
+        .admin-header .header-container .nav-item.user-profile-dropdown a.user .media .media-body {
+            flex: auto;
+        }
+
+        .admin-header .header-container .nav-item.user-profile-dropdown a.user .media .media-body h6 {
+            color: #4361ee;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+
+        .admin-header .header-container .nav-item.user-profile-dropdown a.user .media .media-body h6 span {
+            color: #515365;
+        }
+
+        .admin-header .header-container .nav-item.user-profile-dropdown a.user .media .media-body p {
+            color: #bfc9d4;
+            font-size: 10px;
+        }
+
+        .admin-header .header-container .nav-item.user-profile-dropdown .nav-link.user {
+            padding: 0 0;
+            font-size: 25px;
+        }
+
+        .admin-header .header-container .nav-item.dropdown.user-profile-dropdown .nav-link:after {
+            display: none;
+        }
+
+        .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu {
+            z-index: 9999;
+            max-width: 13rem;
+            padding: 0 11px;
+            top: 166% !important;
+        }
+
+        .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu.show {
+            top: 42px !important;
+        }
+
+        .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu .user-profile-section {
+            padding: 16px 14px;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            margin-right: -12px;
+            margin-left: -12px;
+            background: rgb(96 152 149);
+            margin-top: -1px;
+        }
+
+        .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu .user-profile-section .media {
+            margin: 0;
+        }
+
+        .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu .user-profile-section .media img {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 3px solid rgb(224 230 237 / 58%);
+        }
+
+        .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu .user-profile-section .media .media-body {
+            align-self: center;
+        }
+
+        .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu .user-profile-section .media .media-body h5 {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 0;
+            color: #fafafa;
+        }
+
+        .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu .user-profile-section .media .media-body p {
+            font-size: 11px;
+            font-weight: 500;
+            margin-bottom: 0;
+            color: #e0e6ed;
+        }
+
+        .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu .dropdown-item {
+            padding: 0;
+            background: transparent;
+        }
+
+        .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu .dropdown-item a {
+            display: block;
+            color: #3b3f5c;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 9px 14px;
+        }
+
+        .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu .dropdown-item a:hover {
+            color: #000
+        }
+
+        .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu .dropdown-item.active,
+        .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu .dropdown-item:active {
+            background-color: transparent;
+        }
+
+        .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu .dropdown-item:not(:last-child) {
+            border-bottom: 1px solid #ebedf2;
+        }
+
+        .admin-header .header-container .nav-item.user-profile-dropdown .dropdown-menu .dropdown-item svg {
+            width: 17px;
+            margin-right: 7px;
+            height: 17px;
+            color: #009688;
+            fill: rgb(0 150 136 / 13%);
+        }
+
+        #content .col-left {
+            margin-right: 0;
+        }
+
+        /*
+            The below code is for DEMO purpose --- Use it if you are using this demo otherwise, Remove it
+        */
+        .navbar .navbar-item.navbar-dropdown {
+            margin-left: auto;
+        }
+
+        .layout-px-spacing {
+            min-height: calc(100vh - 145px) !important;
+        }
+    </style>
+
+    <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+
+</head>
+
+<body class="collapsable-menu starterkit admin-header">
+
+    <!-- BEGIN LOADER -->
+    <div id="load_screen">
+        <div class="loader">
+            <div class="loader-content">
+                <div class="spinner-grow align-self-center"></div>
+            </div>
+        </div>
+    </div>
+    <!--  END LOADER -->
+
+    <!--  BEGIN MAIN CONTAINER  -->
+    <div class="main-container sidebar-closed sbar-open" id="container">
+
+        <div class="search-overlay"></div>
+
+        <!--  BEGIN SIDEBAR  -->
+        <div class="sidebar-wrapper sidebar-theme">
+
+            <div class="theme-logo">
+                <a href="index.html">
+                    <img src="assets/img/90x90.jpg" class="navbar-logo" alt="logo">
+                    <span class="admin-logo">CORK<span></span></span>
+                </a>
+            </div>
+
+            <div class="sidebarCollapseFixed">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-arrow-left">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+            </div>
+
+            <nav id="compactSidebar">
+                <ul class="menu-categories">
+                    <li class="menu active submenu-closed">
+                        <a href="#starterKit" data-active="true" class="menu-toggle">
+                            <div class="base-menu">
+                                <div class="base-icons">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-terminal">
+                                        <polyline points="4 17 10 11 4 5"></polyline>
+                                        <line x1="12" y1="19" x2="20" y2="19"></line>
+                                    </svg>
+                                </div>
+                                <span>Starter Kit</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="menu">
+                        <a href="#menuFirst" data-active="false" class="menu-toggle">
+                            <div class="base-menu">
+                                <div class="base-icons">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-cpu">
+                                        <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                                        <rect x="9" y="9" width="6" height="6"></rect>
+                                        <line x1="9" y1="1" x2="9" y2="4"></line>
+                                        <line x1="15" y1="1" x2="15" y2="4"></line>
+                                        <line x1="9" y1="20" x2="9" y2="23"></line>
+                                        <line x1="15" y1="20" x2="15" y2="23"></line>
+                                        <line x1="20" y1="9" x2="23" y2="9"></line>
+                                        <line x1="20" y1="14" x2="23" y2="14"></line>
+                                        <line x1="1" y1="9" x2="4" y2="9"></line>
+                                        <line x1="1" y1="14" x2="4" y2="14"></line>
+                                    </svg>
+                                </div>
+                                <span>Menu 1</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="menu">
+                        <a href="#menuSecond" data-active="false" class="menu-toggle">
+                            <div class="base-menu">
+                                <div class="base-icons">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-zap">
+                                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                                    </svg>
+                                </div>
+                                <span>Menu 2</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="menu">
+                        <a href="#menuThird" data-active="false" class="menu-toggle">
+                            <div class="base-menu">
+                                <div class="base-icons">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-box">
+                                        <path
+                                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                        </path>
+                                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                    </svg>
+                                </div>
+                                <span>Menu 3</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="menu menu-single">
+                        <a href="widgets.html" data-active="false" class="menu-toggle">
+                            <div class="base-menu">
+                                <div class="base-icons">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-file">
+                                        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                                        <polyline points="13 2 13 9 20 9"></polyline>
+                                    </svg>
+                                </div>
+                                <span>Menu 4</span>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <div id="compact_submenuSidebar" class="submenu-sidebar">
+
+                <div class="submenu" id="starterKit">
+                    <ul class="submenu-list" data-parent-element="#starterKit">
+                        <li class="active">
+                            <a href="starter_kit_blank_page.html"> <span class="icon"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-git-commit">
+                                        <circle cx="12" cy="12" r="4"></circle>
+                                        <line x1="1.05" y1="12" x2="7" y2="12"></line>
+                                        <line x1="17.01" y1="12" x2="22.96" y2="12"></line>
+                                    </svg></span> Blank Page </a>
+                        </li>
+                        <li>
+                            <a href="starter_kit_breadcrumb.html"> <span class="icon"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-git-commit">
+                                        <circle cx="12" cy="12" r="4"></circle>
+                                        <line x1="1.05" y1="12" x2="7" y2="12"></line>
+                                        <line x1="17.01" y1="12" x2="22.96" y2="12"></line>
+                                    </svg></span> Breadcrumb </a>
+                        </li>
+                        <li>
+                            <a href="starter_kit_alt_menu.html"> <span class="icon"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-git-commit">
+                                        <circle cx="12" cy="12" r="4"></circle>
+                                        <line x1="1.05" y1="12" x2="7" y2="12"></line>
+                                        <line x1="17.01" y1="12" x2="22.96" y2="12"></line>
+                                    </svg></span> Alternate Menu </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="submenu" id="menuFirst">
+                    <ul class="submenu-list menu-block-submenu" data-parent-element="#menuFirst">
+                        <li class="menu-block">
+                            <a href="javascript:void(0);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-message-square">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg> Submenu 1 </a>
+                        </li>
+                        <li class="menu-block">
+                            <a href="javascript:void(0);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg> Submenu 2 </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="submenu" id="menuSecond">
+                    <ul class="submenu-list" data-parent-element="#menuSecond">
+                        <li>
+                            <a href="javascript:void(0);"> <span class="icon"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-git-commit">
+                                        <circle cx="12" cy="12" r="4"></circle>
+                                        <line x1="1.05" y1="12" x2="7" y2="12"></line>
+                                        <line x1="17.01" y1="12" x2="22.96" y2="12"></line>
+                                    </svg></span> Submenu 1 </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);"> <span class="icon"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-git-commit">
+                                        <circle cx="12" cy="12" r="4"></circle>
+                                        <line x1="1.05" y1="12" x2="7" y2="12"></line>
+                                        <line x1="17.01" y1="12" x2="22.96" y2="12"></line>
+                                    </svg></span> Submenu 2 </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);"> <span class="icon"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-git-commit">
+                                        <circle cx="12" cy="12" r="4"></circle>
+                                        <line x1="1.05" y1="12" x2="7" y2="12"></line>
+                                        <line x1="17.01" y1="12" x2="22.96" y2="12"></line>
+                                    </svg></span> Submenu 3 </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="submenu" id="menuThird">
+                    <ul class="submenu-list" data-parent-element="#menuThird">
+                        <li>
+                            <a href="dragndrop_dragula.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-git-commit">
+                                        <circle cx="12" cy="12" r="4"></circle>
+                                        <line x1="1.05" y1="12" x2="7" y2="12"></line>
+                                        <line x1="17.01" y1="12" x2="22.96" y2="12"></line>
+                                    </svg></span> Submenu 1 </a>
+                        </li>
+                        <li>
+                            <a href="charts_apex.html"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-git-commit">
+                                        <circle cx="12" cy="12" r="4"></circle>
+                                        <line x1="1.05" y1="12" x2="7" y2="12"></line>
+                                        <line x1="17.01" y1="12" x2="22.96" y2="12"></line>
+                                    </svg></span> Submenu 2 </a>
+                        </li>
+
+                        <li class="sub-submenu">
+                            <a role="menu" class="collapsed" data-toggle="collapse" data-target="#auth"
+                                aria-expanded="false">
+                                <div> <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-folder">
+                                            <path
+                                                d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                                            </path>
+                                        </svg></span> Submenu 3 </div> <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </a>
+                            <ul id="auth" class="collapse" data-parent="#compact_submenuSidebar">
+                                <li>
+                                    <a href="javascript:void(0)"> Sub-Submenu 1 </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"> Sub-Submenu 2 </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <!--  END SIDEBAR  -->
+
+        <!--  BEGIN CONTENT AREA  -->
+        <div id="content" class="main-content">
+            <div class="layout-px-spacing">
+
+                <div class="content-container">
+
+                    <div class="col-left layout-top-spacing">
+                        <div class="col-left-content">
+
+                            <div class="header-container">
+                                <header class="header navbar navbar-expand-sm">
+                                    <div class="d-flex">
+                                        <a href="javascript:void(0);" class="sidebarCollapse" data-placement="bottom">
+                                            <div class="bt-menu-trigger">
+                                                <span></span>
+                                            </div>
+                                        </a>
+                                        <div class="page-header">
+                                            <div class="page-title">
+                                                <h3>Usulan</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="header-actions">
+
+                                        <div class="nav-item dropdown user-profile-dropdown">
+                                            <a href="#" class="nav-link dropdown-toggle user" id="user-profile-dropdown"
+                                                data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                                                <div class="media">
+                                                    <img src="assets/img/90x90.jpg" class="img-fluid"
+                                                        alt="admin-profile">
+                                                    <div class="media-body align-self-center">
+                                                        <h6>Bu rukayah</h6>
+                                                    </div>
+                                                </div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-chevron-down">
+                                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                                </svg>
+                                            </a>
+                                            <div class="dropdown-menu position-absolute"
+                                                aria-labelledby="userProfileDropdown">
+                                                <div class="user-profile-section">
+                                                    <div class="media mx-auto">
+                                                        <img src="assets/img/90x90.jpg" class="img-fluid mr-2"
+                                                            alt="avatar">
+                                                        <div class="media-body">
+                                                            <h5>Alan Green</h5>
+                                                            <p>Project Leader</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="dropdown-item">
+                                                    <a href="Login.html">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" class="feather feather-log-out">
+                                                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                                            <polyline points="16 17 21 12 16 7"></polyline>
+                                                            <line x1="21" y1="12" x2="9" y2="12"></line>
+                                                        </svg> <span>Log Out</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </header>
+                            </div>
+
+                            <div class="admin-data-content layout-top-spacing">
+
+                                <div class="row layout-top-spacing" id="cancel-row">
+
+                                    <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
+                                        <div class="widget-content widget-content-area br-6">
+                                            <div class="widget-header">
+                                                <div class="row">
+                                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                                        <h4>Buat Permohonan Layanan Administrasi</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="widget-content widget-content-area">
+                                                <div id="circle-basic" class="">
+                                                    <!-- pilihan 1 -->
+                                                    <h3>Pilih Layanan</h3>
+                                                    <section>
+                                                        <p class="mb-4">Silahkan Pilih layanan :</p>
+                                                        <div class="n-chk">
+                                                            <label
+                                                                class="new-control new-radio new-radio-text radio-classic-success">
+                                                                <input type="radio" class="new-control-input"
+                                                                    name="custom-radio-5">
+                                                                <span class="new-control-indicator"></span>
+                                                                <span class="new-radio-content">Penerbitan
+                                                                    Kepmendagri tentang penerbitan dan pengangkatan
+                                                                    Bupati
+                                                                    wali atau wali kota/wakil wali kota</span>
+                                                            </label>
+                                                        </div> <br> <br>
+                                                        <div class="n-chk">
+                                                            <label
+                                                                class="new-control new-radio new-radio-text radio-classic-success">
+                                                                <input type="radio" class="new-control-input"
+                                                                    name="custom-radio-5">
+                                                                <span class="new-control-indicator"></span>
+                                                                <span class="new-radio-content">Penerbitan Kepmendagri
+                                                                    tentang peresmian pengangkatan dan pemberhentian
+                                                                    pimpinan anggota DPRD Provinsi</span>
+                                                            </label>
+                                                        </div>
+                                                    </section>
+
+                                                    <!-- pilihan 2 -->
+                                                    <h3>Isi Data & Upload Persyaratan</h3>
+                                                    <section>
+                                                        <div class="widget-header">
+                                                            <!-- DATA KE 1 -->
+                                                            <div class="row">
+                                                                <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                                                    <h4><b>DATA PERMOHONAN</b></h4>
+                                                                </div>
+                                                            </div> <br> <br>
+                                                            <form>
+                                                                <div class="form-group row mb-4">
+                                                                    <label for="hEmail"
+                                                                        class="col-xl-2 col-sm-3 col-sm-2 col-form-label">
+                                                                        <h6>Provinsi</h6>
+                                                                    </label>
+                                                                    <div class="col-xl-5 col-lg-9 col-sm-10">
+                                                                        <input type="email" class="form-control"
+                                                                            id="hEmail" placeholder="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group mb-4">
+                                                                    <div class="row">
+                                                                        <label
+                                                                            class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
+                                                                            <h6>Kabupaten/Kota</h6>
+                                                                        </label>
+                                                                        <div class="col-xl-5 col-lg-9 col-sm-10">
+                                                                            <select class="form-control  basic">
+                                                                                <option selected="selected">Pilihan 1
+                                                                                </option>
+                                                                                <option>Pilihan 2</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group mb-4">
+                                                                    <div class="row">
+                                                                        <label
+                                                                            class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
+                                                                            <h6>Jenis
+                                                                                Kelamin</h6>
+                                                                        </label>
+                                                                        <div class="col-xl-5 col-lg-9 col-sm-10">
+                                                                            <select class="form-control  basic">
+                                                                                <option selected="selected">Laki-Laki
+                                                                                </option>
+                                                                                <option>Perempuan</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group mb-4">
+                                                                    <div class="row">
+                                                                        <label
+                                                                            class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
+                                                                            <h6>Objek
+                                                                                KDH</h6>
+                                                                        </label>
+                                                                        <div class="col-xl-5 col-lg-9 col-sm-10">
+                                                                            <select class="form-control  basic">
+                                                                                <option selected="selected">pilihan 1
+                                                                                </option>
+                                                                                <option>Pilihan 2</option>
+                                                                                <option>Pilihan 3</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group mb-4">
+                                                                    <div class="row">
+                                                                        <label
+                                                                            class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
+                                                                            <h6>Penyebab
+                                                                                KDH</h6>
+                                                                        </label>
+                                                                        <div class="col-xl-5 col-lg-9 col-sm-10">
+                                                                            <select class="form-control  basic">
+                                                                                <option selected="selected">pilihan 1
+                                                                                </option>
+                                                                                <option>Pilihan 2</option>
+                                                                                <option>Pilihan 3</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </form>
+                                                            <!-- DATA KE 2 -->
+                                                            <div class="row">
+                                                                <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                                                    <h4><b>KELENGKAPAN ADMINISTRASI</b></h4>
+                                                                </div>
+                                                            </div> <br>
+                                                            <form>
+                                                                <!-- berkas ke 1 -->
+                                                                <div class="col-xl-10 col-md-12 col-sm-12 col-12">
+                                                                    <label for="fullName">
+                                                                        <h6>Pilih Scan FOTOCOPY KEPUTUSAN MENTERI DALAM
+                                                                            NEGERI TENTANG PENGANGKATAN BUPATI DAN/ATAU
+                                                                            WAKIL BUPATI ATAU WALIKOTA DAN/ATAU WAKIL
+                                                                            WALIKOTA YANG BERSANGKUTAN</h6>
+                                                                    </label>
+                                                                    <div class="col-xl-10 col-lg-9 col-sm-10">
+                                                                        <input type="file" class="form-control-file"
+                                                                            id="exampleFormControlFile1">
+                                                                    </div>
+                                                                </div>
+                                                                <br>
+                                                                <!-- berkas ke 2 -->
+                                                                <div class="col-xl-10 col-md-12 col-sm-12 col-12">
+                                                                    <label for="fullName">
+                                                                        <h6>Pilih Scan FOTOCOPY BERITA ACARA PELANTIKAN
+                                                                            BUPATI DAN/ATAU WAKIL BUPATI ATAU WALIKOTA
+                                                                            DAN/ATAU WAKIL WALIKOTA YANG BERSANGKUTAN
+                                                                        </h6>
+                                                                    </label>
+                                                                    <div class="col-xl-10 col-lg-9 col-sm-10">
+                                                                        <input type="file" class="form-control-file"
+                                                                            id="exampleFormControlFile1">
+                                                                    </div>
+                                                                </div>
+                                                                <!-- berkas ke 3 -->
+                                                                <br>
+                                                                <div class="col-xl-10 col-md-12 col-sm-12 col-12">
+                                                                    <label for="fullName">
+                                                                        <h6>Pilih Scan SURAT RISALAH DAN BERITA ACARA
+                                                                            RAPAT PARIPURNA DPRD KABUPATEN/KOTA DALAM
+                                                                            RANGKA PENGUMUMAN PEMBERHENTIAN BUPATI <DAN>
+                                                                                <ATAU> WAKIL BUPATI DAN/ATAU WALIKOTA
+                                                                                    DAN/ATAU WAKIL WALIKOTA KARENA
+                                                                                    BERAKHIR MASA JABATANNYA</ATAU>
+                                                                        </h6>
+                                                                    </label>
+                                                                    <div class="col-xl-10 col-lg-9 col-sm-10">
+                                                                        <input type="file" class="form-control-file"
+                                                                            id="exampleFormControlFile1">
+                                                                    </div>
+                                                                </div>
+                                                                <!-- berkas ke 4 -->
+                                                                <br>
+                                                                <div class="col-xl-10 col-md-12 col-sm-12 col-12">
+                                                                    <label for="fullName">
+                                                                        <h6>Pilih Scan SURAT USULAN PENGESAHAN
+                                                                            PEMBERHENTIAN BUPATI DAN/ATAU WAKIL BUPATI
+                                                                            ATAU WALIKOTA DAN/ATAU WAKIL WALIKOTA OLEH
+                                                                            PIMPINAN DPRD KABUPATEN/KOTA KEPADA MENDAGRI
+                                                                            MELALUI GUBERNUR</h6>
+                                                                    </label>
+                                                                    <div class="col-xl-10 col-lg-9 col-sm-10">
+                                                                        <input type="file" class="form-control-file"
+                                                                            id="exampleFormControlFile1">
+                                                                    </div>
+                                                                </div>
+                                                                <!-- berkas ke 5 -->
+                                                                <br>
+                                                                <div class="col-xl-10 col-md-12 col-sm-12 col-12">
+                                                                    <label for="fullName">
+                                                                        <h6>Pilih Scan SURAT USULAN PENGESAHAN
+                                                                            PEMBERHENTIAN BUPATI DAN/ATAU WAKIL BUPATI
+                                                                            ATAU WALIKOTA DAN/ATAU WAKIL WALIKOTA OLEH
+                                                                            GUBERNUR KEPADA MENDAGRI</h6>
+                                                                    </label>
+                                                                    <div class="col-xl-10 col-lg-9 col-sm-10">
+                                                                        <input type="file" class="form-control-file"
+                                                                            id="exampleFormControlFile1">
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </section>
+
+                                                    <!-- pilihan 3 -->
+                                                    <h3>Selesai</h3>
+                                                    <section>
+                                                        <p>The next and previous buttons help you to navigate
+                                                            through your content.</p>
+                                                    </section>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- footernya sudah saya hapus -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!--  END CONTENT AREA  -->
+    </div>
+    <!-- END MAIN CONTAINER -->
+
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+    <script src="assets/js/libs/jquery-3.1.1.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            App.init();
+        });
+    </script>
+    <script src="assets/js/custom.js"></script>
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="assets/js/scrollspyNav.js"></script>
+    <script src="plugins/jquery-step/jquery.steps.min.js"></script>
+    <script src="plugins/jquery-step/custom-jquery.steps.js"></script>
+    <!-- END PAGE LEVEL SCRIPTS -->
+    <script src="plugins/select2/select2.min.js"></script>
+    <script src="plugins/select2/custom-select2.js"></script>
+
+    <script src="plugins/file-upload/file-upload-with-preview.min.js"></script>
+
+    <script>
+        //First upload
+        var firstUpload = new FileUploadWithPreview('myFirstImage')
+        //Second upload
+        var secondUpload = new FileUploadWithPreview('mySecondImage')
+    </script>
+
+    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+
+    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+</body>
+
+</html>
