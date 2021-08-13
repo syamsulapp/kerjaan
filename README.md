@@ -12,46 +12,46 @@
 - DB => migration table("pengangkatan");
 
 - Schema::table("pengangkatan"), function() {
-	NoRegPengangkatan => primary_key, unique
-	layanan => string 128 
-	provinsi => string 255
-	kabupaten/kota => string 255
-	jenis_kelamin => string 255
-	objek_kdh => string 255
-	penyebab_kdh => string 255
-}
+	- NoRegPengangkatan => primary_key, unique
+	- layanan => string 128 
+	- provinsi => string 255
+	- kabupaten/kota => string 255
+	- jenis_kelamin => string 255
+	- objek_kdh => string 255
+	- penyebab_kdh => string 255
+- }
 - // beda berkas
 - Schema::table("berkas_pengangkatan")->join("pengangkatan"), function() {
-	NoReg_BerkasPengangkatan => primary_key, unique => relation->with(NoRegPengangkatan);
-	img_fc => string 255
-	img_beritaacara =>  string 255
-	dll;
+	- NoReg_BerkasPengangkatan => primary_key, unique => relation->with(NoRegPengangkatan);
+	- img_fc => string 255
+	- img_beritaacara =>  string 255
+	- dll;
 - }
 
 
 - DB => migration table("pemberhentian");
 
 
-Schema::table("pemberhentian"), function() {
-	NoRegPemberhentian => primary_key, unique 
-	layanan => string 128
-	provinsi => string 255
-	kabupaten/kota => string 255
-	jenis_kelamin => string 255
-	objek_kdh => string 255
-	penyebab_kdh => string 255
+- Schema::table("pemberhentian"), function() {
+	- NoRegPemberhentian => primary_key, unique 
+	- layanan => string 128
+	- provinsi => string 255
+	- kabupaten/kota => string 255
+	- jenis_kelamin => string 255
+	- objek_kdh => string 255
+	- penyebab_kdh => string 255
 }
 // beda berkas
-Schema::table("berkas_pemberhentian")->join("pemberhentian"), function() {
-	noReg_BerkasPemberhentian => primary_key, unique => relation->with(NoRegPemberhentian)
-	img_fc => string 255
-	img_beritaacara =>  string 255
-	dll;
-}
+- Schema::table("berkas_pemberhentian")->join("pemberhentian"), function() {
+	- noReg_BerkasPemberhentian => primary_key, unique => relation->with(NoRegPemberhentian)
+	- img_fc => string 255
+	- img_beritaacara =>  string 255
+	- dll;
+- }
 
 
-if(Auth::user()->status == 'pengangkatan') {
-	Route::post('pengangkatan',[Pengangkatan::class, 'post'])->name('pengangkatan');
-} else if (Auth::user()->status == 'pemberhentian') {
-	Route::post('pemberhentian',[Pemberhentian::class, 'post'])->name('pemberhentian');
-}
+- if(Auth::user()->status == 'pengangkatan') {
+	- Route::post('pengangkatan',[Pengangkatan::class, 'post'])->name('pengangkatan');
+- } else if (Auth::user()->status == 'pemberhentian') {
+	- Route::post('pemberhentian',[Pemberhentian::class, 'post'])->name('pemberhentian');
+- }
