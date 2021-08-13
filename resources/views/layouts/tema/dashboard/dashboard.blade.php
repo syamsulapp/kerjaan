@@ -254,6 +254,7 @@
                             </div>
 
                             <!-- footernya sudah saya hapus -->
+                            @include('layouts.tema.komponen.footer')
                         </div>
                     </div>
 
