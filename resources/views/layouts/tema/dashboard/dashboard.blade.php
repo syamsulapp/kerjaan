@@ -48,7 +48,7 @@
                                                             <label
                                                                 class="new-control new-radio new-radio-text radio-classic-success">
                                                                 <input type="radio" class="new-control-input"
-                                                                    name="input1" value="1">
+                                                                    name="input1" value="1" @if(old('input1')) checked @endif> 
                                                                 <span class="new-control-indicator"></span>
                                                                 <span class="new-radio-content">Penerbitan
                                                                     Kepmendagri tentang penerbitan dan pengangkatan
@@ -60,9 +60,9 @@
                                                             <label
                                                                 class="new-control new-radio new-radio-text radio-classic-success">
                                                                 <input type="radio" class="new-control-input"
-                                                                    name="input2" value="2">
+                                                                    name="input2" value="2" @if(old('input2')) checked @endif>
                                                                 <span class="new-control-indicator"></span>
-                                                                <span class="new-radio-content">Penerbitan Kepmendagri
+                                                                <span class="new-radio-content">Penercheckedbitan Kepmendagri
                                                                     tentang peresmian pengangkatan dan pemberhentian
                                                                     pimpinan anggota DPRD Provinsi</span>
                                                             </label>
