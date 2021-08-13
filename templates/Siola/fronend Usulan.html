@@ -21,7 +21,17 @@
     <link rel="stylesheet" type="text/css" href="plugins/jquery-step/jquery.steps.css">
     <link rel="stylesheet" type="text/css" href="assets/css/forms/theme-checkbox-radio.css">
     <link rel="stylesheet" type="text/css" href="plugins/select2/select2.min.css">
-    <link href="plugins/file-upload/file-upload-with-preview.min.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="plugins/file-upload/file-upload-with-preview.min.css" rel="stylesheet" type="text/css" /> -->
+
+
+    <!-- BASE CSS -->
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/menu.css" rel="stylesheet">
+    <link href="css/vendors.min.css" rel="stylesheet">
+    <link href="css/icon_fonts/css/all_icons.min.css" rel="stylesheet">
+    <!-- <link href="css/skins/square/grey.css" rel="stylesheet"> -->
+
     <style>
         #formValidate .wizard>.content {
             min-height: 25em;
@@ -616,217 +626,381 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="widget-content widget-content-area">
-                                                <div id="circle-basic" class="">
-                                                    <!-- pilihan 1 -->
-                                                    <h3>Pilih Layanan</h3>
-                                                    <section>
-                                                        <p class="mb-4">Silahkan Pilih layanan :</p>
-                                                        <div class="n-chk">
-                                                            <label
-                                                                class="new-control new-radio new-radio-text radio-classic-success">
-                                                                <input type="radio" class="new-control-input"
-                                                                    name="custom-radio-5">
-                                                                <span class="new-control-indicator"></span>
-                                                                <span class="new-radio-content">Penerbitan
-                                                                    Kepmendagri tentang penerbitan dan pengangkatan
-                                                                    Bupati
-                                                                    wali atau wali kota/wakil wali kota</span>
-                                                            </label>
-                                                        </div> <br> <br>
-                                                        <div class="n-chk">
-                                                            <label
-                                                                class="new-control new-radio new-radio-text radio-classic-success">
-                                                                <input type="radio" class="new-control-input"
-                                                                    name="custom-radio-5">
-                                                                <span class="new-control-indicator"></span>
-                                                                <span class="new-radio-content">Penerbitan Kepmendagri
-                                                                    tentang peresmian pengangkatan dan pemberhentian
-                                                                    pimpinan anggota DPRD Provinsi</span>
-                                                            </label>
-                                                        </div>
-                                                    </section>
+                                            <main>
+                                                <div class="container">
+                                                    <div id="wizard_container" class="wizard" novalidate="novalidate">
 
-                                                    <!-- pilihan 2 -->
-                                                    <h3>Isi Data & Upload Persyaratan</h3>
-                                                    <section>
-                                                        <div class="widget-header">
-                                                            <!-- DATA KE 1 -->
-                                                            <div class="row">
-                                                                <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                                                    <h4><b>DATA PERMOHONAN</b></h4>
-                                                                </div>
-                                                            </div> <br> <br>
-                                                            <form>
-                                                                <div class="form-group row mb-4">
-                                                                    <label for="hEmail"
-                                                                        class="col-xl-2 col-sm-3 col-sm-2 col-form-label">
-                                                                        <h6>Provinsi</h6>
-                                                                    </label>
-                                                                    <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                        <input type="email" class="form-control"
-                                                                            id="hEmail" placeholder="">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group mb-4">
-                                                                    <div class="row">
-                                                                        <label
-                                                                            class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
-                                                                            <h6>Kabupaten/Kota</h6>
-                                                                        </label>
-                                                                        <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                            <select class="form-control  basic">
-                                                                                <option selected="selected">Pilihan 1
-                                                                                </option>
-                                                                                <option>Pilihan 2</option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group mb-4">
-                                                                    <div class="row">
-                                                                        <label
-                                                                            class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
-                                                                            <h6>Jenis
-                                                                                Kelamin</h6>
-                                                                        </label>
-                                                                        <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                            <select class="form-control  basic">
-                                                                                <option selected="selected">Laki-Laki
-                                                                                </option>
-                                                                                <option>Perempuan</option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group mb-4">
-                                                                    <div class="row">
-                                                                        <label
-                                                                            class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
-                                                                            <h6>Objek
-                                                                                KDH</h6>
-                                                                        </label>
-                                                                        <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                            <select class="form-control  basic">
-                                                                                <option selected="selected">pilihan 1
-                                                                                </option>
-                                                                                <option>Pilihan 2</option>
-                                                                                <option>Pilihan 3</option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group mb-4">
-                                                                    <div class="row">
-                                                                        <label
-                                                                            class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
-                                                                            <h6>Penyebab
-                                                                                KDH</h6>
-                                                                        </label>
-                                                                        <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                            <select class="form-control  basic">
-                                                                                <option selected="selected">pilihan 1
-                                                                                </option>
-                                                                                <option>Pilihan 2</option>
-                                                                                <option>Pilihan 3</option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                        <form name="example-1" id="wrapped" method="POST"
+                                                            class="wizard-form"
+                                                            action="phpmailer/multiple_branch_phpmailer_template_smtp.php"
+                                                            novalidate="novalidate">
+                                                            <input id="website" name="website" type="text" value="">
+                                                            <!-- Leave input above for security protection, read docs for details -->
+                                                            <div id="middle-wizard"
+                                                                class="wizard-branch wizard-wrapper">
 
-                                                            </form>
-                                                            <!-- DATA KE 2 -->
-                                                            <div class="row">
-                                                                <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                                                    <h4><b>KELENGKAPAN ADMINISTRASI</b></h4>
-                                                                </div>
-                                                            </div> <br>
-                                                            <form>
-                                                                <!-- berkas ke 1 -->
-                                                                <div class="col-xl-10 col-md-12 col-sm-12 col-12">
-                                                                    <label for="fullName">
-                                                                        <h6>Pilih Scan FOTOCOPY KEPUTUSAN MENTERI DALAM
-                                                                            NEGERI TENTANG PENGANGKATAN BUPATI DAN/ATAU
-                                                                            WAKIL BUPATI ATAU WALIKOTA DAN/ATAU WAKIL
-                                                                            WALIKOTA YANG BERSANGKUTAN</h6>
-                                                                    </label>
-                                                                    <div class="col-xl-10 col-lg-9 col-sm-10">
-                                                                        <input type="file" class="form-control-file"
-                                                                            id="exampleFormControlFile1">
+                                                                <!-- First branch What Type of Project ============================== -->
+                                                                <div class="step wizard-step" data-state="branchtype"
+                                                                    style="display: none;">
+                                                                    <div class="question_title">
+                                                                        <h3 class="wizard-header">What Type of Project
+                                                                            do you need?</h3>
+                                                                        <p>Selection with Branch (First Branch). Web
+                                                                            Development have a <strong>Second
+                                                                                Branch</strong>.</p>
                                                                     </div>
-                                                                </div>
-                                                                <br>
-                                                                <!-- berkas ke 2 -->
-                                                                <div class="col-xl-10 col-md-12 col-sm-12 col-12">
-                                                                    <label for="fullName">
-                                                                        <h6>Pilih Scan FOTOCOPY BERITA ACARA PELANTIKAN
-                                                                            BUPATI DAN/ATAU WAKIL BUPATI ATAU WALIKOTA
-                                                                            DAN/ATAU WAKIL WALIKOTA YANG BERSANGKUTAN
-                                                                        </h6>
-                                                                    </label>
-                                                                    <div class="col-xl-10 col-lg-9 col-sm-10">
-                                                                        <input type="file" class="form-control-file"
-                                                                            id="exampleFormControlFile1">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-4">
+                                                                            <div class="item">
+                                                                                <input id="answer_1" type="radio"
+                                                                                    name="branch_1_group_1"
+                                                                                    value="Seo-Optimization"
+                                                                                    class="required valid">
+                                                                                <label for="answer_1"><img
+                                                                                        src="img/seo_icon_1.svg"
+                                                                                        alt=""><strong>Seo
+                                                                                        Optimization</strong>Postea
+                                                                                    democritum mnesarchum ne nam, ad vim
+                                                                                    aperiri tractatos.</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-4">
+                                                                            <div class="item">
+                                                                                <input id="answer_2"
+                                                                                    name="branch_1_group_1" type="radio"
+                                                                                    value="Web-Development"
+                                                                                    class="required valid">
+                                                                                <label for="answer_2"><img
+                                                                                        src="img/web_development_icon_1.svg"
+                                                                                        alt=""><strong>Web
+                                                                                        Development</strong>Postea
+                                                                                    democritum mnesarchum ne nam, ad vim
+                                                                                    aperiri tractatos.</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- <div class="col-lg-4">
+                                                              <div class="item">
+                                                                <input id="answer_3" name="branch_1_group_1" type="radio" value="Design" class="required valid">
+                                                                <label for="answer_3"><img src="img/design_icon_1.svg" alt=""><strong>Design</strong>Postea democritum mnesarchum ne nam, ad vim aperiri tractatos.</label>
+                                                              </div>
+                                                            </div> -->
                                                                     </div>
+                                                                    <!-- /row-->
                                                                 </div>
-                                                                <!-- berkas ke 3 -->
-                                                                <br>
-                                                                <div class="col-xl-10 col-md-12 col-sm-12 col-12">
-                                                                    <label for="fullName">
-                                                                        <h6>Pilih Scan SURAT RISALAH DAN BERITA ACARA
-                                                                            RAPAT PARIPURNA DPRD KABUPATEN/KOTA DALAM
-                                                                            RANGKA PENGUMUMAN PEMBERHENTIAN BUPATI <DAN>
-                                                                                <ATAU> WAKIL BUPATI DAN/ATAU WALIKOTA
-                                                                                    DAN/ATAU WAKIL WALIKOTA KARENA
-                                                                                    BERAKHIR MASA JABATANNYA</ATAU>
-                                                                        </h6>
-                                                                    </label>
-                                                                    <div class="col-xl-10 col-lg-9 col-sm-10">
-                                                                        <input type="file" class="form-control-file"
-                                                                            id="exampleFormControlFile1">
-                                                                    </div>
-                                                                </div>
-                                                                <!-- berkas ke 4 -->
-                                                                <br>
-                                                                <div class="col-xl-10 col-md-12 col-sm-12 col-12">
-                                                                    <label for="fullName">
-                                                                        <h6>Pilih Scan SURAT USULAN PENGESAHAN
-                                                                            PEMBERHENTIAN BUPATI DAN/ATAU WAKIL BUPATI
-                                                                            ATAU WALIKOTA DAN/ATAU WAKIL WALIKOTA OLEH
-                                                                            PIMPINAN DPRD KABUPATEN/KOTA KEPADA MENDAGRI
-                                                                            MELALUI GUBERNUR</h6>
-                                                                    </label>
-                                                                    <div class="col-xl-10 col-lg-9 col-sm-10">
-                                                                        <input type="file" class="form-control-file"
-                                                                            id="exampleFormControlFile1">
-                                                                    </div>
-                                                                </div>
-                                                                <!-- berkas ke 5 -->
-                                                                <br>
-                                                                <div class="col-xl-10 col-md-12 col-sm-12 col-12">
-                                                                    <label for="fullName">
-                                                                        <h6>Pilih Scan SURAT USULAN PENGESAHAN
-                                                                            PEMBERHENTIAN BUPATI DAN/ATAU WAKIL BUPATI
-                                                                            ATAU WALIKOTA DAN/ATAU WAKIL WALIKOTA OLEH
-                                                                            GUBERNUR KEPADA MENDAGRI</h6>
-                                                                    </label>
-                                                                    <div class="col-xl-10 col-lg-9 col-sm-10">
-                                                                        <input type="file" class="form-control-file"
-                                                                            id="exampleFormControlFile1">
-                                                                    </div>
-                                                                </div>
-                                                            </form>
-                                                        </div>
-                                                    </section>
+                                                                <!-- /First branch What Type of Project ============================== -->
 
-                                                    <!-- pilihan 3 -->
-                                                    <h3>Selesai</h3>
-                                                    <section>
-                                                        <p>The next and previous buttons help you to navigate
-                                                            through your content.</p>
-                                                    </section>
+                                                                <!-- /What Type of Project > Seo-Optimization ============================== -->
+                                                                <div class="branch wizard-branch" id="Seo-Optimization">
+                                                                    <div class="step wizard-step current"
+                                                                        data-state="budget" style="">
+                                                                        <div class="question_title">
+                                                                            <h3>DATA PERMOHONAN</h3>
+                                                                        </div>
+                                                                        <div class="widget-header">
+                                                                            <div class="form-group row mb-4">
+                                                                                <label for="hEmail"
+                                                                                    class="col-xl-2 col-sm-3 col-sm-2 col-form-label">
+                                                                                    <h6>Provinsi</h6>
+                                                                                </label>
+                                                                                <div
+                                                                                    class="col-xl-5 col-lg-9 col-sm-10">
+                                                                                    <input type="email"
+                                                                                        class="form-control" id="hEmail"
+                                                                                        placeholder="">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group mb-4">
+                                                                                <div class="row">
+                                                                                    <label
+                                                                                        class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
+                                                                                        <h6>Kabupaten/Kota</h6>
+                                                                                    </label>
+                                                                                    <div
+                                                                                        class="col-xl-5 col-lg-9 col-sm-10">
+                                                                                        <select
+                                                                                            class="form-control  basic">
+                                                                                            <option selected="selected">
+                                                                                                Pilihan
+                                                                                                1
+                                                                                            </option>
+                                                                                            <option>Pilihan 2</option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group mb-4">
+                                                                                <div class="row">
+                                                                                    <label
+                                                                                        class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
+                                                                                        <h6>Jenis
+                                                                                            Kelamin</h6>
+                                                                                    </label>
+                                                                                    <div
+                                                                                        class="col-xl-5 col-lg-9 col-sm-10">
+                                                                                        <select
+                                                                                            class="form-control  basic">
+                                                                                            <option selected="selected">
+                                                                                                Laki-Laki
+                                                                                            </option>
+                                                                                            <option>Perempuan</option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group mb-4">
+                                                                                <div class="row">
+                                                                                    <label
+                                                                                        class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
+                                                                                        <h6>Objek
+                                                                                            KDH</h6>
+                                                                                    </label>
+                                                                                    <div
+                                                                                        class="col-xl-5 col-lg-9 col-sm-10">
+                                                                                        <select
+                                                                                            class="form-control  basic">
+                                                                                            <option selected="selected">
+                                                                                                pilihan
+                                                                                                1
+                                                                                            </option>
+                                                                                            <option>Pilihan 2</option>
+                                                                                            <option>Pilihan 3</option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group mb-4">
+                                                                                <div class="row">
+                                                                                    <label
+                                                                                        class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
+                                                                                        <h6>Penyebab
+                                                                                            KDH</h6>
+                                                                                    </label>
+                                                                                    <div
+                                                                                        class="col-xl-5 col-lg-9 col-sm-10">
+                                                                                        <select
+                                                                                            class="form-control  basic">
+                                                                                            <option selected="selected">
+                                                                                                pilihan
+                                                                                                1
+                                                                                            </option>
+                                                                                            <option>Pilihan 2</option>
+                                                                                            <option>Pilihan 3</option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="question_title">
+                                                                            <h3>KELENGKAPAN ADMINISTRASI</h3>
+                                                                        </div>
+                                                                        <div class="widget-header">
+                                                                            <!-- berkas ke 1 -->
+                                                                            <div
+                                                                                class="col-xl-10 col-md-12 col-sm-12 col-12">
+                                                                                <label for="fullName">
+                                                                                    <h6>Pilih Scan FOTOCOPY KEPUTUSAN
+                                                                                        MENTERI
+                                                                                        DALAM
+                                                                                        NEGERI TENTANG PENGANGKATAN
+                                                                                        BUPATI
+                                                                                        DAN/ATAU
+                                                                                        WAKIL BUPATI ATAU WALIKOTA
+                                                                                        DAN/ATAU
+                                                                                        WAKIL
+                                                                                        WALIKOTA YANG BERSANGKUTAN</h6>
+                                                                                </label>
+                                                                                <div
+                                                                                    class="col-xl-10 col-lg-9 col-sm-10">
+                                                                                    <input type="file"
+                                                                                        class="form-control-file"
+                                                                                        id="exampleFormControlFile1">
+                                                                                </div>
+                                                                            </div>
+                                                                            <br>
+                                                                            <!-- berkas ke 2 -->
+                                                                            <div
+                                                                                class="col-xl-10 col-md-12 col-sm-12 col-12">
+                                                                                <label for="fullName">
+                                                                                    <h6>Pilih Scan FOTOCOPY BERITA ACARA
+                                                                                        PELANTIKAN
+                                                                                        BUPATI DAN/ATAU WAKIL BUPATI
+                                                                                        ATAU
+                                                                                        WALIKOTA
+                                                                                        DAN/ATAU WAKIL WALIKOTA YANG
+                                                                                        BERSANGKUTAN
+                                                                                    </h6>
+                                                                                </label>
+                                                                                <div
+                                                                                    class="col-xl-10 col-lg-9 col-sm-10">
+                                                                                    <input type="file"
+                                                                                        class="form-control-file"
+                                                                                        id="exampleFormControlFile1">
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- berkas ke 3 -->
+                                                                            <br>
+                                                                            <div
+                                                                                class="col-xl-10 col-md-12 col-sm-12 col-12">
+                                                                                <label for="fullName">
+                                                                                    <h6>Pilih Scan SURAT RISALAH DAN
+                                                                                        BERITA
+                                                                                        ACARA
+                                                                                        RAPAT PARIPURNA DPRD
+                                                                                        KABUPATEN/KOTA
+                                                                                        DALAM
+                                                                                        RANGKA PENGUMUMAN PEMBERHENTIAN
+                                                                                        BUPATI
+                                                                                        <DAN>
+                                                                                            <ATAU> WAKIL BUPATI DAN/ATAU
+                                                                                                WALIKOTA
+                                                                                                DAN/ATAU WAKIL WALIKOTA
+                                                                                                KARENA
+                                                                                                BERAKHIR MASA JABATANNYA
+                                                                                            </ATAU>
+                                                                                    </h6>
+                                                                                </label>
+                                                                                <div
+                                                                                    class="col-xl-10 col-lg-9 col-sm-10">
+                                                                                    <input type="file"
+                                                                                        class="form-control-file"
+                                                                                        id="exampleFormControlFile1">
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- berkas ke 4 -->
+                                                                            <br>
+                                                                            <div
+                                                                                class="col-xl-10 col-md-12 col-sm-12 col-12">
+                                                                                <label for="fullName">
+                                                                                    <h6>Pilih Scan SURAT USULAN
+                                                                                        PENGESAHAN
+                                                                                        PEMBERHENTIAN BUPATI DAN/ATAU
+                                                                                        WAKIL
+                                                                                        BUPATI
+                                                                                        ATAU WALIKOTA DAN/ATAU WAKIL
+                                                                                        WALIKOTA
+                                                                                        OLEH
+                                                                                        PIMPINAN DPRD KABUPATEN/KOTA
+                                                                                        KEPADA
+                                                                                        MENDAGRI
+                                                                                        MELALUI GUBERNUR</h6>
+                                                                                </label>
+                                                                                <div
+                                                                                    class="col-xl-10 col-lg-9 col-sm-10">
+                                                                                    <input type="file"
+                                                                                        class="form-control-file"
+                                                                                        id="exampleFormControlFile1">
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- berkas ke 5 -->
+                                                                            <br>
+                                                                            <div
+                                                                                class="col-xl-10 col-md-12 col-sm-12 col-12">
+                                                                                <label for="fullName">
+                                                                                    <h6>Pilih Scan SURAT USULAN
+                                                                                        PENGESAHAN
+                                                                                        PEMBERHENTIAN BUPATI DAN/ATAU
+                                                                                        WAKIL
+                                                                                        BUPATI
+                                                                                        ATAU WALIKOTA DAN/ATAU WAKIL
+                                                                                        WALIKOTA
+                                                                                        OLEH
+                                                                                        GUBERNUR KEPADA MENDAGRI</h6>
+                                                                                </label>
+                                                                                <div
+                                                                                    class="col-xl-10 col-lg-9 col-sm-10">
+                                                                                    <input type="file"
+                                                                                        class="form-control-file"
+                                                                                        id="exampleFormControlFile1">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- /row-->
+                                                                    </div>
+                                                                    <!-- /step -->
+                                                                </div>
+                                                                <!-- /What Type of Project > Seo-Optimization ============================== -->
+
+                                                                <!-- Second branch Web-Development ============================== -->
+                                                                <div class="branch wizard-branch" id="Web-Development">
+                                                                    <div class="step wizard-step"
+                                                                        data-state="branchtype" style="display: none;">
+                                                                        <div class="question_title">
+                                                                            <h3>What Type of Web Development do you
+                                                                                need?</h3>
+                                                                            <p>Selection with Branch (Second Branch)</p>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-lg-4">
+                                                                                <div class="item">
+                                                                                    <input id="branch_2_answer_1"
+                                                                                        type="radio"
+                                                                                        name="branch_2_group_1"
+                                                                                        value="HTML-Development"
+                                                                                        class="required valid">
+                                                                                    <label for="branch_2_answer_1"><img
+                                                                                            src="img/web_development_icon_2.svg"
+                                                                                            alt=""><strong>HTML
+                                                                                            Development</strong>Postea
+                                                                                        democritum mnesarchum ne nam, ad
+                                                                                        vim aperiri tractatos.</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-lg-4">
+                                                                                <div class="item">
+                                                                                    <input id="branch_2_answer_2"
+                                                                                        name="branch_2_group_1"
+                                                                                        type="radio"
+                                                                                        value="CMS-Development"
+                                                                                        class="required valid">
+                                                                                    <label for="branch_2_answer_2"><img
+                                                                                            src="img/web_development_icon_3.svg"
+                                                                                            alt=""><strong>CMS
+                                                                                            Development</strong>Postea
+                                                                                        democritum mnesarchum ne nam, ad
+                                                                                        vim aperiri tractatos.</label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-lg-4">
+                                                                                <div class="item">
+                                                                                    <input id="branch_2_answer_3"
+                                                                                        name="branch_2_group_1"
+                                                                                        type="radio"
+                                                                                        value="FrontEnd-Development"
+                                                                                        class="required valid">
+                                                                                    <label for="branch_2_answer_3"><img
+                                                                                            src="img/web_development_icon_4.svg"
+                                                                                            alt=""><strong>FrontEnd
+                                                                                            Development</strong>Postea
+                                                                                        democritum mnesarchum ne nam, ad
+                                                                                        vim aperiri tractatos.</label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- /row-->
+                                                                    </div>
+                                                                </div>
+                                                                <!-- /Second branch Web-Development ============================== -->
+
+
+                                                            </div>
+
+                                                            <!-- /middle-wizard -->
+                                                            <div id="bottom-wizard">
+                                                                <button type="button" name="backward"
+                                                                    class="backward">Previous </button>
+                                                                <button type="button" name="forward"
+                                                                    class="forward">Next</button>
+                                                                <button type="submit" name="process" class="submit"
+                                                                    disabled="disabled">Submit</button>
+                                                            </div>
+                                                            <!-- /bottom-wizard -->
+                                                        </form>
+                                                    </div>
+                                                    <!-- /Wizard container -->
                                                 </div>
-                                            </div>
+                                                <!-- /Container -->
+                                            </main>
                                         </div>
                                     </div>
                                 </div>
@@ -866,16 +1040,18 @@
     <script src="plugins/jquery-step/custom-jquery.steps.js"></script>
     <!-- END PAGE LEVEL SCRIPTS -->
     <script src="plugins/select2/select2.min.js"></script>
-    <script src="plugins/select2/custom-select2.js"></script>
+    <!-- <script src="plugins/select2/custom-select2.js"></script> -->
 
-    <script src="plugins/file-upload/file-upload-with-preview.min.js"></script>
+    <!-- tambahan plugin -->
+    <!-- <script src="js/jquery-3.5.1.min.js"></script> -->
+    <script src="js/common_scripts.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wizard_func_multiple_branch.js"></script>
+    <!-- tutup -->
 
-    <script>
-        //First upload
-        var firstUpload = new FileUploadWithPreview('myFirstImage')
-        //Second upload
-        var secondUpload = new FileUploadWithPreview('mySecondImage')
-    </script>
+    <!-- <script src="plugins/file-upload/file-upload-with-preview.min.js"></script> -->
+
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 
