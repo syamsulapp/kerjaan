@@ -16,6 +16,8 @@
     <link href="assets/css/structure.css" rel="stylesheet" type="text/css" class="structure" />
     <!-- END GLOBAL MANDATORY STYLES -->
 
+    <link href="assets/css/scrollspyNav.css" rel="stylesheet" type="text/css" />
+
     <link href="assets/css/tables/table-basic.css" rel="stylesheet" type="text/css" />
 
     <!-- END PAGE LEVEL STYLES -->
@@ -545,7 +547,7 @@
                                                     <img src="assets/img/90x90.jpg" class="img-fluid"
                                                         alt="admin-profile">
                                                     <div class="media-body align-self-center">
-                                                        <h6>Bu rukayah</h6>
+                                                        <h6>Alan</h6>
                                                     </div>
                                                 </div>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -569,7 +571,7 @@
                                                 </div>
                                                 
                                                 <div class="dropdown-item">
-                                                    <a href="Login.html">
+                                                    <a href="auth_login.html">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                             viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                                             stroke-width="2" stroke-linecap="round"
@@ -599,63 +601,65 @@
                                             <form class="form-inline my-2 my-lg-0">
                                                 <div class="">
                                                     Pencarian
-                                                    
+
                                                     <input type="text" class="form-control product-search"
                                                         id="input-search" placeholder="Masukkan pencarian">
-                                                        <br><br>
-                                                        <button class="btn btn-success mb-2">Cari</button>
-                                                        <button class="btn btn-danger mb-2">Refresh</button>
+                                                    <br><br>
+                                                    <button class="btn btn-success mb-2">Cari</button>
+                                                    <button class="btn btn-danger mb-2">Refresh</button>
                                                 </div>
                                             </form>
                                         </div>
-                                        <div class="widget-content widget-content-area br-6">
-                                            <table class="table table-bordered mb-4">
-                                                <thead class="table-light">
-                                                    <tr>
-                                                        <th>No</th>
-                                                        <th class="text-center">Tgl Registrasi</th>
-                                                        <th class="text-center">Nomor Registrasi</th>
-                                                        <th class="text-center">Layanan</th>
-                                                        <th class="text-center">Informasi Permohonan</th>
-                                                        <th class="text-center">Status Permohonan</th>
-                                                        <th class="text-center dt-no-sorting">Aksi</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>2021/08/02</td>
-                                                        <td class="text-center"><span
-                                                                class="badge badge-info">E474D10</span></td>
-                                                        <td>Penerbitan kemendagri pemberhentian</td>
-                                                        <td>Lorem ipsum dolor sit</td>
-                                                        <td class="text-center"><span
-                                                                class="badge badge-success">Approved</span></td>
+                                        <div class="widget-content widget-content-area">
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered mb-4">
+                                                    <thead class="table-light">
+                                                        <tr>
+                                                            <th>No</th>
+                                                            <th class="text-center">Tgl Registrasi</th>
+                                                            <th class="text-center">Nomor Registrasi</th>
+                                                            <th class="text-center">Layanan</th>
+                                                            <th class="text-center">Informasi Permohonan</th>
+                                                            <th class="text-center">Status Permohonan</th>
+                                                            <th class="text-center dt-no-sorting">Aksi</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>2021/08/02</td>
+                                                            <td class="text-center"><span
+                                                                    class="badge badge-info">E474D10</span></td>
+                                                            <td>Penerbitan kemendagri pemberhentian</td>
+                                                            <td>Lorem ipsum dolor sit</td>
+                                                            <td class="text-center"><span
+                                                                    class="badge badge-success">Approved</span></td>
 
-                                                        <td class="text-center"><button
-                                                                class="btn btn-danger mb-2">Cetak bukti</button>
-                                                        </td>
-                                                    </tr>
+                                                            <td class="text-center"><button
+                                                                    class="btn btn-danger mb-2">Cetak bukti</button>
+                                                            </td>
+                                                        </tr>
 
-                                                </tbody>
-                                            </table>
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
 
                                 </div>
 
                             </div>
-                            
+
                             <div class="footer-wrapper col-xl-12">
                                 <div class="footer-section f-section-1">
-                                    <p class="">© 2021 <a target="_blank" href="https://designreset.com">ULA Kemendagri</a>
+                                    <p class="">© 2021 <a target="_blank" href="https://designreset.com">ULA
+                                            Kemendagri</a>
                                     </p>
                                 </div>
                                 <div class="footer-section f-section-2">
-                                    <p class="">ULA Kemendagri <svg width="24"
-                                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                            class="feather feather-heart">
+                                    <p class="">ULA Kemendagri <svg width="24" height="24" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" class="feather feather-heart">
                                             <path
                                                 d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
                                             </path>
@@ -687,7 +691,11 @@
     </script>
     <script src="assets/js/custom.js"></script>
     <!-- END GLOBAL MANDATORY SCRIPTS -->
-
+    <script src="assets/js/scrollspyNav.js"></script>
+    <script>
+        checkall('todoAll', 'todochkbox');
+        $('[data-toggle="tooltip"]').tooltip()
+    </script>
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 
