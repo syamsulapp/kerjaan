@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Administrator;
+use App\Http\Controllers\Usersiola;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,13 +19,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('layouts.tema.dashboard.dashboard');
-})->middleware(['auth','roleadmin'])->name('dashboard');
+/* gak dipake */
+// Route::get('/dashboard', function () {
+    //     return view('layouts.tema.dashboard.dashboard');
+    // })->middleware(['auth','roleadmin'])->name('dashboard');
+    
+    
+/* Routes group khusus user  */
+Route::prefix('user')->group(function(){
+    Route::get('/view',[Usersiola::class, 'form'])->name('user')->middleware('roleadmin');
+    Route::post('/insert-form',[Usersiola::class, 'insert_form'])->name('insert-form')->middleware('roleadmin');
+});
 
-
-Route::get('/administrator',[Administrator::class, 'index'])->name('administrator')->middleware('role');
-
-
+/* Routes group khusus admin */
+Route::prefix('admin')->group(function() {
+    Route::get('/view',[Administrator::class, 'index'])->name('admin')->middleware('role');
+});
 
 require __DIR__.'/auth.php';

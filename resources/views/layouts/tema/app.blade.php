@@ -25,7 +25,17 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/forms/theme-checkbox-radio.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('plugins/select2/select2.min.css') }}">
     <link href="{{ asset('plugins/file-upload/file-upload-with-preview.min.css') }}" rel="stylesheet" type="text/css" />
+
+    <!--- tambahan css -->
+    <!-- BASE CSS -->
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/menu.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/vendors.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/icon_fonts/css/all_icons.min.css') }}" rel="stylesheet"> -->
+    <!-- <link href="css/skins/square/grey.css" rel="stylesheet"> -->
 </head>
+
 
 
 @yield('konten')
@@ -71,6 +81,13 @@
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 
+     <!-- tambahan plugin -->
+    <!-- <script src="js/jquery-3.5.1.min.js"></script> -->
+    <!-- <script src="{{ asset('js/common_scripts.min.js') }}"></script>
+    <script src="{{ asset('js/menu.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/wizard_func_multiple_branch.js') }}"></script> -->
+    <!-- tutup -->
 </body>
 </html>
 

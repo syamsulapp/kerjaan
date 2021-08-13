@@ -18,7 +18,7 @@ class RoleUser
     public function handle(Request $request, Closure $next)
     {
         if(Auth::user()->role != 'admin') {
-            return redirect('/dashboard');
+            return redirect('/user/view');
         }
         return $next($request);
     }

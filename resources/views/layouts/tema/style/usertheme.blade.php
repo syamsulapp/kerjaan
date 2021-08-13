@@ -25,8 +25,7 @@
                                             <a href="#" class="nav-link dropdown-toggle user" id="user-profile-dropdown"
                                                 data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
                                                 <div class="media">
-                                                    <img src="assets/img/90x90.jpg" class="img-fluid"
-                                                        alt="admin-profile">
+                                                <svg viewBox="0 0 24 24" width="200" height="200" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                                                     <div class="media-body align-self-center">
                                                         <h6>{{ Auth::user()->name }}</h6>
                                                     </div>
@@ -42,11 +41,8 @@
                                                 aria-labelledby="userProfileDropdown">
                                                 <div class="user-profile-section">
                                                     <div class="media mx-auto">
-                                                        <img src="assets/img/90x90.jpg" class="img-fluid mr-2"
-                                                            alt="avatar">
                                                         <div class="media-body">
-                                                            <h5>{{ Auth::user()->email }}</h5>
-                                                            <p>{{ Auth::user()->role }}</p>
+                                                            <h5>{{ ('Hak Akses:') }} {{ Auth::user()->role }}</h5>
                                                         </div>
                                                     </div>
                                                 </div>

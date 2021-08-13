@@ -42,11 +42,13 @@
                                                     <h3>Pilih Layanan</h3>
                                                     <section>
                                                         <p class="mb-4">Silahkan Pilih layanan :</p>
+                                                        <form action="{{ url('/user/view') }}" method="GET">
+                                                        @csrf
                                                         <div class="n-chk">
                                                             <label
                                                                 class="new-control new-radio new-radio-text radio-classic-success">
                                                                 <input type="radio" class="new-control-input"
-                                                                    name="custom-radio-5">
+                                                                    name="input1" value="1">
                                                                 <span class="new-control-indicator"></span>
                                                                 <span class="new-radio-content">Penerbitan
                                                                     Kepmendagri tentang penerbitan dan pengangkatan
@@ -58,13 +60,15 @@
                                                             <label
                                                                 class="new-control new-radio new-radio-text radio-classic-success">
                                                                 <input type="radio" class="new-control-input"
-                                                                    name="custom-radio-5">
+                                                                    name="input2" value="2">
                                                                 <span class="new-control-indicator"></span>
                                                                 <span class="new-radio-content">Penerbitan Kepmendagri
                                                                     tentang peresmian pengangkatan dan pemberhentian
                                                                     pimpinan anggota DPRD Provinsi</span>
                                                             </label>
                                                         </div>
+                                                        <button type="submit" class="btn btn-primary">{{ __('Pilih') }}</button>
+                                                        <form>
                                                     </section>
 
                                                     <!-- pilihan 2 -->
@@ -72,6 +76,7 @@
                                                     <section>
                                                         <div class="widget-header">
                                                             <!-- DATA KE 1 -->
+                                                            @if($data['key1'])
                                                             <div class="row">
                                                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
                                                                     <h4><b>DATA PERMOHONAN</b></h4>
@@ -155,6 +160,7 @@
                                                                 </div>
 
                                                             </form>
+                                                            @else
                                                             <!-- DATA KE 2 -->
                                                             <div class="row">
                                                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
@@ -236,15 +242,10 @@
                                                                     </div>
                                                                 </div>
                                                             </form>
+                                                            @endif
                                                         </div>
                                                     </section>
 
-                                                    <!-- pilihan 3 -->
-                                                    <h3>Selesai</h3>
-                                                    <section>
-                                                        <p>The next and previous buttons help you to navigate
-                                                            through your content.</p>
-                                                    </section>
                                                 </div>
                                             </div>
                                         </div>
@@ -252,9 +253,6 @@
                                 </div>
 
                             </div>
-
-                            <!-- footernya sudah saya hapus -->
-                            @include('layouts.tema.komponen.footer')
                         </div>
                     </div>
 
