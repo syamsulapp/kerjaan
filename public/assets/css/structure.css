@@ -703,7 +703,7 @@ code { color: #e7515a; }
     padding: 0;
     height: calc(100vh - 85px);
     flex-wrap: wrap;
-    display: inline-block;
+    /* display: inline-block; */
     margin-bottom: 0;
 }
 .sidebar-wrapper #compactSidebar .menu-categories.ps .ps__rail-y:hover, 

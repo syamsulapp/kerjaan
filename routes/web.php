@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Administrator;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,11 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('layouts.tema.dashboard.dashboard');
-})->middleware(['auth'])->name('dashboard');
+})->middleware(['auth','roleadmin'])->name('dashboard');
+
+
+Route::get('/administrator',[Administrator::class, 'index'])->name('administrator')->middleware('role');
+
+
 
 require __DIR__.'/auth.php';

@@ -8,7 +8,13 @@
                                         </a>
                                         <div class="page-header">
                                             <div class="page-title">
-                                                <h3>Usulan</h3>
+                                                <h3>
+                                                @if(Auth::user()->role == 'admin')    
+                                                    {{ __('History Permohonan Layanan Administrasi Saya') }}
+                                                @else
+                                                    {{ __('Usulan') }}
+                                                @endif
+                                                </h3>
                                             </div>
                                         </div>
                                     </div>
@@ -40,7 +46,7 @@
                                                             alt="avatar">
                                                         <div class="media-body">
                                                             <h5>{{ Auth::user()->email }}</h5>
-                                                            <p>Administrator</p>
+                                                            <p>{{ Auth::user()->role }}</p>
                                                         </div>
                                                     </div>
                                                 </div>

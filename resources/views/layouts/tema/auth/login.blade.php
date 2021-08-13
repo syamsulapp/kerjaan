@@ -11,7 +11,7 @@
                 <div class="form-container">
                     <div class="form-content">
 
-                        <h1 class="">{{ ('Login Di') }} <a href="index.html"><span class="brand-name">{{ ('SIOLA') }}</span></a></h1>
+                        <h1 class="">{{ ('Login Di') }} <a href="index.html"><span class="brand-name">{{ ('SIOLA') }} {{ ('Kota Kendari') }}</span></a></h1>
                         <p class="signup-link">{{ ('Belum Punya Akun?') }} <a href="{{ route('register') }}">{{ ('Buat Akun') }}</a></p>
 
                         @if($errors->any())
@@ -72,7 +72,8 @@
             </div>
         </div>
         <div class="form-image">
-            <div class="l-image">
+            <!-- <div class="l-image"> -->
+            <img src="{{ asset('assets/img/mtq.jpg') }}" alt="" height="650">
             </div>
         </div>
     </div>
