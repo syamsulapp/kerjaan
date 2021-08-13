@@ -20,7 +20,7 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        return view('auth.register');
+        return view('layouts.tema.auth.register');
     }
 
     /**
@@ -34,16 +34,18 @@ class RegisteredUserController extends Controller
     public function store(Request $request)
     {
         // costumisasi nama validasinyalogin
-        // $validasi = [
-        //     'email' => [
-        //         'required' => 'Penulisan Email Tidak Sesuai'
-        //     ]
-        // ];
+        $validasi = [
+            'required' => ':attribute jangan di kosongkan',
+            'email' => 'penulisan email tidak sesuai',
+            'confirmed' => 'password anda belum sesuai',
+            'max' => 'password maksimal 255 karakter',
+            'password.Rules' => 'minimal 8 karakter'
+        ];
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
-        ]);
+        ],$validasi);
 
         $user = User::create([
             'name' => $request->name,
