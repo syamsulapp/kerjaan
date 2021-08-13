@@ -9,8 +9,9 @@
 
 ## Desain Logic Form Dan DB
 
-DB => migration table("pengangkatan");
-Schema::table("pengangkatan"), function() {
+- DB => migration table("pengangkatan");
+
+- Schema::table("pengangkatan"), function() {
 	NoRegPengangkatan => primary_key, unique
 	layanan => string 128 
 	provinsi => string 255
@@ -19,16 +20,16 @@ Schema::table("pengangkatan"), function() {
 	objek_kdh => string 255
 	penyebab_kdh => string 255
 }
-// beda berkas
-Schema::table("berkas_pengangkatan")->join("pengangkatan"), function() {
+- // beda berkas
+- Schema::table("berkas_pengangkatan")->join("pengangkatan"), function() {
 	NoReg_BerkasPengangkatan => primary_key, unique => relation->with(NoRegPengangkatan);
 	img_fc => string 255
 	img_beritaacara =>  string 255
 	dll;
-}
+- }
 
 
-DB => migration table("pemberhentian");
+- DB => migration table("pemberhentian");
 
 
 Schema::table("pemberhentian"), function() {
