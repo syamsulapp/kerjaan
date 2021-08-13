@@ -36,6 +36,12 @@
                                 required autocomplete="new-password" />
             </div>
 
+             <!-- hak ases -->
+             <div class="mt-4">
+
+                <x-input id="role" class="block mt-1 w-full" type="hidden" name="role" :value="__('user')" required />
+            </div>
+
             <!-- Confirm Password -->
             <div class="mt-4">
                 <x-label for="password_confirmation" :value="__('Confirm Password')" />

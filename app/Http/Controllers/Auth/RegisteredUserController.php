@@ -33,7 +33,7 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
-        // costumisasi nama validasinya
+        // costumisasi nama validasinyalogin
         // $validasi = [
         //     'email' => [
         //         'required' => 'Penulisan Email Tidak Sesuai'
@@ -48,6 +48,7 @@ class RegisteredUserController extends Controller
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
+            'role' => $request->role,
             'password' => Hash::make($request->password),
         ]);
 

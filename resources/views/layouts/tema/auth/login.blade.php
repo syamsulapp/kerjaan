@@ -12,7 +12,7 @@
                     <div class="form-content">
 
                         <h1 class="">{{ ('Login Di') }} <a href="index.html"><span class="brand-name">{{ ('SIOLA') }}</span></a></h1>
-                        <p class="signup-link">{{ ('Belum Punya Akun?') }} <a href="auth_register.html">{{ ('Buat Akun') }}</a></p>
+                        <p class="signup-link">{{ ('Belum Punya Akun?') }} <a href="{{ route('register') }}">{{ ('Buat Akun') }}</a></p>
 
                         @if($errors->any())
                             <div class="alert alert-danger">    
