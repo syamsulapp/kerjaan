@@ -34,6 +34,7 @@
                                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
                                                 <h4>Buat Permohonan Layanan Administrasi</h4>
                                             </div>
+<<<<<<< HEAD
                                         </div>
                                     </div>
                                     <div class="widget-content widget-content-area">
@@ -83,6 +84,37 @@
                                                         <div class="form-group row mb-4">
                                                             <label for="hEmail" class="col-xl-2 col-sm-3 col-sm-2 col-form-label">
                                                                 <h6>Provinsi</h6>
+=======
+                                            <div class="widget-content widget-content-area">
+                                                <div id="circle-basic" class="">
+                                                    <!-- pilihan 1 -->
+                                                    <h3>Pilih Layanan</h3>
+                                                    <section>
+                                                        <p class="mb-4">Silahkan Pilih layanan :</p>
+                                                        <form action="{{ url('/user/view') }}" method="GET">
+                                                        @csrf
+                                                        <div class="n-chk">
+                                                            <label
+                                                                class="new-control new-radio new-radio-text radio-classic-success">
+                                                                <input type="radio" class="new-control-input"
+                                                                    name="input1" value="1" @if(old('input1')) checked @endif> 
+                                                                <span class="new-control-indicator"></span>
+                                                                <span class="new-radio-content">Penerbitan
+                                                                    Kepmendagri tentang penerbitan dan pengangkatan
+                                                                    Bupati
+                                                                    wali atau wali kota/wakil wali kota</span>
+                                                            </label>
+                                                        </div> <br> <br>
+                                                        <div class="n-chk">
+                                                            <label
+                                                                class="new-control new-radio new-radio-text radio-classic-success">
+                                                                <input type="radio" class="new-control-input"
+                                                                    name="input2" value="2" @if(old('input2')) checked @endif>
+                                                                <span class="new-control-indicator"></span>
+                                                                <span class="new-radio-content">Penercheckedbitan Kepmendagri
+                                                                    tentang peresmian pengangkatan dan pemberhentian
+                                                                    pimpinan anggota DPRD Provinsi</span>
+>>>>>>> 93f2ebde3364a2c62926d8141835146517061fd7
                                                             </label>
                                                             <div class="col-xl-5 col-lg-9 col-sm-10">
                                                                 <input type="email" class="form-control" id="hEmail" placeholder="">
