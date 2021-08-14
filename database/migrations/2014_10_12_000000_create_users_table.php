@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('role');
             $table->string('password');
+            $table->enum('status_kirim_permohonan', ['belum', 'sudah']);
             $table->rememberToken();
             $table->timestamps();
         });

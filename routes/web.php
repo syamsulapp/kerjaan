@@ -21,21 +21,21 @@ Route::get('/', function () {
 
 /* gak dipake */
 // Route::get('/dashboard', function () {
-    //     return view('layouts.tema.dashboard.dashboard');
-    // })->middleware(['auth','roleadmin'])->name('dashboard');
-    
-    
+//     return view('layouts.tema.dashboard.dashboard');
+// })->middleware(['auth','roleadmin'])->name('dashboard');
+
+
 /* Routes group khusus user  */
-Route::prefix('user')->group(function(){
-    Route::get('/view',[Usersiola::class, 'view'])->name('user')->middleware('roleadmin');
-    Route::get('/pilihan',[Usersiola::class, 'pilihan'])->name('user')->middleware('roleadmin');
-    Route::post('/insert-form_pemberhentian',[Usersiola::class, 'pemberhentian'])->name('insert-form_pemberhentian')->middleware('roleadmin');
-    Route::post('/insert-form_pengangkatan',[Usersiola::class, 'insert_form_pengangkatan'])->name('insert-form_pengangkatan')->middleware('roleadmin');
+Route::prefix('user')->group(function () {
+    Route::get('/view', [Usersiola::class, 'view'])->name('user')->middleware('roleadmin');
+    Route::get('/pilihan', [Usersiola::class, 'pilihan'])->name('user')->middleware(['roleadmin', 'status_permohonan']);
+    Route::post('/insert-form_pemberhentian', [Usersiola::class, 'pemberhentian'])->name('insert-form_pemberhentian')->middleware('roleadmin');
+    Route::post('/insert-form_pengangkatan', [Usersiola::class, 'insert_form_pengangkatan'])->name('insert-form_pengangkatan')->middleware('roleadmin');
 });
 
 /* Routes group khusus admin */
-Route::prefix('admin')->group(function() {
-    Route::get('/view',[Administrator::class, 'index'])->name('admin')->middleware('role');
+Route::prefix('admin')->group(function () {
+    Route::get('/view', [Administrator::class, 'index'])->name('admin')->middleware('role');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

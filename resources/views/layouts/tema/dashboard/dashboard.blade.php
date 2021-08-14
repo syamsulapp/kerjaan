@@ -41,6 +41,7 @@
                                             @endif
                                         </div>
                                     </div>
+                                    @if(Auth::user()->status_kirim_permohonan == 'belum')
                                     <div class="widget-content widget-content-area">
                                         <div id="circle-basic" class="">
                                             <!-- pilihan 1 -->
@@ -75,6 +76,14 @@
 
                                         </div>
                                     </div>
+                                    @else
+                                    <div class="alert alert-success" role="alert">
+                                        <h4 class="alert-heading">Anda Sudah Mengirim Permohonan</h4>
+                                        <p>silahkan cek status data anda.</p>
+                                        <hr>
+                                        <p class="mb-0">{{ __('@') }} {{ now()->year }} {{ _('SIOLA KEMENDAGRI KOTA KENDARI')}} {{ __('reserved') }}.</p>
+                                    </div>
+                                    @endif
                                 </div>
                             </div>
                         </div>
