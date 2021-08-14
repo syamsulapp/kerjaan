@@ -2,7 +2,7 @@
 <div class="sidebar-wrapper sidebar-theme">
 
     <div class="theme-logo">
-        <a href="index.html">
+        <a href="#">
             <img src="assets/img/90x90.jpg" class="navbar-logo" alt="logo">
             <span class="admin-logo">{{ ('SIOLA') }}<span></span></span>
         </a>
@@ -67,25 +67,25 @@
         <div class="submenu" id="starterKit">
             <ul class="submenu-list" data-parent-element="#starterKit">
                 <li class="active">
-                    <a href="starter_kit_blank_page.html"> <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit">
+                    <a href="{{ url('/user/view') }}"> <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit">
                                 <circle cx="12" cy="12" r="4"></circle>
                                 <line x1="1.05" y1="12" x2="7" y2="12"></line>
                                 <line x1="17.01" y1="12" x2="22.96" y2="12"></line>
-                            </svg></span> Blank Page </a>
+                            </svg></span> Beranda </a>
                 </li>
                 <li>
-                    <a href="starter_kit_breadcrumb.html"> <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit">
+                    <a href="{{ url('/status-data-anda') }}"> <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit">
                                 <circle cx="12" cy="12" r="4"></circle>
                                 <line x1="1.05" y1="12" x2="7" y2="12"></line>
                                 <line x1="17.01" y1="12" x2="22.96" y2="12"></line>
-                            </svg></span> Breadcrumb </a>
+                            </svg></span> Status Data Anda </a>
                 </li>
                 <li>
-                    <a href="starter_kit_alt_menu.html"> <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit">
+                    <a href="{{ url('/data-profile') }}"> <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit">
                                 <circle cx="12" cy="12" r="4"></circle>
                                 <line x1="1.05" y1="12" x2="7" y2="12"></line>
                                 <line x1="17.01" y1="12" x2="22.96" y2="12"></line>
-                            </svg></span> Alternate Menu </a>
+                            </svg></span> Profile </a>
                 </li>
             </ul>
         </div>
