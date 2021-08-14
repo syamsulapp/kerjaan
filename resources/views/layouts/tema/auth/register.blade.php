@@ -43,7 +43,7 @@
                                         <circle cx="12" cy="12" r="4"></circle>
                                         <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
                                     </svg>
-                                    <input id="email" name="email" type="text" value="" placeholder="Email" value="{{ old('email') }}">
+                                    <input id="email" name="email" type="text" placeholder="Email" value="{{ old('email') }}">
                                 </div>
                                 <div id="password-field" class="field-wrapper input mb-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -66,7 +66,6 @@
                                         placeholder="konfirmasi password">
                                 </div>
 
-                                <input type="hidden" name="role" value="user">
                                 <div class="d-sm-flex justify-content-between">
                                     <div class="field-wrapper toggle-pass">
                                         <p class="d-inline-block">{{ _('Lihat Password') }}</p>
