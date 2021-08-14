@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTablePemberhentian extends Migration
+class CreateTablePengangkatan extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateTablePemberhentian extends Migration
      */
     public function up()
     {
-        Schema::create('table_pemberhentian', function (Blueprint $table) {
+        Schema::create('table_pengangkatan', function (Blueprint $table) {
             $table->id();
             $table->string('noreg', 128)->unique();
             $table->string('nama', 128);
@@ -29,7 +29,13 @@ class CreateTablePemberhentian extends Migration
             $table->string('upload4', 128);
             $table->string('upload5', 128);
             $table->string('upload6', 128);
-
+            $table->string('upload7', 128);
+            $table->string('upload8', 128);
+            $table->string('upload9', 128);
+            $table->string('upload10', 128);
+            $table->string('upload11', 128);
+            $table->string('upload12', 128);
+            $table->string('upload13', 128);
             $table->timestamps();
         });
     }
@@ -41,6 +47,6 @@ class CreateTablePemberhentian extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_pemberhentian');
+        Schema::dropIfExists('table_pengangkatan');
     }
 }

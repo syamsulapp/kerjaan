@@ -30,7 +30,7 @@ Route::prefix('user')->group(function () {
     Route::get('/view', [Usersiola::class, 'view'])->name('user')->middleware('roleadmin');
     Route::get('/pilihan', [Usersiola::class, 'pilihan'])->name('user')->middleware(['roleadmin', 'status_permohonan']);
     Route::post('/insert-form_pemberhentian', [Usersiola::class, 'pemberhentian'])->name('insert-form_pemberhentian')->middleware('roleadmin');
-    Route::post('/insert-form_pengangkatan', [Usersiola::class, 'insert_form_pengangkatan'])->name('insert-form_pengangkatan')->middleware('roleadmin');
+    Route::post('/insert-form_pengangkatan', [Usersiola::class, 'pengangkatan'])->name('insert-form_pengangkatan')->middleware('roleadmin');
 });
 
 /* Routes group khusus admin */

@@ -34,8 +34,8 @@
                                     </div>
                                     <div class="widget-content widget-content-area">
                                         <div id="circle-basic" class="">
-<!-- pilihan 2 -->
-<h3>Isi Data & Upload Persyaratan</h3>
+                                            <!-- pilihan 2 -->
+                                            <h3>Isi Data & Upload Persyaratan</h3>
                                             <section>
                                                 <div class="widget-header">
                                                     <!-- DATA KE 1 -->
@@ -50,10 +50,21 @@
                                                     use Illuminate\Support\Facades\Auth;
                                                     // buat kode registrasi form
                                                     $data['no-reg'] = Auth::user()->id;
-                                                    $noreg = 'SIOLA-KDH'. '-' . $data['no-reg'];
+                                                    $noreg = 'SIOLA-KDH' . '-' . $data['no-reg'];
                                                     ?>
-                                                    <form action="{{ url('/user/insert-form_pemberhentian') }}" method="POST" enctype="multipart/form-data"> 
+                                                    <form action="{{ url('/user/insert-form_pemberhentian') }}" method="POST" enctype="multipart/form-data">
                                                         @csrf
+                                                        <div class="form-group row mb-4">
+                                                            <label for="noreg" class="col-xl-2 col-sm-3 col-sm-2 col-form-label">
+                                                                <h6>Kategori Permohonan</h6>
+                                                            </label>
+                                                            <div class="col-xl-5 col-lg-9 col-sm-10">
+                                                                <input type="text" name="kategori_permohonan" class="form-control @error('kategori_permohonan') is-invalid @enderror" id="kategori_permohonan" placeholder="kategori_permohonan" value="@if($data['form']) {{ __('Pemberhentian') }} @endif">
+                                                            </div>
+                                                            @error('kategori_permohonan')
+                                                            <div class="alert alert-danger">{{ $message }}</div>
+                                                            @enderror
+                                                        </div>
                                                         <div class="form-group row mb-4">
                                                             <label for="noreg" class="col-xl-2 col-sm-3 col-sm-2 col-form-label">
                                                                 <h6>NomorRegistrasi</h6>
@@ -62,7 +73,7 @@
                                                                 <input type="text" name="noreg" class="form-control @error('noreg') is-invalid @enderror" id="noreg" placeholder="noreg" value="{{ $noreg }}">
                                                             </div>
                                                             @error('noreg')
-                                                                <div class="alert alert-danger">{{ $message }}</div>
+                                                            <div class="alert alert-danger">{{ $message }}</div>
                                                             @enderror
                                                         </div>
                                                         <div class="form-group row mb-4">
@@ -73,7 +84,7 @@
                                                                 <input type="text" name="nama" class="form-control @error('nama') is-invalid @enderror" id="nama" placeholder="nama" value="{{ Auth::user()->name}}">
                                                             </div>
                                                             @error('nama')
-                                                                <div class="alert alert-danger">{{ $message }}</div>
+                                                            <div class="alert alert-danger">{{ $message }}</div>
                                                             @enderror
                                                         </div>
                                                         <div class="form-group row mb-4">
@@ -84,7 +95,7 @@
                                                                 <input type="text" name="provinsi" class="form-control @error('provinsi') is-invalid @enderror" id="provinsi" placeholder="provinsi" value="{{ old('provinsi') }}">
                                                             </div>
                                                             @error('provinsi')
-                                                                <div class="alert alert-danger">{{ $message }}</div>
+                                                            <div class="alert alert-danger">{{ $message }}</div>
                                                             @enderror
                                                         </div>
                                                         <div class="form-group mb-4">
@@ -151,12 +162,12 @@
                                                             </div>
                                                         </div>
 
-                                                    <!-- DATA KE 2 -->
-                                                    <div class="row">
-                                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                                            <h4><b>KELENGKAPAN ADMINISTRASI</b></h4>
-                                                        </div>
-                                                    </div> <br>
+                                                        <!-- DATA KE 2 -->
+                                                        <div class="row">
+                                                            <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                                                <h4><b>KELENGKAPAN ADMINISTRASI</b></h4>
+                                                            </div>
+                                                        </div> <br>
                                                         <!-- berkas ke 1 -->
                                                         <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                             <label for="fullName">
@@ -167,7 +178,7 @@
                                                             </div>
                                                             <br>
                                                             @error('upload1')
-                                                                <span class="alert alert-danger">{{ $message }}</span>
+                                                            <span class="alert alert-danger">{{ $message }}</span>
                                                             @enderror
                                                         </div>
                                                         <br>
@@ -181,7 +192,7 @@
                                                             </div>
                                                             <br>
                                                             @error('upload2')
-                                                                <span class="alert alert-danger">{{ $message }}</span>
+                                                            <span class="alert alert-danger">{{ $message }}</span>
                                                             @enderror
                                                         </div>
                                                         <br>
@@ -198,7 +209,7 @@
                                                             </div>
                                                             <br>
                                                             @error('upload3')
-                                                                <span class="alert alert-danger">{{ $message }}</span>
+                                                            <span class="alert alert-danger">{{ $message }}</span>
                                                             @enderror
                                                         </div>
                                                         <!-- berkas ke 4 -->
@@ -217,7 +228,7 @@
                                                             </div>
                                                             <br>
                                                             @error('upload4')
-                                                                <span class="alert alert-danger">{{ $message }}</span>
+                                                            <span class="alert alert-danger">{{ $message }}</span>
                                                             @enderror
                                                         </div>
                                                         <!-- berkas ke 5 -->
@@ -235,7 +246,7 @@
                                                             </div>
                                                             <br>
                                                             @error('upload5')
-                                                                <span class="alert alert-danger">{{ $message }}</span>
+                                                            <span class="alert alert-danger">{{ $message }}</span>
                                                             @enderror
                                                         </div>
                                                         <!-- berkas ke 6 -->
@@ -252,7 +263,7 @@
                                                             </div>
                                                             <br>
                                                             @error('upload6')
-                                                                <span class="alert alert-danger">{{ $message }}</span>
+                                                            <span class="alert alert-danger">{{ $message }}</span>
                                                             @enderror
                                                         </div>
                                                         <br>

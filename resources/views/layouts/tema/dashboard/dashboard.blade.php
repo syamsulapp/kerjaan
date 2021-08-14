@@ -51,7 +51,7 @@
                                                 <form action="{{ url('/user/pilihan/') }}" method="GET">
                                                     <div class="n-chk">
                                                         <label class="new-control new-radio new-radio-text radio-classic-success">
-                                                            <input type="radio" class="new-control-input" name="input1" value="1">
+                                                            <input type="radio" class="new-control-input" name="input" value="1">
                                                             <span class="new-control-indicator"></span>
                                                             <span class="new-radio-content">Penerbitan
                                                                 Kepmendagri tentang pemberhentian dan pengangkatan
@@ -60,7 +60,7 @@
                                                     </div> <br> <br>
                                                     <div class="n-chk">
                                                         <label class="new-control new-radio new-radio-text radio-classic-success">
-                                                            <input type="radio" class="new-control-input" name="input2" value="2">
+                                                            <input type="radio" class="new-control-input" name="input" value="2">
                                                             <span class="new-control-indicator"></span>
                                                             <span class="new-radio-content">Penerbitan Kepmendagri
                                                                 tentang Peresmian Pengangkatan dan Pemberhentian
