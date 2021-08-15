@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Administrator;
+use App\Http\Controllers\ControllerUsersManagement;
 use App\Http\Controllers\Usersiola;
 use Illuminate\Support\Facades\Route;
 
@@ -36,6 +37,13 @@ Route::prefix('user')->group(function () {
 /* Routes group khusus admin */
 Route::prefix('admin')->group(function () {
     Route::get('/view', [Administrator::class, 'index'])->name('admin')->middleware('role');
+    Route::get('/users-management', [ControllerUsersManagement::class, 'index'])->middleware('role')->name('users-management');
+
+    // users management view forms
+    Route::get('/users-management-form', [ControllerUsersManagement::class, 'create'])->middleware('role')->name('users-management-form');
+
+    // users management tambah data
+    Route::post('/users-management-tambah', [ControllerUsersManagement::class, 'store'])->middleware('role')->name('users-management-tambah');
 });
 
 require __DIR__ . '/auth.php';

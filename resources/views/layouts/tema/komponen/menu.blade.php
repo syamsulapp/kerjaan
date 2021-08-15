@@ -33,7 +33,7 @@
             </li>
             @else
             <li class="menu menu-single">
-                <a href="" data-active="false" class="menu-toggle">
+                <a href="{{ url('/admin/users-management') }}" data-active="false" class="menu-toggle">
                     <div class="base-menu">
                         <div class="base-icons">
                             <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
@@ -46,7 +46,7 @@
                 </a>
             </li>
             <li class="menu menu-single">
-                <a href="" data-active="false" class="menu-toggle">
+                <a href="{{ url('/admin/view') }}" data-active="false" class="menu-toggle">
                     <div class="base-menu">
                         <div class="base-icons">
                             <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
