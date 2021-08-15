@@ -539,7 +539,7 @@ code {
     flex: 1 auto;
     -ms-flex: 1 0 0px;
     min-width: 0;
-    margin-right: 348px;
+    /* margin-right: 348px; */
 }
 
 #content .col-left-content {
