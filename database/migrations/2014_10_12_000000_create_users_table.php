@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('role');
             $table->string('password');
             $table->enum('status_kirim_permohonan', ['belum', 'sudah']);
+            $table->string('kategori_permohonan', null);
             $table->rememberToken();
             $table->timestamps();
         });

@@ -45,7 +45,7 @@ class UsulanSaya extends Controller
             if ($cek_data["pemberhentian"] == $data[1]) {
                 $usulan = ModelsUsulanSaya2::all();
                 return view('layouts.tema.usulan.usulanview', compact('usulan'));
-            } else if ($cek_data["pengangkatan"] != $data[0]) {
+            } else {
                 $usulan = ModelsUsulanSaya::all();
                 return view('layouts.tema.usulan.usulanview', compact('usulan'));
             }
