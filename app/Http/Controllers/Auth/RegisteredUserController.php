@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+use Keygen\Keygen;
 
 class RegisteredUserController extends Controller
 {
@@ -51,6 +52,7 @@ class RegisteredUserController extends Controller
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
+            'noreg' => Keygen::numeric(10)->generate(),
             'role' => 'user', // default saat registrasi adalah sebagai user
             'password' => Hash::make($request->password),
         ]);

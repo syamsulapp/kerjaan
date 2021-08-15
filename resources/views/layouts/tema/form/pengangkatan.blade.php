@@ -48,28 +48,28 @@
 
                                                     use Illuminate\Support\Facades\Auth;
                                                     // buat kode registrasi form
-                                                    $data['no-reg'] = Auth::user()->id;
-                                                    $noreg = 'SIOLA-KDH' . '-' . $data['no-reg'];
+                                                    $data['no-reg'] = Auth::user()->noreg;
+                                                    $noreg = $data['no-reg'];
                                                     ?>
                                                     <form action="{{ url('/user/insert-form_pengangkatan') }}" method="POST" enctype="multipart/form-data">
                                                         @csrf
                                                         <div class="form-group row mb-4">
-                                                            <label for="noreg" class="col-xl-2 col-sm-3 col-sm-2 col-form-label">
+                                                            <!-- <label for="noreg" class="col-xl-2 col-sm-3 col-sm-2 col-form-label">
                                                                 <h6>Kategori Permohonan</h6>
-                                                            </label>
+                                                            </label> -->
                                                             <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                <input type="text" name="kategori_permohonan" class="form-control @error('kategori_permohonan') is-invalid @enderror" id="kategori_permohonan" placeholder="kategori_permohonan" value="@if($data['form']) {{ __('pengangkatan') }} @endif">
+                                                                <input type="hidden" name="kategori_permohonan" class="form-control @error('kategori_permohonan') is-invalid @enderror" id="kategori_permohonan" placeholder="kategori_permohonan" value="@if($data['form']) {{ __('pengangkatan') }} @endif">
                                                             </div>
                                                             @error('kategori_permohonan')
                                                             <div class="alert alert-danger">{{ $message }}</div>
                                                             @enderror
                                                         </div>
                                                         <div class="form-group row mb-4">
-                                                            <label for="noreg" class="col-xl-2 col-sm-3 col-sm-2 col-form-label">
+                                                            <!-- <label for="noreg" class="col-xl-2 col-sm-3 col-sm-2 col-form-label">
                                                                 <h6>NomorRegistrasi</h6>
-                                                            </label>
+                                                            </label> -->
                                                             <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                <input type="text" name="noreg" class="form-control @error('noreg') is-invalid @enderror" id="noreg" placeholder="noreg" value="{{ $noreg }}">
+                                                                <input type="hidden" name="noreg" class="form-control @error('noreg') is-invalid @enderror" id="noreg" placeholder="noreg" value="{{ $noreg }}">
                                                             </div>
                                                             @error('noreg')
                                                             <div class="alert alert-danger">{{ $message }}</div>

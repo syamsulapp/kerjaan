@@ -115,6 +115,10 @@ class Usersiola extends Controller
             ->where('id', Auth::user()->id)
             ->update(['status_kirim_permohonan' => 'sudah']);
 
+        DB::table('users')
+            ->where('id', Auth::user()->id)
+            ->update(['kategori_permohonan' => 'pemberhentian']);
+
         return redirect('/user/view')->with(['sukses' => 'data berhasil di kirim']);
     }
 
@@ -231,6 +235,10 @@ class Usersiola extends Controller
         DB::table('users')
             ->where('id', Auth::user()->id)
             ->update(['status_kirim_permohonan' => 'sudah']);
+
+        DB::table('users')
+            ->where('id', Auth::user()->id)
+            ->update(['kategori_permohonan' => 'pengangkatan']);
 
         return redirect('/user/view')->with(['sukses' => 'data berhasil di kirim']);
     }

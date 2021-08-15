@@ -7,8 +7,6 @@
 @include('layouts.tema.komponen.header')
 
 @include('layouts.tema.komponen.menu')
-
-
 @section('konten')
 <div id="content" class="main-content">
     <div class="layout-px-spacing">
@@ -42,46 +40,18 @@
                                                     <!-- PEMBERHENTIAN -->
                                                     <div class="row">
                                                         <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                                            <h4><b>DATA PERMOHONAN @if($data['form']) {{ __('PEMBERHENTIAN') }}@endif</b></h4>
+                                                            <h4><b>Detail Data Pemberhentian</b></h4>
                                                         </div>
                                                     </div> <br> <br>
-                                                    <?php
-
-                                                    use Illuminate\Support\Facades\Auth;
-                                                    // buat kode registrasi form
-                                                    $data['no-reg'] = Auth::user()->noreg;
-                                                    $noreg = $data['no-reg'];
-                                                    ?>
-                                                    <form action="{{ url('/user/insert-form_pemberhentian') }}" method="POST" enctype="multipart/form-data">
+                                                    <form action="#" method="POST" enctype="multipart/form-data">
+                                                        @method('put')
                                                         @csrf
-                                                        <div class="form-group row mb-4">
-                                                            <!-- <label for="noreg" class="col-xl-2 col-sm-3 col-sm-2 col-form-label">
-                                                                <h6>Kategori Permohonan</h6>
-                                                            </label> -->
-                                                            <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                <input type="hidden" name="kategori_permohonan" class="form-control @error('kategori_permohonan') is-invalid @enderror" id="kategori_permohonan" placeholder="kategori_permohonan" value="@if($data['form']) {{ __('pemberhentian') }} @endif">
-                                                            </div>
-                                                            @error('kategori_permohonan')
-                                                            <div class="alert alert-danger">{{ $message }}</div>
-                                                            @enderror
-                                                        </div>
-                                                        <div class="form-group row mb-4">
-                                                            <!-- <label for="noreg" class="col-xl-2 col-sm-3 col-sm-2 col-form-label">
-                                                                <h6>NomorRegistrasi</h6>
-                                                            </label> -->
-                                                            <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                <input type="hidden" name="noreg" class="form-control @error('noreg') is-invalid @enderror" id="noreg" placeholder="noreg" value="{{ $noreg }}">
-                                                            </div>
-                                                            @error('noreg')
-                                                            <div class="alert alert-danger">{{ $message }}</div>
-                                                            @enderror
-                                                        </div>
                                                         <div class="form-group row mb-4">
                                                             <label for="nama" class="col-xl-2 col-sm-3 col-sm-2 col-form-label">
                                                                 <h6>nama</h6>
                                                             </label>
                                                             <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                <input type="text" name="nama" class="form-control @error('nama') is-invalid @enderror" id="nama" placeholder="nama" value="{{ Auth::user()->name}}">
+                                                                <input type="text" name="nama" class="form-control @error('nama') is-invalid @enderror" id="nama" placeholder="nama" value="{{ $data_pemberhentian->nama }}">
                                                             </div>
                                                             @error('nama')
                                                             <div class="alert alert-danger">{{ $message }}</div>
@@ -92,74 +62,56 @@
                                                                 <h6>Provinsi</h6>
                                                             </label>
                                                             <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                <input type="text" name="provinsi" class="form-control @error('provinsi') is-invalid @enderror" id="provinsi" placeholder="provinsi" value="{{ old('provinsi') }}">
+                                                                <input type="text" name="provinsi" class="form-control @error('provinsi') is-invalid @enderror" id="provinsi" placeholder="provinsi" value="{{ $data_pemberhentian->provinsi }}">
                                                             </div>
                                                             @error('provinsi')
                                                             <div class="alert alert-danger">{{ $message }}</div>
                                                             @enderror
                                                         </div>
-                                                        <div class="form-group mb-4">
-                                                            <div class="row">
-                                                                <label class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
-                                                                    <h6>Kabupaten/Kota</h6>
-                                                                </label>
-                                                                <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                    <select class="form-control  basic" name="kabupaten">
-                                                                        <option selected="selected">Konawe
-                                                                        </option>
-                                                                        <option>konsel</option>
-                                                                        <option>kendari</option>
-                                                                        <option>unaha</option>
-                                                                    </select>
-                                                                </div>
+                                                        <div class="form-group row mb-4">
+                                                            <label for="kabupaten" class="col-xl-2 col-sm-3 col-sm-2 col-form-label">
+                                                                <h6>kabupaten</h6>
+                                                            </label>
+                                                            <div class="col-xl-5 col-lg-9 col-sm-10">
+                                                                <input type="text" name="kabupaten" class="form-control @error('kabupaten') is-invalid @enderror" id="kabupaten" placeholder="kabupaten" value="{{ $data_pemberhentian->kabupaten }}">
                                                             </div>
+                                                            @error('kabupaten')
+                                                            <div class="alert alert-danger">{{ $message }}</div>
+                                                            @enderror
                                                         </div>
-                                                        <div class="form-group mb-4">
-                                                            <div class="row">
-                                                                <label class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
-                                                                    <h6>Jenis
-                                                                        Kelamin</h6>
-                                                                </label>
-                                                                <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                    <select class="form-control  basic" name="jk">
-                                                                        <option selected="selected">Laki-Laki
-                                                                        </option>
-                                                                        <option>Perempuan</option>
-                                                                    </select>
-                                                                </div>
+                                                        <div class="form-group row mb-4">
+                                                            <label for="penyebabkdh" class="col-xl-2 col-sm-3 col-sm-2 col-form-label">
+                                                                <h6>penyebabkdh</h6>
+                                                            </label>
+                                                            <div class="col-xl-5 col-lg-9 col-sm-10">
+                                                                <input type="text" name="penyebabkdh" class="form-control @error('penyebabkdh') is-invalid @enderror" id="penyebabkdh" placeholder="penyebabkdh" value="{{ $data_pemberhentian->penyebabkdh }}">
                                                             </div>
+                                                            @error('penyebabkdh')
+                                                            <div class="alert alert-danger">{{ $message }}</div>
+                                                            @enderror
                                                         </div>
-                                                        <div class="form-group mb-4">
-                                                            <div class="row">
-                                                                <label class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
-                                                                    <h6>Objek
-                                                                        KDH</h6>
-                                                                </label>
-                                                                <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                    <select class="form-control  basic" name="objekkdh">
-                                                                        <option selected="selected">pilihan 1
-                                                                        </option>
-                                                                        <option>Pilihan 2</option>
-                                                                        <option>Pilihan 3</option>
-                                                                    </select>
-                                                                </div>
+
+                                                        <div class="form-group row mb-4">
+                                                            <label for="objekkdh" class="col-xl-2 col-sm-3 col-sm-2 col-form-label">
+                                                                <h6>objekkdh</h6>
+                                                            </label>
+                                                            <div class="col-xl-5 col-lg-9 col-sm-10">
+                                                                <input type="text" name="objekkdh" class="form-control @error('objekkdh') is-invalid @enderror" id="objekkdh" placeholder="objekkdh" value="{{ $data_pemberhentian->objekkdh }}">
                                                             </div>
+                                                            @error('objekkdh')
+                                                            <div class="alert alert-danger">{{ $message }}</div>
+                                                            @enderror
                                                         </div>
-                                                        <div class="form-group mb-4">
-                                                            <div class="row">
-                                                                <label class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
-                                                                    <h6>Penyebab
-                                                                        KDH</h6>
-                                                                </label>
-                                                                <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                    <select class="form-control  basic" name="penyebabkdh">
-                                                                        <option selected="selected">pilihan 1
-                                                                        </option>
-                                                                        <option>Pilihan 2</option>
-                                                                        <option>Pilihan 3</option>
-                                                                    </select>
-                                                                </div>
+                                                        <div class="form-group row mb-4">
+                                                            <label for="jk" class="col-xl-2 col-sm-3 col-sm-2 col-form-label">
+                                                                <h6>jk</h6>
+                                                            </label>
+                                                            <div class="col-xl-5 col-lg-9 col-sm-10">
+                                                                <input type="text" name="jk" class="form-control @error('jk') is-invalid @enderror" id="jk" placeholder="jk" value="{{ $data_pemberhentian->jk }}">
                                                             </div>
+                                                            @error('jk')
+                                                            <div class="alert alert-danger">{{ $message }}</div>
+                                                            @enderror
                                                         </div>
 
                                                         <!-- DATA KE 2 -->
@@ -282,4 +234,3 @@
         </div>
     </div>
 </div>
-@endsection

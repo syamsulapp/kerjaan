@@ -47,16 +47,21 @@
                                                 <th class="no-content">Actions</th>
                                             </tr>
                                         </thead>
+                                        @php
+                                        $cek['data_id'] = Auth::user()->noreg
+                                        @endphp
                                         <tbody>
                                             @foreach($usulan as $usulan_saya)
                                             <tr>
+                                                <!-- fungsi untuk datanya bisa sesuai pada masing2 session user -->
+                                                @if($cek['data_id'] == $usulan_saya->noreg)
                                                 <td>{{ $loop->iteration }}</td>
                                                 <td>{{ $usulan_saya->nama }}</td>
                                                 <td>{{ $usulan_saya->created_at }}</td>
                                                 <td><span class="badge badge-info">{{ $usulan_saya->noreg }}</span></td>
                                                 <td>{{ $usulan_saya->kategori_permohonan }}</td>
                                                 <td>@if($usulan_saya->kategori_permohonan == 'pemberhentian')
-                                                    {{ __('wadaw') }}
+                                                    {{ __('Jenis Usulan : Pemberhentian Objek KDH') }}
                                                     @else
                                                     {{ __('Jenis Usulan: pengangkatan Objek KDH ') }}
                                                     @endif
@@ -69,6 +74,7 @@
                                                             <rect x="6" y="14" width="12" height="8"></rect>
                                                         </svg>Cetak</button>
                                                 </td>
+                                                @endif
                                             </tr>
                                             @endforeach
                                         </tbody>

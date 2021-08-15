@@ -18,10 +18,11 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->string('noreg');
             $table->string('role');
             $table->string('password');
             $table->enum('status_kirim_permohonan', ['belum', 'sudah']);
-            $table->string('kategori_permohonan', null);
+            $table->enum('kategori_permohonan', ['default', 'pemberhentian', 'pengangkatan']);
             $table->rememberToken();
             $table->timestamps();
         });

@@ -19,34 +19,23 @@ class UsulanSaya extends Controller
     {
         $this->middleware('auth');
     }
-    public function usulan()
+    public function usulan(ModelsUsulanSaya $usulan, ModelsUsulanSaya2 $usulan2)
     {
-        $pemberhentian = DB::table('table_pemberhentian')->where('kategori_permohonan')
-            ->orderBy('id', 'desc')
-            ->get();
-        $pengangkatan = DB::table('table_pengangkatan')->where('kategori_permohonan')
-            ->orderBy('id', 'desc')
-            ->get();
-
-
-        // rumus pembeda
-
-        $data[0] = 'pemberhentian';
-        $data[1] = 'pengangkatan';
 
         // untuk ngecek udah ngirim permohonan atau belum
         $cek['user'] = Auth::user()->status_kirim_permohonan;
-        $cek_data = array(
-            "pemberhentian" => $pemberhentian,
-            "pengangkatan" => $pengangkatan,
+
+        $data = array(
+            'pemberhentian' => Auth::user()->kategori_permohonan,
+            'pengangkatan' => Auth::user()->kategori_permohonan
         );
 
         if ($cek['user'] == 'sudah') {
-            if ($cek_data["pemberhentian"] == $data[1]) {
-                $usulan = ModelsUsulanSaya2::all();
+            if ($data['pemberhentian'] == 'pemberhentian') {
+                $usulan = $usulan2->all();
                 return view('layouts.tema.usulan.usulanview', compact('usulan'));
-            } else {
-                $usulan = ModelsUsulanSaya::all();
+            } else if ($data['pengangkatan'] == 'pengangkatan') {
+                $usulan = $usulan->all();
                 return view('layouts.tema.usulan.usulanview', compact('usulan'));
             }
         } else if ($cek['user'] == 'belum') {
