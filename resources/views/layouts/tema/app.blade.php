@@ -26,6 +26,15 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('plugins/select2/select2.min.css') }}">
     <link href="{{ asset('plugins/file-upload/file-upload-with-preview.min.css') }}" rel="stylesheet" type="text/css" />
 
+
+    <!-- data table -->
+    <link href="{{ asset('assets/css/tables/table-basic.css') }}" rel="stylesheet" type="text/css" />
+
+    <!-- penambahan plugin baru -->
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('plugins/table/datatable/datatables.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('plugins/table/datatable/dt-global_style.css') }}">
+
     <!--- tambahan css -->
     <!-- BASE CSS -->
     <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
@@ -50,46 +59,66 @@
 <script src="{{ asset('assets/js/authentication/form-1.js') }}"></script>
 
 <script src="{{ asset('plugins/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
-    <script src="{{ asset('assets/js/app.js') }}"></script>
+<script src="{{ asset('assets/js/app.js') }}"></script>
 
-    <script>
-        $(document).ready(function () {
-            App.init();
-        });
-    </script>
-    <script src="{{ asset('assets/js/custom.js') }}"></script>
-    <!-- END GLOBAL MANDATORY SCRIPTS -->
+<script>
+    $(document).ready(function() {
+        App.init();
+    });
+</script>
+<script src="{{ asset('assets/js/custom.js') }}"></script>
+<!-- END GLOBAL MANDATORY SCRIPTS -->
 
-    <!-- BEGIN PAGE LEVEL SCRIPTS -->
-    <script src="{{ asset('assets/js/scrollspyNav.js') }}"></script>
-    <script src="{{ asset('plugins/jquery-step/jquery.steps.min.js') }}"></script>
-    <script src="{{ asset('plugins/jquery-step/custom-jquery.steps.js') }}"></script>
-    <!-- END PAGE LEVEL SCRIPTS -->
-    <script src="{{ asset('plugins/select2/select2.min.js') }}"></script>
-    <script src="{{ asset('plugins/select2/custom-select2.js') }}"></script>
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="{{ asset('assets/js/scrollspyNav.js') }}"></script>
+<script src="{{ asset('plugins/jquery-step/jquery.steps.min.js') }}"></script>
+<script src="{{ asset('plugins/jquery-step/custom-jquery.steps.js') }}"></script>
+<!-- END PAGE LEVEL SCRIPTS -->
+<script src="{{ asset('plugins/select2/select2.min.js') }}"></script>
+<script src="{{ asset('plugins/select2/custom-select2.js') }}"></script>
 
-    <script src="{{ asset('plugins/file-upload/file-upload-with-preview.min.js') }}"></script>
+<script src="{{ asset('plugins/file-upload/file-upload-with-preview.min.js') }}"></script>
 
-    <script>
-        //First upload
-        var firstUpload = new FileUploadWithPreview('myFirstImage')
-        //Second upload
-        var secondUpload = new FileUploadWithPreview('mySecondImage')
-    </script>
+<script>
+    //First upload
+    var firstUpload = new FileUploadWithPreview('myFirstImage')
+    //Second upload
+    var secondUpload = new FileUploadWithPreview('mySecondImage')
+</script>
 
-    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+<script src="{{ asset('plugins/table/datatable/datatables.js') }}"></script>
+<script>
+    $('#zero-config').DataTable({
+        "dom": "<'dt--top-section'<'row'<'col-12 col-sm-6 d-flex justify-content-sm-start justify-content-center'l><'col-12 col-sm-6 d-flex justify-content-sm-end justify-content-center mt-sm-0 mt-3'f>>>" +
+            "<'table-responsive'tr>" +
+            "<'dt--bottom-section d-sm-flex justify-content-sm-between text-center'<'dt--pages-count  mb-sm-0 mb-3'i><'dt--pagination'p>>",
+        "oLanguage": {
+            "oPaginate": {
+                "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>',
+                "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>'
+            },
+            "sInfo": "Showing page _PAGE_ of _PAGES_",
+            "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+            "sSearchPlaceholder": "Search...",
+            "sLengthMenu": "Results :  _MENU_",
+        },
+        "stripeClasses": [],
+        "lengthMenu": [7, 10, 20, 50],
+        "pageLength": 7
+    });
+</script>
 
-    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+<!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 
-     <!-- tambahan plugin -->
-    <!-- <script src="js/jquery-3.5.1.min.js"></script> -->
-    <!-- <script src="{{ asset('js/common_scripts.min.js') }}"></script>
+<!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+
+<!-- tambahan plugin -->
+<!-- <script src="js/jquery-3.5.1.min.js"></script> -->
+<!-- <script src="{{ asset('js/common_scripts.min.js') }}"></script>
     <script src="{{ asset('js/menu.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
     <script src="{{ asset('js/wizard_func_multiple_branch.js') }}"></script> -->
-    <!-- tutup -->
+<!-- tutup -->
 </body>
+
 </html>
-
-
-
