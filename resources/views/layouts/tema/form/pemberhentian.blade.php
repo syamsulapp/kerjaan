@@ -42,7 +42,7 @@
                                                     <!-- PEMBERHENTIAN -->
                                                     <div class="row">
                                                         <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                                            <h4><b>DATA PERMOHONAN</b></h4>
+                                                            <h4><b>DATA PERMOHONAN @if($data['form']) {{ __('PEMBERHENTIAN') }}@endif</b></h4>
                                                         </div>
                                                     </div> <br> <br>
                                                     <?php
