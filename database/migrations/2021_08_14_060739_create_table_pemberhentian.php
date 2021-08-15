@@ -23,6 +23,7 @@ class CreateTablePemberhentian extends Migration
             $table->string('objekkdh', 128);
             $table->string('penyebabkdh', 128);
             $table->string('kategori_permohonan', 128);
+            $table->string('status_permohonan', 128);
             $table->string('upload1', 128);
             $table->string('upload2', 128);
             $table->string('upload3', 128);

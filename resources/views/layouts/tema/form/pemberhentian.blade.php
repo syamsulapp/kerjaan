@@ -59,7 +59,7 @@
                                                                 <h6>Kategori Permohonan</h6>
                                                             </label>
                                                             <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                <input type="text" name="kategori_permohonan" class="form-control @error('kategori_permohonan') is-invalid @enderror" id="kategori_permohonan" placeholder="kategori_permohonan" value="@if($data['form']) {{ __('Pemberhentian') }} @endif">
+                                                                <input type="text" name="kategori_permohonan" class="form-control @error('kategori_permohonan') is-invalid @enderror" id="kategori_permohonan" placeholder="kategori_permohonan" value="@if($data['form']) {{ __('pemberhentian') }} @endif">
                                                             </div>
                                                             @error('kategori_permohonan')
                                                             <div class="alert alert-danger">{{ $message }}</div>

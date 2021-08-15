@@ -85,9 +85,9 @@ class ControllerUsersManagement extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(ModelsUsersManagement $edit)
     {
-        //
+        return view('layouts.tema.dashboard.view_edit_users', compact('edit'));
     }
 
     /**
@@ -97,9 +97,30 @@ class ControllerUsersManagement extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, ModelsUsersManagement $modifData)
     {
-        //
+        $kostum = [
+            'required' => ':attribute jangan di kosongkan',
+            'max' => 'maksimal 128 karakter ',
+            'min' => 'maksimal 4 karakter ',
+            'same' => 'password tidak sama ',
+        ];
+        $request->validate([
+            'nama' => 'required|max:128|min:4',
+            'email' => 'required',
+            'password' => 'required|max:128|min:4',
+            'konfir-password' => 'required|same:password|max:128|min:4',
+        ], $kostum);
+
+        ModelsUsersManagement::where('id', $modifData->id)
+            ->update([
+                'name' => $request->nama,
+                'email' => $request->email,
+                'role' => $request->role,
+                'password' => Hash::make($request->password)
+            ]);
+
+        return redirect('/admin/users-management')->with('sukses', 'data berhasil di ubah');
     }
 
     /**
@@ -108,8 +129,10 @@ class ControllerUsersManagement extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(ModelsUsersManagement $hapusData)
     {
-        //
+        ModelsUsersManagement::destroy($hapusData->id);
+
+        return redirect('/admin/users-management')->with('sukses', 'Data User Berhasil Di Hapus');
     }
 }

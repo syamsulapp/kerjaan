@@ -3,6 +3,7 @@
 use App\Http\Controllers\Administrator;
 use App\Http\Controllers\ControllerUsersManagement;
 use App\Http\Controllers\Usersiola;
+use App\Http\Controllers\UsulanSaya;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,6 +33,9 @@ Route::prefix('user')->group(function () {
     Route::get('/pilihan', [Usersiola::class, 'pilihan'])->name('user')->middleware(['roleadmin', 'status_permohonan']);
     Route::post('/insert-form_pemberhentian', [Usersiola::class, 'pemberhentian'])->name('insert-form_pemberhentian')->middleware('roleadmin');
     Route::post('/insert-form_pengangkatan', [Usersiola::class, 'pengangkatan'])->name('insert-form_pengangkatan')->middleware('roleadmin');
+
+    // routes usulan saya
+    Route::get('/usulan_saya', [UsulanSaya::class, 'usulan'])->name('usulan_saya')->middleware('roleadmin');
 });
 
 /* Routes group khusus admin */
@@ -44,6 +48,14 @@ Route::prefix('admin')->group(function () {
 
     // users management tambah data
     Route::post('/users-management-tambah', [ControllerUsersManagement::class, 'store'])->middleware('role')->name('users-management-tambah');
+
+    // view edit forms
+    Route::get('/users-management-form/{edit}/edit-data', [ControllerUsersManagement::class, 'edit'])->middleware('role')->name('users-management-form-edit');
+
+    // edit data forms
+    Route::put('/users-management-form/{modifData}/update-data', [ControllerUsersManagement::class, 'update'])->middleware('role')->name('users-management-update-data');
+    // delete 
+    Route::delete('/users-management-delete/{hapusData}/hapus', [ControllerUsersManagement::class, 'destroy'])->middleware('role')->name('users-management-delete');
 });
 
 require __DIR__ . '/auth.php';
