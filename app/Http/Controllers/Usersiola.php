@@ -33,9 +33,11 @@ class Usersiola extends Controller
         if ($status['form'] == '1') {
             $data['form'] = $status['form'];
             return view('layouts.tema.form.pemberhentian', compact('data'));
-        } else {
+        } else if ($status['form'] == '2') {
             $data['form'] = $status['form'];
             return view('layouts.tema.form.pengangkatan', compact('data'));
+        } else {
+            return redirect('/user/view');
         }
     }
 
