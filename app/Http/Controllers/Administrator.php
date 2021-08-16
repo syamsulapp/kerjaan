@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use GuzzleHttp\Psr7\Request;
+use Illuminate\Http\Request;
 
 use App\Models\Pemberhentian;
 use App\Models\Pengangkatan;
+use Illuminate\Support\Facades\DB;
 
 class Administrator extends Controller
 {
@@ -43,6 +44,12 @@ class Administrator extends Controller
     // kasih status buat user apakah disetujui berkasnya atau tidak untuk pemberhentian
     public function update_data_pemberhentian(Request $request, Pemberhentian $pemberhentian)
     {
+
+        DB::table('table_pemberhentian')
+            ->where('id', $request->id)
+            ->update(['status_permohonan' => $request->kirim_status]);
+
+        return redirect('/admin/pemberhentian')->with(['sukses' => 'anda sdh mengirim status ke user yang bersangkutan']);
     }
     public function update_data_pengangkatan(Request $request, Pemberhentian $pemberhentian)
     {

@@ -36,6 +36,11 @@
                                     </div>
                                     <br>
                                     <br>
+                                    @if($pesan = Session::get('sukses'))
+                                    <div class="alert alert-success" role="alert">
+                                        {{ $pesan }}
+                                    </div>
+                                    @endif
                                     <table id="zero-config" class="table dt-table-hover" style="width:100%">
                                         <thead>
                                             <tr>

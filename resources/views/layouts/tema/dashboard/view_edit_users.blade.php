@@ -32,10 +32,19 @@
                                     <div class="widget-header">
                                         <div class="row">
                                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                                <h4>Tambah Users Baru</h4>
+                                                <h4>Edit Users</h4>
                                             </div>
                                         </div>
                                     </div>
+                                    @if($errors->any())
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                    @endif
                                     <div class="widget-content widget-content-area">
                                         <form action="{{ url('/admin/users-management-form') }}{{('/')}}{{$edit->id}}{{('/update-data')}}" method="POST">
                                             @method('put')

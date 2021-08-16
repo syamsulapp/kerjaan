@@ -23,13 +23,6 @@
 
                             <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
                                 <div class="widget-content widget-content-area br-6">
-                                    <div class="widget-header">
-                                        <div class="row">
-                                            <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                                <h4>Buat Permohonan Layanan Administrasi</h4>
-                                            </div>
-                                        </div>
-                                    </div>
                                     <div class="widget-content widget-content-area">
                                         <div id="circle-basic" class="">
                                             <!-- pilihan 2 -->
@@ -43,9 +36,10 @@
                                                             <h4><b>Detail Data Pemberhentian</b></h4>
                                                         </div>
                                                     </div> <br> <br>
-                                                    <form action="#" method="POST" enctype="multipart/form-data">
+                                                    <form action="{{ url('admin/edit-data') }}{{ ('/') }}{{ $data_pemberhentian->id}}{{('/')}}{{ ('ubah') }}" method="POST">
                                                         @method('put')
                                                         @csrf
+                                                        <input type="hidden" name="id" value="{{ $data_pemberhentian->id }}">
                                                         <div class="form-group row mb-4">
                                                             <label for="nama" class="col-xl-2 col-sm-3 col-sm-2 col-form-label">
                                                                 <h6>nama</h6>
@@ -125,13 +119,7 @@
                                                             <label for="fullName">
                                                                 <h6>File Scan KETERANGAN KEASLIAN DOKUMENT DARI BIRO PEMERINTAHAN/OTDA PROVINSI (<i> ASISTEN BIDANG PEMERINTAHAN</i>)</h6>
                                                             </label>
-                                                            <div class="col-xl-10 col-lg-9 col-sm-10">
-                                                                <input type="file" name="upload1" class="form-control-file @error('upload1') is-invalid @enderror" id="exampleFormControlFile1" value="{{ old('upload1') }}">
-                                                            </div>
-                                                            <br>
-                                                            @error('upload1')
-                                                            <span class="alert alert-danger">{{ $message }}</span>
-                                                            @enderror
+                                                            <img src="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->id . '/' . $data_pemberhentian->upload1) }}" alt="upload1" width="400" height="300">
                                                         </div>
                                                         <br>
                                                         <!-- berkas ke 2 -->
@@ -139,13 +127,7 @@
                                                             <label for="fullName">
                                                                 <h6>File Scan FOTOCOPY KEPUTUSAN MENTERI DALAM NEGERI TENTANG PENGANGKATAN BUPATI DAN/ATAU WAKIL BUPATI ATAU WALIKOTA DAN/ATAU WAKIL WALIKOTA YANG BERSANGKUTAN</h6>
                                                             </label>
-                                                            <div class="col-xl-10 col-lg-9 col-sm-10">
-                                                                <input type="file" name="upload2" class="form-control-file  @error('upload2') is-invalid @enderror" id="exampleFormControlFile1" value="{{ old('upload2') }}">
-                                                            </div>
-                                                            <br>
-                                                            @error('upload2')
-                                                            <span class="alert alert-danger">{{ $message }}</span>
-                                                            @enderror
+                                                            <img src="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->id . '/' . $data_pemberhentian->upload2) }}" alt="upload1" width="400" height="300">
                                                         </div>
                                                         <br>
                                                         <!-- berkas ke 3 -->
@@ -156,13 +138,7 @@
                                                                     DAN/ATAU WAKIL WALIKOTA YANG BERSANGKUTAN
                                                                 </h6>
                                                             </label>
-                                                            <div class="col-xl-10 col-lg-9 col-sm-10">
-                                                                <input type="file" name="upload3" class="form-control-file @error('upload3') is-invalid @enderror" id="exampleFormControlFile1" value="{{ old('upload3') }}">
-                                                            </div>
-                                                            <br>
-                                                            @error('upload3')
-                                                            <span class="alert alert-danger">{{ $message }}</span>
-                                                            @enderror
+                                                            <img src="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->id . '/' . $data_pemberhentian->upload3) }}" alt="upload1" width="400" height="300">
                                                         </div>
                                                         <!-- berkas ke 4 -->
                                                         <br>
@@ -175,13 +151,8 @@
                                                                     BERAKHIR MASA JABATANNYA
                                                                 </h6>
                                                             </label>
-                                                            <div class="col-xl-10 col-lg-9 col-sm-10">
-                                                                <input type="file" name="upload4" class="form-control-file  @error('upload4') is-invalid @enderror" id="exampleFormControlFile1" value="{{ old('upload4') }}">
-                                                            </div>
-                                                            <br>
-                                                            @error('upload4')
-                                                            <span class="alert alert-danger">{{ $message }}</span>
-                                                            @enderror
+                                                            <img src="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->id . '/' . $data_pemberhentian->upload4) }}" alt="upload1" width="400" height="300">
+
                                                         </div>
                                                         <!-- berkas ke 5 -->
                                                         <br>
@@ -193,13 +164,8 @@
                                                                     PIMPINAN DPRD KABUPATEN/KOTA KEPADA MENDAGRI
                                                                     MELALUI GUBERNUR</h6>
                                                             </label>
-                                                            <div class="col-xl-10 col-lg-9 col-sm-10">
-                                                                <input type="file" name="upload5" class="form-control-file @error('upload5') is-invalid @enderror" id="exampleFormControlFile1" value="{{ old('upload5') }}">
-                                                            </div>
-                                                            <br>
-                                                            @error('upload5')
-                                                            <span class="alert alert-danger">{{ $message }}</span>
-                                                            @enderror
+                                                            <img src="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->id . '/' . $data_pemberhentian->upload5) }}" alt="upload1" width="400" height="300">
+
                                                         </div>
                                                         <!-- berkas ke 6 -->
                                                         <br>
@@ -210,13 +176,18 @@
                                                                     ATAU WALIKOTA DAN/ATAU WAKIL WALIKOTA OLEH
                                                                     GUBERNUR KEPADA MENDAGRI</h6>
                                                             </label>
-                                                            <div class="col-xl-10 col-lg-9 col-sm-10">
-                                                                <input type="file" name="upload6" class="form-control-file @error('upload6') is-invalid @enderror" id="exampleFormControlFile1" value="{{ old('upload6') }}">
-                                                            </div>
-                                                            <br>
-                                                            @error('upload6')
-                                                            <span class="alert alert-danger">{{ $message }}</span>
-                                                            @enderror
+                                                            <img src="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->id . '/' . $data_pemberhentian->upload6) }}" alt="upload1" width="400" height="300">
+
+                                                        </div>
+                                                        <br>
+                                                        <div class="col-xl-10 col-md-12 col-sm-12 col-12">
+                                                            <label for="fullName">
+                                                                <h6>Kirim Status Berkas</h6>
+                                                                <select class="form-control" name="kirim_status" id="kirim_status">
+                                                                    <option>disapprove</option>
+                                                                    <option>approve</option>
+                                                                </select>
+                                                            </label>
                                                         </div>
                                                         <br>
                                                         <button type="submit" class="btn btn-primary">{{ __('kirim') }}</button>

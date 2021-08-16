@@ -45,14 +45,19 @@ Route::prefix('user')->group(function () {
 /* Routes group khusus admin */
 Route::prefix('admin')->group(function () {
 
+    Route::get('/view', function () {
+        return 'halaman admin';
+    });
+
     /** routes dibawah ini khusus untuk menu dashboard  */
-
-
 
     /** routes dibawah ini khusus untuk menu pemberhentian  */
     Route::get('/pemberhentian', [Administrator::class, 'index_pemberhentian'])->name('pemberhentian')->middleware('role');
     // fungsi edit dan hapus untuk user yang sdh up permohonan
-    Route::get('/edit-data/{pemberhentian}/view', [Administrator::class, 'edit_data_pemberhentian'])->name('edit-data')->middleware('role');;
+    Route::get('/edit-data/{pemberhentian}/view', [Administrator::class, 'edit_data_pemberhentian'])->name('edit-data')->middleware('role');
+
+    Route::put('/edit-data/{pemberhentian}/ubah', [Administrator::class, 'update_data_pemberhentian'])->name('pemberhentian')->middleware('role');
+    /** ================= */
 
 
     /** routes dibawah ini khusus untuk menu pengangkatan  */
