@@ -67,27 +67,27 @@ class Usersiola extends Controller
         // upload dokumen
         if (request()->hasFile('upload1')) {
             $upload1 = request()->file('upload1')->getClientOriginalName();
-            request()->file('upload1')->storeAs('public/dokumen_pemberhentian', Auth::user()->id . '/' . $upload1, '');
+            request()->file('upload1')->storeAs('public/dokumen_pemberhentian', Auth::user()->noreg . '/' . $upload1, '');
         }
         if (request()->hasFile('upload2')) {
             $upload2 = request()->file('upload2')->getClientOriginalName();
-            request()->file('upload2')->storeAs('public/dokumen_pemberhentian', Auth::user()->id . '/' . $upload2, '');
+            request()->file('upload2')->storeAs('public/dokumen_pemberhentian', Auth::user()->noreg . '/' . $upload2, '');
         }
         if (request()->hasFile('upload3')) {
             $upload3 = request()->file('upload3')->getClientOriginalName();
-            request()->file('upload3')->storeAs('public/dokumen_pemberhentian', Auth::user()->id . '/' . $upload3, '');
+            request()->file('upload3')->storeAs('public/dokumen_pemberhentian', Auth::user()->noreg . '/' . $upload3, '');
         }
         if (request()->hasFile('upload4')) {
             $upload4 = request()->file('upload4')->getClientOriginalName();
-            request()->file('upload4')->storeAs('public/dokumen_pemberhentian', Auth::user()->id . '/' . $upload4, '');
+            request()->file('upload4')->storeAs('public/dokumen_pemberhentian', Auth::user()->noreg . '/' . $upload4, '');
         }
         if (request()->hasFile('upload5')) {
             $upload5 = request()->file('upload5')->getClientOriginalName();
-            request()->file('upload5')->storeAs('public/dokumen_pemberhentian', Auth::user()->id . '/' . $upload5, '');
+            request()->file('upload5')->storeAs('public/dokumen_pemberhentian', Auth::user()->noreg . '/' . $upload5, '');
         }
         if (request()->hasFile('upload6')) {
             $upload6 = request()->file('upload6')->getClientOriginalName();
-            request()->file('upload6')->storeAs('public/dokumen_pemberhentian', Auth::user()->id . '/' . $upload6, '');
+            request()->file('upload6')->storeAs('public/dokumen_pemberhentian', Auth::user()->noreg . '/' . $upload6, '');
         }
 
         PemberhentianModels::create([
@@ -153,55 +153,55 @@ class Usersiola extends Controller
         // upload dokumen
         if (request()->hasFile('upload1')) {
             $upload1 = request()->file('upload1')->getClientOriginalName();
-            request()->file('upload1')->storeAs('public/dokumen_pengangkatan', Auth::user()->id . '/' . $upload1, '');
+            request()->file('upload1')->storeAs('public/dokumen_pengangkatan', Auth::user()->noreg . '/' . $upload1, '');
         }
         if (request()->hasFile('upload2')) {
             $upload2 = request()->file('upload2')->getClientOriginalName();
-            request()->file('upload2')->storeAs('public/dokumen_pengangkatan', Auth::user()->id . '/' . $upload2, '');
+            request()->file('upload2')->storeAs('public/dokumen_pengangkatan', Auth::user()->noreg . '/' . $upload2, '');
         }
         if (request()->hasFile('upload3')) {
             $upload3 = request()->file('upload3')->getClientOriginalName();
-            request()->file('upload3')->storeAs('public/dokumen_pengangkatan', Auth::user()->id . '/' . $upload3, '');
+            request()->file('upload3')->storeAs('public/dokumen_pengangkatan', Auth::user()->noreg . '/' . $upload3, '');
         }
         if (request()->hasFile('upload4')) {
             $upload4 = request()->file('upload4')->getClientOriginalName();
-            request()->file('upload4')->storeAs('public/dokumen_pengangkatan', Auth::user()->id . '/' . $upload4, '');
+            request()->file('upload4')->storeAs('public/dokumen_pengangkatan', Auth::user()->noreg . '/' . $upload4, '');
         }
         if (request()->hasFile('upload5')) {
             $upload5 = request()->file('upload5')->getClientOriginalName();
-            request()->file('upload5')->storeAs('public/dokumen_pengangkatan', Auth::user()->id . '/' . $upload5, '');
+            request()->file('upload5')->storeAs('public/dokumen_pengangkatan', Auth::user()->noreg . '/' . $upload5, '');
         }
         if (request()->hasFile('upload6')) {
             $upload6 = request()->file('upload6')->getClientOriginalName();
-            request()->file('upload6')->storeAs('public/dokumen_pengangkatan', Auth::user()->id . '/' . $upload6, '');
+            request()->file('upload6')->storeAs('public/dokumen_pengangkatan', Auth::user()->noreg . '/' . $upload6, '');
         }
         if (request()->hasFile('upload7')) {
             $upload7 = request()->file('upload7')->getClientOriginalName();
-            request()->file('upload7')->storeAs('public/dokumen_pengangkatan', Auth::user()->id . '/' . $upload7, '');
+            request()->file('upload7')->storeAs('public/dokumen_pengangkatan', Auth::user()->noreg . '/' . $upload7, '');
         }
         if (request()->hasFile('upload8')) {
             $upload8 = request()->file('upload8')->getClientOriginalName();
-            request()->file('upload8')->storeAs('public/dokumen_pengangkatan', Auth::user()->id . '/' . $upload8, '');
+            request()->file('upload8')->storeAs('public/dokumen_pengangkatan', Auth::user()->noreg . '/' . $upload8, '');
         }
         if (request()->hasFile('upload9')) {
             $upload9 = request()->file('upload9')->getClientOriginalName();
-            request()->file('upload9')->storeAs('public/dokumen_pengangkatan', Auth::user()->id . '/' . $upload9, '');
+            request()->file('upload9')->storeAs('public/dokumen_pengangkatan', Auth::user()->noreg . '/' . $upload9, '');
         }
         if (request()->hasFile('upload10')) {
             $upload10 = request()->file('upload10')->getClientOriginalName();
-            request()->file('upload10')->storeAs('public/dokumen_pengangkatan', Auth::user()->id . '/' . $upload10, '');
+            request()->file('upload10')->storeAs('public/dokumen_pengangkatan', Auth::user()->noreg . '/' . $upload10, '');
         }
         if (request()->hasFile('upload11')) {
             $upload11 = request()->file('upload11')->getClientOriginalName();
-            request()->file('upload11')->storeAs('public/dokumen_pengangkatan', Auth::user()->id . '/' . $upload11, '');
+            request()->file('upload11')->storeAs('public/dokumen_pengangkatan', Auth::user()->noreg . '/' . $upload11, '');
         }
         if (request()->hasFile('upload12')) {
             $upload12 = request()->file('upload12')->getClientOriginalName();
-            request()->file('upload12')->storeAs('public/dokumen_pengangkatan', Auth::user()->id . '/' . $upload12, '');
+            request()->file('upload12')->storeAs('public/dokumen_pengangkatan', Auth::user()->noreg . '/' . $upload12, '');
         }
         if (request()->hasFile('upload13')) {
             $upload13 = request()->file('upload13')->getClientOriginalName();
-            request()->file('upload13')->storeAs('public/dokumen_pengangkatan', Auth::user()->id . '/' . $upload13, '');
+            request()->file('upload13')->storeAs('public/dokumen_pengangkatan', Auth::user()->noreg . '/' . $upload13, '');
         }
 
         PengangkatanModels::create([

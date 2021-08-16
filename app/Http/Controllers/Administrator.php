@@ -39,6 +39,8 @@ class Administrator extends Controller
 
     public function edit_data_pengangkatan(Pengangkatan $pengangkatan)
     {
+        $data_pengangkatan = $pengangkatan;
+        return view('layouts.tema.dashboard.edit_pengangkatan', compact('data_pengangkatan'));
     }
 
     // kasih status buat user apakah disetujui berkasnya atau tidak untuk pemberhentian
@@ -53,5 +55,10 @@ class Administrator extends Controller
     }
     public function update_data_pengangkatan(Request $request, Pemberhentian $pemberhentian)
     {
+        DB::table('table_pengangkatan')
+            ->where('id', $request->id)
+            ->update(['status_permohonan' => $request->kirim_status]);
+
+        return redirect('/admin/pengangkatan')->with(['sukses' => 'anda sdh mengirim status ke user yang bersangkutan']);
     }
 }

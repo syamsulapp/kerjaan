@@ -63,7 +63,9 @@ Route::prefix('admin')->group(function () {
     /** routes dibawah ini khusus untuk menu pengangkatan  */
     Route::get('/pengangkatan', [Administrator::class, 'index_pengangkatan'])->name('pengangkatan')->middleware('role');
     // fungsi edit dan hapus untuk user yang sdh up permohonan
-    Route::get('/edit-data/{pengangkatan}/view', [Administrator::class, 'edit_data_pengangkatan'])->name('edit-data')->middleware('role');;
+    Route::get('/edit-data-2/{pengangkatan}/view', [Administrator::class, 'edit_data_pengangkatan'])->name('edit-data-pengangkatan')->middleware('role');;
+
+    Route::put('/edit-data-2/{pengangkatan}/ubah', [Administrator::class, 'update_data_pengangkatan'])->name('update-data-pengangkatan')->middleware('role');;
 
 
     /** routes dibawah ini untuk menu users management */

@@ -35,6 +35,11 @@
                                         <h3>Data Pengangkatan</h3>
                                     </div>
                                     <br>
+                                    @if($pesan = Session::get('sukses'))
+                                    <div class="alert alert-success" role="alert">
+                                        {{ $pesan }}
+                                    </div>
+                                    @endif
                                     <br>
                                     <table id="zero-config" class="table dt-table-hover" style="width:100%">
                                         <thead>
@@ -53,7 +58,7 @@
                                                 <td>{{ $ps->nama }}</td>
                                                 <td><span class="badge badge-info">{{ $ps->noreg }}</span></td>
                                                 <td>{{ $ps->kategori_permohonan }}</td>
-                                                <td><a href="#" class="btn btn-primary">view</a></td>
+                                                <td><a href="{{ url('/admin/edit-data-2') }}{{('/')}}{{$ps->id}}{{('/view')}}" class="btn btn-primary">view</a></td>
                                             </tr>
                                             @endforeach
                                         </tbody>

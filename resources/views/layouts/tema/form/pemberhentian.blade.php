@@ -267,6 +267,7 @@
                                                             @enderror
                                                         </div>
                                                         <br>
+                                                        <a class="btn btn-primary d-inline" href="{{ url('user/pilihan') }}" type="submit" di>kembali</a>
                                                         <button type="submit" class="btn btn-primary">{{ __('kirim') }}</button>
                                                     </form>
                                                 </div>
