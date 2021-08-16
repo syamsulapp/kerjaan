@@ -45,11 +45,8 @@ Route::prefix('user')->group(function () {
 /* Routes group khusus admin */
 Route::prefix('admin')->group(function () {
 
-    Route::get('/view', function () {
-        return 'halaman admin';
-    });
-
     /** routes dibawah ini khusus untuk menu dashboard  */
+    Route::get('/view', [Administrator::class, 'adminDashboard'])->name('adminDashboard')->middleware('role');;
 
     /** routes dibawah ini khusus untuk menu pemberhentian  */
     Route::get('/pemberhentian', [Administrator::class, 'index_pemberhentian'])->name('pemberhentian')->middleware('role');

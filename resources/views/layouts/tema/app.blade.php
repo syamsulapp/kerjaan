@@ -31,9 +31,13 @@
     <link href="{{ asset('assets/css/tables/table-basic.css') }}" rel="stylesheet" type="text/css" />
 
     <!-- penambahan plugin baru -->
+    <link href="{{ asset('plugins/apex/apexcharts.css') }}" rel="stylesheet" type="text/css">
     <!-- BEGIN PAGE LEVEL STYLES -->
     <link rel="stylesheet" type="text/css" href="{{ asset('plugins/table/datatable/datatables.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('plugins/table/datatable/dt-global_style.css') }}">
+
+    <link href="{{ asset('assets/css/dashboard/dash_2.css') }}" rel="stylesheet" type="text/css" class="dashboard-sales" />
+
 
     <!--- tambahan css -->
     <!-- BASE CSS -->
@@ -85,6 +89,11 @@
     //Second upload
     var secondUpload = new FileUploadWithPreview('mySecondImage')
 </script>
+
+<script src="{{ asset('plugins/apex/apexcharts.min.js') }}"></script>
+
+<script src="{{ asset('assets/js/dashboard/dash_2.js') }}"></script>
+
 
 <script src="{{ asset('plugins/table/datatable/datatables.js') }}"></script>
 <script>

@@ -9,6 +9,8 @@ use App\Models\Pemberhentian;
 use App\Models\Pengangkatan;
 use Illuminate\Support\Facades\DB;
 
+use App\Models\ModelsDashboard;
+
 class Administrator extends Controller
 {
 
@@ -16,6 +18,14 @@ class Administrator extends Controller
     {
         // jalnanin session
         $this->middleware('auth');
+    }
+
+    // admin dashboard
+
+    public function adminDashboard(ModelsDashboard $dash)
+    {
+        $dashboard = $dash->all();
+        return view('layouts.tema.dashboard.admindash', compact('dashboard'));
     }
     // view forms (for admin)
     public function index_pemberhentian()
