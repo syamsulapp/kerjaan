@@ -118,7 +118,7 @@
                                                             <label for="fullName">
                                                                 <h6>File Scan KETERANGAN KEASLIAN DOKUMENT DARI BIRO PEMERINTAHAN/OTDA PROVINSI (<i> ASISTEN BIDANG PEMERINTAHAN</i>)</h6>
                                                             </label>
-                                                            <img src="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload1) }}" alt="upload1" width="400" height="300">
+                                                            <a href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload1) }}"></a>
                                                         </div>
                                                         <br>
                                                         <!-- berkas ke 2 -->
@@ -126,7 +126,7 @@
                                                             <label for="fullName">
                                                                 <h6>File Scan FOTOCOPY KEPUTUSAN MENTERI DALAM NEGERI TENTANG PENGANGKATAN BUPATI DAN/ATAU WAKIL BUPATI ATAU WALIKOTA DAN/ATAU WAKIL WALIKOTA YANG BERSANGKUTAN</h6>
                                                             </label>
-                                                            <img src="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload2) }}" alt="upload1" width="400" height="300">
+                                                            <a href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload2) }}"></a>
                                                         </div>
                                                         <br>
                                                         <!-- berkas ke 3 -->
@@ -137,7 +137,7 @@
                                                                     DAN/ATAU WAKIL WALIKOTA YANG BERSANGKUTAN
                                                                 </h6>
                                                             </label>
-                                                            <img src="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload3) }}" alt="upload1" width="400" height="300">
+                                                            <a href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload3) }}"></a>
                                                         </div>
                                                         <!-- berkas ke 4 -->
                                                         <br>
@@ -150,7 +150,7 @@
                                                                     BERAKHIR MASA JABATANNYA
                                                                 </h6>
                                                             </label>
-                                                            <img src="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload4) }}" alt="upload1" width="400" height="300">
+                                                            <a href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload4) }}"></a>
 
                                                         </div>
                                                         <!-- berkas ke 5 -->
@@ -163,7 +163,7 @@
                                                                     PIMPINAN DPRD KABUPATEN/KOTA KEPADA MENDAGRI
                                                                     MELALUI GUBERNUR</h6>
                                                             </label>
-                                                            <img src="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload5) }}" alt="upload1" width="400" height="300">
+                                                            <a href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload5) }}"></a>
 
                                                         </div>
                                                         <!-- berkas ke 6 -->
@@ -175,7 +175,7 @@
                                                                     ATAU WALIKOTA DAN/ATAU WAKIL WALIKOTA OLEH
                                                                     GUBERNUR KEPADA MENDAGRI</h6>
                                                             </label>
-                                                            <img src="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload6) }}" alt="upload1" width="400" height="300">
+                                                            <a href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload6) }}"></a>
 
                                                         </div>
                                                         <br>

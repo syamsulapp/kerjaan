@@ -46,9 +46,9 @@ class Usersiola extends Controller
 
         $namavalidasi = [
             'required' => ':attribute jangan di kosongkan',
-            'mimes' => 'untuk file :attribute yang di izinkan hanya jpg / png',
+            'mimetypes' => 'untuk file :attribute yang di izinkan hanya pdf',
             'unique' => 'anda sdh pernah mengirim permohonan sebelumnya',
-            'max' => 'file yang di upload tidak boleh melebihi 256kb'
+            'max' => 'file yang di upload tidak boleh melebihi 1 mb'
         ];
 
 
@@ -57,12 +57,12 @@ class Usersiola extends Controller
             'kategori_permohonan' => 'required',
             'nama' => 'required',
             'provinsi' => 'required',
-            'upload1' => 'required|file|mimes:jpg,png|max:256',
-            'upload2' => 'required|file|mimes:jpg,png|max:256',
-            'upload3' => 'required|file|mimes:jpg,png|max:256',
-            'upload4' => 'required|file|mimes:jpg,png|max:256',
-            'upload5' => 'required|file|mimes:jpg,png|max:256',
-            'upload6' => 'required|file|mimes:jpg,png|max:256',
+            'upload1' => 'required|file|mimetypes:application/pdf|max:1024',
+            'upload2' => 'required|file|mimetypes:application/pdf|max:1024',
+            'upload3' => 'required|file|mimetypes:application/pdf|max:1024',
+            'upload4' => 'required|file|mimetypes:application/pdf|max:1024',
+            'upload5' => 'required|file|mimetypes:application/pdf|max:1024',
+            'upload6' => 'required|file|mimetypes:application/pdf|max:1024',
         ], $namavalidasi);
 
         // upload dokumen

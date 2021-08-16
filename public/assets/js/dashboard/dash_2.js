@@ -427,7 +427,7 @@ var options = {
       show: true,
       width: 25,
     },
-    series: [985, 737],
+    series: [2, 2],
     labels: ['Pengangkatan', 'Pemberhentian'],
     responsive: [{
         breakpoint: 1599,
