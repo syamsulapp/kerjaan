@@ -3,7 +3,7 @@
 
     <div class="theme-logo">
         <a href="#">
-            <img src="assets/img/90x90.jpg" class="navbar-logo" alt="logo">
+            <img src="{{ url('fronts/assets/img/favicon.png') }}" class="navbar-logo" alt="logo">
             <span class="admin-logo">{{ ('SIOLA') }}<span></span></span>
         </a>
     </div>
