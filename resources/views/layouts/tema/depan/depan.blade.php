@@ -7,15 +7,10 @@
 <body>
     <section id="topbar" class="d-flex align-items-center">
         <div class="container d-flex justify-content-center justify-content-md-between">
-            <div class="contact-info d-flex align-items-center">
-                <div class="logo">
-                    <h1><a href="index.html"><img src="{{ url('fronts/assets/img/header_frontend.png') }}" width="290" height="40"></a></h1>
-                    <!-- Uncomment below if you prefer to use an image logo -->
-                    <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-                </div>
-            </div>
             <div class="social-links d-none d-md-flex align-items-center">
                 <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">pengaduan@kemendagri.go.id</a></i>
+            </div>
+            <div class="social-links d-none d-md-flex align-items-center">
                 <i class="bi bi-phone d-flex align-items-center ms-4"><span>(021) 3521468</span></i>
             </div>
         </div>
@@ -24,74 +19,17 @@
     <header id="header" class="d-flex align-items-center">
         <div class="container d-flex justify-content-between align-items-center">
 
+            <div class="logo">
+                <h1><a href="index.html"><img src="{{ url('fronts/assets/img/header_frontend.png') }}" width="290" height="40"></a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            </div>
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="active" href="index.html">Beranda</a></li>
-                    <li class="dropdown"><a href="#"><span>Tentang ULA</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">Visi,Misi, Motto dan Maklumat Pelayanan</a></li>
-                            <li><a href="#">Mekanisme dan Alur Layanan Administrasi dan Konsultasi Online</a></li>
-                            <li><a href="#">Road Map ULA Kemendagri</a></li>
-                            <li><a href="#">SOP Jenis Layanan Administrasi</a></li>
-                            <li><a href="#">Progres Layanan Administrasi dan Konsultasi Tahun 2019</a></li>
-                            <li><a href="#">Galeri</a></li>
-                            <li><a href="#">Kontak</a></li>
-                            <li><a href="#">Survei 2019</a></li>
-                            <li><a href="#">Penghargaan</a></li>
-                            <li><a href="#">Sertifikat Petugas Layanan Terbaik</a></li>
-                            <li><a href="#">Struktur Organisasi</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="#"><span>Brosur Layanan</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">Evaluasi Rancangan Peraturan Daerah tentang APBD dan Rancangan <br> Peraturan Gubernur
-                                    tentang Penjabaran APBD</a></li>
-                            <li><a href="#">Evaluasi Rancangan Peraturan Daerah tentang Pertanggungjawaban Pelaksanaan <br> APBD
-                                    dan
-                                    Rancangan Peraturan Gubernur tentang Penjabaran Pertanggungjawaban <br> Pelaksanaan APBD</a></li>
-                            <li><a href="#">Evaluasi Rancangan Peraturan Daerah Tentang Perubahan APBD dan Rancangan <br>
-                                    Peraturan
-                                    Peraturan Gubernur tentang Penjabaran Perubahan APBD</a></li>
-                            <li><a href="#">Rekomendasi Izin Perjalanan Dinas Luar Negeri Bagi Pejabat Negara & DPRD Provinsi,
-                                    <br> Kabupaten/Kota</a></li>
-                            <li><a href="#">Rekomendasi Izin Perjalanan Dinas Luar Negeri Bagi ASN Pemda</a></li>
+                    <li><a class="active" href="index.html">Home</a></li>
 
-                            <li><a href="#">Pemberitahuan Penelitian Orang Asing dan Lembaga Asing</a></li>
-                            <li><a href="#">Penerbitan Kepmendagri Tentang Pemberhentian <br> dan Pengangkatan Bupati/Wakil Bupati
-                                    atau
-                                    Walikota/Wakil Walikota</a></li>
-                            <li><a href="#">Penerbitan Kepmendagri Tentang Peresmian Pergantian Antar Waktu(PAW) <br> Anggota DPRD
-                                    Provinsi</a></li>
-                            <li><a href="#">Penerbitan Surat Keterangan Terdaftar (SKT)</a></li>
-                            <li><a href="#">Pemberian Rekomendasi Penelitian</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="Berita.html">Berita</a></li>
-                    <li class="dropdown"><a href="#"><span>Galeri</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="portfolio.html">Galeri Photo</a></li>
-                            <li><a href="portfolio.html">Galeri Vidio</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="About">About</a></li>
 
-                    <li class="dropdown"><a href="#"><span>Dokumen</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="services.html">MANUAL LAYANAN ADMINISTRASI</a></li>
-                            <li><a href="services.html">MANUAL LAYANAN KONSULTASI</a></li>
-                            <li><a href="#">Kepmendagri 061-8490 tentang Standar Pelayanan Publik</a></li>
-                            <li><a href="#">SE Mendagri kepada Bupati dan Walikota</a></li>
-                            <li><a href="#">SE Mendagri kepada Gubernur Se Indonesia</a></li>
-                            <li><a href="">SE Mendagri kepada Komponen Kemendagri</a></li>
-                            <li><a href="">Surat Edaran Mendagri tentang Penerapan <br> Layanan Online untuk Daerah
-                                    Indonesia</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="#"><span>Survei Kepuasan Masyarakat</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="services.html">Survei Index Kepuasan Masyarakat 2019</a></li>
-                            <li><a href="services.html">Survei Index Kepuasan Masyarakat 2020</a></li>
-                        </ul>
-                    </li>
                     <li><a href="{{ route('login') }} "><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
                                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                 <circle cx="12" cy="7" r="4"></circle>
@@ -173,93 +111,25 @@
             <div class="container">
 
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-6 pt-4 pt-lg-0">
                         <div class="icon-box">
                             <i class="bi bi-card-checklist"></i>
-                            <h3><a href="">Lorem Ipsum</a></h3>
+                            <h3><a href="">Pemberhentian</a></h3>
                             <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate
                                 non provident</p>
                         </div>
                     </div>
-                    <div class="col-lg-4 mt-4 mt-lg-0">
+                    <div class="col-lg-6 pt-4 pt-lg-0 content">
                         <div class="icon-box">
                             <i class="bi bi-bar-chart"></i>
-                            <h3><a href="">Dolor Sitema</a></h3>
+                            <h3><a href="">Pengangkatan</a></h3>
                             <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad
                                 limino ata</p>
                         </div>
                     </div>
-                    <div class="col-lg-4 mt-4 mt-lg-0">
-                        <div class="icon-box">
-                            <i class="bi bi-binoculars"></i>
-                            <h3><a href="">Sed ut perspiciatis</a></h3>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
-                            </p>
-                        </div>
-                    </div>
                 </div>
-
-            </div>
-        </section><!-- End Featured Section -->
-
-        <!-- ======= Services Section ======= -->
-        <section id="services" class="services">
-            <div class="container">
-
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                            <h4><a href="">Lorem Ipsum</a></h4>
-                            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-file"></i></div>
-                            <h4><a href="">Sed ut perspiciatis</a></h4>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-tachometer"></i></div>
-                            <h4><a href="">Magni Dolores</a></h4>
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-world"></i></div>
-                            <h4><a href="">Nemo Enim</a></h4>
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-slideshow"></i></div>
-                            <h4><a href="">Dele cardo</a></h4>
-                            <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-arch"></i></div>
-                            <h4><a href="">Divera don</a></h4>
-                            <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
         </section>
-        <!-- End Services Section -->
+        <!-- End Featured Section -->
 
         <section id="footer">
             <div class="footer-newsletter">
