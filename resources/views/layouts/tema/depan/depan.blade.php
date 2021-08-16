@@ -233,16 +233,16 @@
 
         <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong><span>ULA Kemendagri</span></strong>. <script>
-                    document.write(new Date().getFullYear())
-                </script>
+                &copy; Copyright <strong><span>ULA Kemendagri</span></strong>.
             </div>
             <div class="credits">
                 <!-- All the links in the footer should remain intact. -->
                 <!-- You can delete the links only if you purchased the pro version. -->
                 <!-- Licensing information: https://bootstrapmade.com/license/ -->
                 <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/eterna-free-multipurpose-bootstrap-template/ -->
-                Designed by <a href="#">SIOLA</a>
+                Designed by <a href="#">Green Tech Studio </a>. <script>
+                    document.write(new Date().getFullYear())
+                </script>
             </div>
         </div>
     </footer>
