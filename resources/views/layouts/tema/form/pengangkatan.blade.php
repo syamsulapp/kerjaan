@@ -91,7 +91,7 @@
                                                                 <h6>Provinsi</h6>
                                                             </label>
                                                             <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                <input type="text" name="provinsi" class="form-control @error('provinsi') is-invalid @enderror" id="hEmail" placeholder="">
+                                                                <input type="text" name="provinsi" class="form-control @error('provinsi') is-invalid @enderror" id="hEmail" placeholder="" value="{{ old('provinsi') }}">
                                                             </div>
                                                             @error('provinsi')
                                                             <div class="alert alert-danger">{{ $message }}</div>

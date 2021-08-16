@@ -127,7 +127,7 @@ class Usersiola extends Controller
     {
         $namavalidasi = [
             'required' => ':attribute jangan di kosongkan',
-            'mimes' => 'untuk file :attribute yang di izinkan hanya jpg / png',
+            'mimetypes' => 'untuk file :attribute yang di izinkan hanya pdf ',
             'unique' => 'anda sdh pernah mengirim permohonan sebelumnya'
         ];
 
@@ -136,19 +136,19 @@ class Usersiola extends Controller
             'kategori_permohonan' => 'required',
             'nama' => 'required',
             'provinsi' => 'required',
-            'upload1' => 'required|file|mimes:jpg,png|max:256',
-            'upload2' => 'required|file|mimes:jpg,png|max:256',
-            'upload3' => 'required|file|mimes:jpg,png|max:256',
-            'upload4' => 'required|file|mimes:jpg,png|max:256',
-            'upload5' => 'required|file|mimes:jpg,png|max:256',
-            'upload6' => 'required|file|mimes:jpg,png|max:256',
-            'upload7' => 'required|file|mimes:jpg,png|max:256',
-            'upload8' => 'required|file|mimes:jpg,png|max:256',
-            'upload9' => 'required|file|mimes:jpg,png|max:256',
-            'upload10' => 'required|file|mimes:jpg,png|max:256',
-            'upload11' => 'required|file|mimes:jpg,png|max:256',
-            'upload12' => 'required|file|mimes:jpg,png|max:256',
-            'upload13' => 'required|file|mimes:jpg,png|max:256',
+            'upload1' => 'required|file|mimetypes:application/pdf|max:1024',
+            'upload2' => 'required|file|mimetypes:application/pdf|max:1024',
+            'upload3' => 'required|file|mimetypes:application/pdf|max:1024',
+            'upload4' => 'required|file|mimetypes:application/pdf|max:1024',
+            'upload5' => 'required|file|mimetypes:application/pdf|max:1024',
+            'upload6' => 'required|file|mimetypes:application/pdf|max:1024',
+            'upload7' => 'required|file|mimetypes:application/pdf|max:1024',
+            'upload8' => 'required|file|mimetypes:application/pdf|max:1024',
+            'upload9' => 'required|file|mimetypes:application/pdf|max:1024',
+            'upload10' => 'required|file|mimetypes:application/pdf|max:1024',
+            'upload11' => 'required|file|mimetypes:application/pdf|max:1024',
+            'upload12' => 'required|file|mimetypes:application/pdf|max:1024',
+            'upload13' => 'required|file|mimetypes:application/pdf|max:1024',
         ], $namavalidasi);
 
         // upload dokumen

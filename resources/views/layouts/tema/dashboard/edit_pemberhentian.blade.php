@@ -118,7 +118,8 @@
                                                             <label for="fullName">
                                                                 <h6>File Scan KETERANGAN KEASLIAN DOKUMENT DARI BIRO PEMERINTAHAN/OTDA PROVINSI (<i> ASISTEN BIDANG PEMERINTAHAN</i>)</h6>
                                                             </label>
-                                                            <a href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload1) }}"></a>
+                                                            <br>
+                                                            <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload1) }}">File Scan KETERANGAN KEASLIAN DOKUMENT</a>
                                                         </div>
                                                         <br>
                                                         <!-- berkas ke 2 -->
@@ -126,7 +127,8 @@
                                                             <label for="fullName">
                                                                 <h6>File Scan FOTOCOPY KEPUTUSAN MENTERI DALAM NEGERI TENTANG PENGANGKATAN BUPATI DAN/ATAU WAKIL BUPATI ATAU WALIKOTA DAN/ATAU WAKIL WALIKOTA YANG BERSANGKUTAN</h6>
                                                             </label>
-                                                            <a href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload2) }}"></a>
+                                                            <br>
+                                                            <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload2) }}">File Scan FOTOCOPY KEPUTUSAN MENTERI DALAM NEGERI</a>
                                                         </div>
                                                         <br>
                                                         <!-- berkas ke 3 -->
@@ -137,7 +139,8 @@
                                                                     DAN/ATAU WAKIL WALIKOTA YANG BERSANGKUTAN
                                                                 </h6>
                                                             </label>
-                                                            <a href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload3) }}"></a>
+                                                            <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload3) }}">File Scan FOTOCOPY BERITA ACARA PELANTIKAN
+                                                                BUPATI DAN/ATAU WAKIL BUPATI</a>
                                                         </div>
                                                         <!-- berkas ke 4 -->
                                                         <br>
@@ -150,7 +153,8 @@
                                                                     BERAKHIR MASA JABATANNYA
                                                                 </h6>
                                                             </label>
-                                                            <a href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload4) }}"></a>
+                                                            <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload4) }}">File Scan SURAT RISALAH DAN BERITA ACARA
+                                                                RAPAT PARIPURNA DPRD</a>
 
                                                         </div>
                                                         <!-- berkas ke 5 -->
@@ -163,7 +167,10 @@
                                                                     PIMPINAN DPRD KABUPATEN/KOTA KEPADA MENDAGRI
                                                                     MELALUI GUBERNUR</h6>
                                                             </label>
-                                                            <a href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload5) }}"></a>
+                                                            <br>
+                                                            <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload5) }}">File Scan SURAT USULAN PENGESAHAN
+                                                                PEMBERHENTIAN BUPATI DAN/ATAU WAKIL BUPATI
+                                                                ATAU WALIKOTA </a>
 
                                                         </div>
                                                         <!-- berkas ke 6 -->
@@ -175,7 +182,9 @@
                                                                     ATAU WALIKOTA DAN/ATAU WAKIL WALIKOTA OLEH
                                                                     GUBERNUR KEPADA MENDAGRI</h6>
                                                             </label>
-                                                            <a href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload6) }}"></a>
+                                                            <br>
+                                                            <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload6) }}">File Scan SURAT USULAN PENGESAHAN
+                                                                PEMBERHENTIAN</a>
 
                                                         </div>
                                                         <br>

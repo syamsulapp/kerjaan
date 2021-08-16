@@ -107,7 +107,9 @@
                                                                 <label for="fullName">
                                                                     <h6>File Scan SURAT KETERANGAN KEASLIAN DOCUMENT DARI BIRO PEMERINTAHAN/OTDA PROVINSI (ASISTEN BIDANG PEMERINTAHAN)</h6>
                                                                 </label>
-                                                                <img src="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload1) }}" alt="upload1" width="400" height="300">
+                                                                <br>
+                                                                <br>
+                                                                <a class="btn btn-primary" href="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload1) }}">File Scan SURAT KETERANGAN </a>
                                                             </div>
                                                             <br>
                                                             <!-- berkas ke 2 -->
@@ -115,7 +117,8 @@
                                                                 <label for="fullName">
                                                                     <h6>File Scan FOTOCOPY KEPUTUSAN MENTERI DALAM NEGERI TENTANG PENGANGKATAN BUPATI DAN WAKIL BUPATI ATAU WALIKOTA DAN WAKIL WALIKOTA PERIODE SEBELUMNYA</h6>
                                                                 </label>
-                                                                <img src="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload2) }}" alt="upload2" width="400" height="300">
+                                                                <br>
+                                                                <a class="btn btn-primary" href="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload2) }}">File Scan FOTOCOPY KEPUTUSAN MENTERI</a>
                                                             </div>
                                                             <br>
                                                             <!-- berkas ke 3 -->
@@ -124,7 +127,8 @@
                                                                     <h6>File Scan FOTOCOPY KEPUTUSAN MENTERI DALAM NEGERI TENTANG PENGANGKATAN PEJABAT BUPATI/WALIKOTA (DALAM HAL DAERAH DIPIMPIN OLEH PEJABAT)
                                                                     </h6>
                                                                 </label>
-                                                                <img src="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload3) }}" alt="upload3" width="400" height="300">
+                                                                <br>
+                                                                <a class="btn btn-primary" href="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload3) }}">FOTOCOPY KEPUTUSAN MENTERI DALAM NEGERI </a>
                                                             </div>
                                                             <br>
                                                             <!-- berkas ke 4 -->
@@ -135,7 +139,8 @@
                                                                         DAN WAKIL WALIKOTA PERIODE SEBELUMNYA
                                                                     </h6>
                                                                 </label>
-                                                                <img src="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload4) }}" alt="upload4" width="400" height="300">
+                                                                <br>
+                                                                <a class="btn btn-primary" href="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload4) }}">File Scan FOTOCOPY BERITA ACARA </a>
                                                             </div>
                                                             <!-- berkas ke 5 -->
                                                             <br>
@@ -144,7 +149,8 @@
                                                                     <h6>File Scan KEPUTUSAN KPU KABUPATEN/KOTA TENTANG REKAPPITULASI HASIL PERHITUNGAN SUARA
                                                                     </h6>
                                                                 </label>
-                                                                <img src="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload5) }}" alt="upload5" width="400" height="300">
+                                                                <br>
+                                                                <a class="btn btn-primary" href="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload5) }}">File Scan KEPUTUSAN KPU KABUPATEN</a>
                                                             </div>
                                                             <!-- berkas ke 6 -->
                                                             <br>
@@ -152,7 +158,8 @@
                                                                 <label for="fullName">
                                                                     <h6>File Scan KEPUTUSAN KPU KABUPATEN/KOTA TENTANG PENETAPAN PASANGAN CALON TERPILIH</h6>
                                                                 </label>
-                                                                <img src="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload6) }}" alt="upload6" width="400" height="300">
+                                                                <br>
+                                                                <a class="btn btn-primary" href="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload6) }}">FILE TENTANG PENETAPAN PASANGAN </a>
                                                             </div>
                                                             <!-- berkas ke 7 -->
                                                             <br>
@@ -160,7 +167,8 @@
                                                                 <label for="fullName">
                                                                     <h6>File Scan RISALAH DAN BERITA ACARA RAPAT PARIPURNA DPRD KABUPATEN/KOTA DALAM RANGKA PENGUMUMAN PENETAPAN PASANGAN CALON BUPATI DAN WAKIL BUPATI ATAU WALIKOTA DAN WAKIL WALIKOTA TERPILIH</h6>
                                                                 </label>
-                                                                <img src="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload7) }}" alt="upload7" width="400" height="300">
+                                                                <br>
+                                                                <a class="btn btn-primary" href="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload7) }}">File Scan RISALAH DAN BERITA ACARA</a>
                                                             </div>
                                                             <!-- berkas ke 8 -->
                                                             <br>
@@ -168,7 +176,8 @@
                                                                 <label for="fullName">
                                                                     <h6>File Scan PUTUSAN MAHKAMAH KONSTITUSI RI TENTANG PERSELISIHAN HASIL PEMILIHAN (APABILA TERDAPAT GUGATAN)</h6>
                                                                 </label>
-                                                                <img src="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload8) }}" alt="upload8" width="400" height="300">
+                                                                <br>
+                                                                <a class="btn btn-primary" href="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload8) }}">File Scan PUTUSAN MAHKAMAH KONSTITUSI </a>
                                                             </div>
                                                             <!-- berkas ke 9 -->
                                                             <br>
@@ -176,7 +185,8 @@
                                                                 <label for="fullName">
                                                                     <h6>File Scan SURAT MAHKAMAH KONSTITUSI RI MENGENAI TIDA TERDAFTARNYA GUGATAN PERSELISIHAN HASIL PEMILIHAN (APABILA TIDAK TERDAPAT GUGATAN)</h6>
                                                                 </label>
-                                                                <img src="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload9) }}" alt="upload9" width="400" height="300">
+                                                                <br>
+                                                                <a class="btn btn-primary" href="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload9) }}">File Scan TERDAFTARNYA GUGATAN </a>
                                                             </div>
                                                             <!-- berkas ke 10 -->
                                                             <br>
@@ -184,7 +194,8 @@
                                                                 <label for="fullName">
                                                                     <h6>File Scan SURAT KPU RI PERIHAL PENETAPAN PASANGAN CALON TERPILIH TANPA PERMOHONAN PERSELISIHAN HASIL PEMILIHAN DI MAHKAMAH KONSTITUSI RI (APABILA TIDAK TERDAPAT GUGATAN)</h6>
                                                                 </label>
-                                                                <img src="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload10) }}" alt="upload10" width="400" height="300">
+                                                                <br>
+                                                                <a class="btn btn-primary" href="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload10) }}">File Scan SURAT KPU RI PERIHAL</a>
                                                             </div>
                                                             <!-- berkas ke 11 -->
                                                             <br>
@@ -192,7 +203,8 @@
                                                                 <label for="fullName">
                                                                     <h6>File Scan SURAT PENYAMPAIAN PENETAPAN PASANGAN CALON TERPILIH OLEH PKU KABUPATEN/KOTA KEPADA DPRD KABUPATEN/KOTA</h6>
                                                                 </label>
-                                                                <img src="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload11) }}" alt="upload11" width="400" height="300">
+                                                                <br>
+                                                                <a class="btn btn-primary" href="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload11) }}">File Scan SURAT PENYAMPAIAN</a>
                                                             </div>
                                                             <!-- berkas ke 12 -->
                                                             <br>
@@ -200,7 +212,8 @@
                                                                 <label for="fullName">
                                                                     <h6>File Scan SURAT USULAN PENGESAHAN PENGANGKATAN PASANGAN CALON BUPATI DAN WAKIL BUPATI ATAU WALIKOTA DAN WAKIL WALIKOTA OLEH DPRD KABUPATEN/KOTA KEPADA MENDAGRI MELALUI GUBERNUR</h6>
                                                                 </label>
-                                                                <img src="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload12) }}" alt="upload12" width="400" height="300">
+                                                                <br>
+                                                                <a class="btn btn-primary" href="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload12) }}">File Scan SURAT USULAN PENGESAHAN</a>
                                                             </div>
                                                             <!-- berkas ke 13 -->
                                                             <br>
@@ -208,7 +221,8 @@
                                                                 <label for="fullName">
                                                                     <h6>File Scan SURAT USULAN PENGESAHAN PENGANGKATAN PASANGAN CALON BUPATI DAN WAKIL BUPATI ATAU WALIKOTA DAN WAKIL WALIKOTA OLEH GUBERNUR KEPADA MENDAGRI</h6>
                                                                 </label>
-                                                                <img src="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload13) }}" alt="upload13" width="400" height="300">
+                                                                <br>
+                                                                <a class="btn btn-primary" href="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload13) }}">File Scan SURAT WALIKOTA OLEH GUBERNUR</a>
                                                             </div>
                                                             <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                 <label for="fullName">
