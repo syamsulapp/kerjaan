@@ -600,8 +600,24 @@ section {
   left: calc(50% - 25px);
 }
 
-.section-title p {
-  margin-bottom: 0;
+.section-title h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-title h3::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #e96b56;
+  bottom: 0;
+  left: calc(50% - 25px);
 }
 
 /*--------------------------------------------------------------
