@@ -59,7 +59,7 @@
                                 <div class="widget widget-activity-four">
 
                                     <div class="widget-heading">
-                                        <h5 class="">Aktivitas Users</h5>
+                                        <h5 class="">Daftar Users</h5>
                                         <div class="w-icon">
                                             <a class="btn btn-primary" href="javascript:void(0);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
                                                     <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -73,19 +73,15 @@
                                         <div class="mt-container mx-auto">
                                             <div class="timeline-line">
                                                 @foreach($dashboard as $ds)
-                                                @if($ds->noreg == 1221975634)
-                                                @continue
-                                                @else
                                                 <div class="item-timeline timeline-primary">
                                                     <div class="t-dot" data-original-title="" title="">
                                                     </div>
                                                     <div class="t-text">
                                                         <p><span>{{ $ds->name}}</span> {{ $ds->noreg}}</p>
-                                                        <span class="badge">{{ $ds->kategori_permohonan }}</span>
-                                                        <p class="t-time">{{ $ds->status_kirim_permohonan }}</p>
+                                                        <span class="badge">{{ $ds->role }}</span>
+                                                        <p class="t-time">{{ $ds->created_at }}</p>
                                                     </div>
                                                 </div>
-                                                @endif
                                                 @endforeach
 
                                             </div>
