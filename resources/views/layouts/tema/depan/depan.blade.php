@@ -29,11 +29,19 @@
                     <li><a class="active" href="index.html">Home</a></li>
 
                     <li><a href="About">About</a></li>
-
+                    @if(Route::has('login'))
+                    @auth
+                    <li><a href="{{ url('/admin/view') }} "><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg> {{ Auth::user()->name }}</a></li>
+                    @else
                     <li><a href="{{ route('login') }} "><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
                                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                 <circle cx="12" cy="7" r="4"></circle>
                             </svg> Login</a></li>
+                    @endauth
+                    @endif
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>

@@ -427,8 +427,8 @@ var options = {
       show: true,
       width: 25,
     },
-    series: [985, 737, 270],
-    labels: ['Apparel', 'Sports', 'Others'],
+    series: [985, 737],
+    labels: ['Pengangkatan', 'Pemberhentian'],
     responsive: [{
         breakpoint: 1599,
         options: {
