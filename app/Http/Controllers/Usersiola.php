@@ -47,7 +47,8 @@ class Usersiola extends Controller
         $namavalidasi = [
             'required' => ':attribute jangan di kosongkan',
             'mimes' => 'untuk file :attribute yang di izinkan hanya jpg / png',
-            'unique' => 'anda sdh pernah mengirim permohonan sebelumnya'
+            'unique' => 'anda sdh pernah mengirim permohonan sebelumnya',
+            'max' => 'file yang di upload tidak boleh melebihi 256kb'
         ];
 
 
