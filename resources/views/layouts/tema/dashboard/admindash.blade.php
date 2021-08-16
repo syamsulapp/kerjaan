@@ -29,7 +29,7 @@
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
                                 <div class="widget widget-chart-one">
                                     <div class="widget-heading">
-                                        <h5 class="">Revenue</h5>
+                                        <h5 class="">Data Statistik Permohonan Users</h5>
                                         <div class="task-action">
                                             <div class="dropdown">
                                                 <a class="dropdown-toggle" href="#" role="button" id="pendingTask" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -104,7 +104,7 @@
                             <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
                                 <div class="widget widget-chart-two">
                                     <div class="widget-heading">
-                                        <h5 class="">Sales by Category</h5>
+                                        <h5 class="">Total Data Permohonan</h5>
                                         <div class="w-icon">
                                             <a class="btn btn-primary" href="javascript:void(0);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
                                                     <line x1="5" y1="12" x2="19" y2="12"></line>
