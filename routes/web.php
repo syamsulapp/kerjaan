@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('layouts.tema.depan.depan');
 });
-
+/** routes ini untuk halaman depan (front end) */
 Route::prefix('menu')->group(function () {
     Route::get('about', [Front::class, 'about'])->name('about');
 });
