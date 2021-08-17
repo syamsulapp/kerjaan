@@ -3,6 +3,7 @@
 use App\Http\Controllers\Administrator;
 use App\Http\Controllers\ControllerProfile;
 use App\Http\Controllers\ControllerUsersManagement;
+use App\Http\Controllers\Front;
 use App\Http\Controllers\Usersiola;
 use App\Http\Controllers\UsulanSaya;
 use Illuminate\Support\Facades\Route;
@@ -18,8 +19,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/** routes untuk tampilan depan */
 Route::get('/', function () {
     return view('layouts.tema.depan.depan');
+});
+
+Route::prefix('menu')->group(function () {
+    Route::get('about', [Front::class, 'about'])->name('about');
 });
 
 /* gak dipake */
@@ -46,8 +52,7 @@ Route::prefix('user')->group(function () {
 Route::prefix('admin')->group(function () {
 
     /** routes dibawah ini khusus untuk menu dashboard  */
-    Route::get('/view', [Administrator::class, 'adminDashboard'])->name('adminDashboard')->middleware('role');;
-
+    Route::get('/view', [Administrator::class, 'adminDashboard'])->name('adminDashboard')->middleware('role');
     /** routes dibawah ini khusus untuk menu pemberhentian  */
     Route::get('/pemberhentian', [Administrator::class, 'index_pemberhentian'])->name('pemberhentian')->middleware('role');
     // fungsi edit dan hapus untuk user yang sdh up permohonan
