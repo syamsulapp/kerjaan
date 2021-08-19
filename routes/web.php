@@ -44,7 +44,7 @@ Route::prefix('user')->group(function () {
     // routes usulan saya
     Route::get('/usulan_saya', [UsulanSaya::class, 'usulan'])->name('usulan_saya')->middleware('roleadmin');
 
-    // data profile 
+    // data profile
     Route::get('/view-profile', [ControllerProfile::class, 'view_profile'])->name('user')->middleware('roleadmin');
 });
 
@@ -53,6 +53,8 @@ Route::prefix('admin')->group(function () {
 
     /** routes dibawah ini khusus untuk menu dashboard  */
     Route::get('/view', [Administrator::class, 'adminDashboard'])->name('adminDashboard')->middleware('role');
+
+    /** ====================== */
     /** routes dibawah ini khusus untuk menu pemberhentian  */
     Route::get('/pemberhentian', [Administrator::class, 'index_pemberhentian'])->name('pemberhentian')->middleware('role');
     // fungsi edit dan hapus untuk user yang sdh up permohonan
@@ -83,7 +85,7 @@ Route::prefix('admin')->group(function () {
 
     // edit data forms
     Route::put('/users-management-form/{modifData}/update-data', [ControllerUsersManagement::class, 'update'])->middleware('role')->name('users-management-update-data');
-    // delete 
+    // delete
     Route::delete('/users-management-delete/{hapusData}/hapus', [ControllerUsersManagement::class, 'destroy'])->middleware('role')->name('users-management-delete');
 });
 

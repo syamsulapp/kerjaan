@@ -24,9 +24,9 @@ class Usersiola extends Controller
 
     public function view()
     {
-
         return view('layouts.tema.dashboard.dashboard');
     }
+
     public function pilihan(Request $request)
     {
         $status['form'] = $request->input;

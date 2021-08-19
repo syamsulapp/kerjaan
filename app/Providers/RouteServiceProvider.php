@@ -17,6 +17,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
+    /** logic dibawah ini mengarah ketika login sukses dan register sukses  */
     public const HOME = '/user/view';
 
     /**
