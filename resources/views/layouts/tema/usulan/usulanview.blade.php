@@ -1,6 +1,6 @@
 @extends('layouts.tema.app')
 
-@section('title','SIOLA KEMENDAGRI')
+@section('title','SIOLA_Prov KDH')
 
 @include('layouts.tema.style.tampilan')
 

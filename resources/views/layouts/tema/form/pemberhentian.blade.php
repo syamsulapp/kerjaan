@@ -1,6 +1,6 @@
 @extends('layouts.tema.app')
 
-@section('title','SIOLA KEMENDAGRI')
+@section('title','SIOLA_Prov KDH')
 
 @include('layouts.tema.style.tampilan')
 
@@ -81,7 +81,7 @@
                                                                 <h6>nama</h6>
                                                             </label>
                                                             <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                <input type="text" name="nama" class="form-control @error('nama') is-invalid @enderror" id="nama" placeholder="nama" value="{{ Auth::user()->name}}">
+                                                                <input type="text" disabled name="nama" class="form-control @error('nama') is-invalid @enderror" id="nama" placeholder="nama" value="{{ Auth::user()->name}}">
                                                             </div>
                                                             @error('nama')
                                                             <div class="alert alert-danger">{{ $message }}</div>
@@ -92,11 +92,25 @@
                                                                 <h6>Provinsi</h6>
                                                             </label>
                                                             <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                <input type="text" name="provinsi" class="form-control @error('provinsi') is-invalid @enderror" id="provinsi" placeholder="provinsi" value="{{ __('sulawesi tenggara') }}">
+                                                                <input type="text" disabled name="provinsi" class="form-control @error('provinsi') is-invalid @enderror" id="provinsi" placeholder="provinsi" value="{{ __('sulawesi tenggara') }}">
                                                             </div>
                                                             @error('provinsi')
                                                             <div class="alert alert-danger">{{ $message }}</div>
                                                             @enderror
+                                                        </div>
+                                                        <div class="form-group mb-4">
+                                                            <div class="row">
+                                                                <label class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
+                                                                    <h6>Kabupaten</h6>
+                                                                </label>
+                                                                <div class="col-xl-5 col-lg-9 col-sm-10">
+                                                                    <select class="form-control  basic" name="kabupaten">
+                                                                        @foreach($data["kabupaten"] as $data => $kabupaten)
+                                                                            <option value="{{ $kabupaten->kabupaten }}" selected >{{ $kabupaten->kabupaten }}</option>
+                                                                        @endforeach
+                                                                    </select>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                         <div class="form-group mb-4">
                                                             <div class="row">
@@ -127,20 +141,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="form-group mb-4">
-                                                            <div class="row">
-                                                                <label class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
-                                                                    <h6>Kabupaten</h6>
-                                                                </label>
-                                                                <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                    <select class="form-control  basic" name="kabupaten">
-                                                                        @foreach($data["kabupaten"] as $data => $kabupaten)
-                                                                            <option value="{{ $kabupaten->kabupaten }}" selected >{{ $kabupaten->kabupaten }}</option>
-                                                                        @endforeach
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                        
                                                         <div class="form-group mb-4">
                                                             <div class="row">
                                                                 <label class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
