@@ -141,7 +141,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        
+                                                        </div>
                                                         <div class="form-group mb-4">
                                                             <div class="row">
                                                                 <label class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
