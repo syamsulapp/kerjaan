@@ -30,6 +30,7 @@ class CreateTablePemberhentian extends Migration
             $table->string('upload4', 128);
             $table->string('upload5', 128);
             $table->string('upload6', 128);
+            $table->string('upload7', 128);
 
             $table->timestamps();
         });

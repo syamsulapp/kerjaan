@@ -37,7 +37,6 @@
                                         </div>
                                         <thead>
                                             <tr>
-                                                <th>No</th>
                                                 <th>Nama</th>
                                                 <th>Tgl Registrasi</th>
                                                 <th>Nomor Registrasi</th>
@@ -55,15 +54,14 @@
                                             <tr>
                                                 <!-- fungsi untuk datanya bisa sesuai pada masing2 session user -->
                                                 @if($cek['data_id'] == $usulan_saya->noreg)
-                                                <td>{{ $loop->iteration }}</td>
                                                 <td>{{ $usulan_saya->nama }}</td>
                                                 <td>{{ $usulan_saya->created_at }}</td>
                                                 <td><span class="badge badge-info">{{ $usulan_saya->noreg }}</span></td>
                                                 <td>{{ $usulan_saya->kategori_permohonan }}</td>
                                                 <td>@if($usulan_saya->kategori_permohonan == 'pemberhentian')
-                                                    {{ __('Jenis Usulan : Pemberhentian Objek KDH') }}
+                                                    {{ __('Jenis Usulan : Pemberhentian Objek KDH') }} {{ $usulan_saya->objekkdh }}
                                                     @else
-                                                    {{ __('Jenis Usulan: pengangkatan Objek KDH ') }}
+                                                    {{ __('Jenis Usulan: pengangkatan Objek KDH ') }} {{ $usulan_saya->objekkdh }}
                                                     @endif
                                                 </td>
                                                 <td>
@@ -77,14 +75,16 @@
                                                     @endif
                                                 </td>
                                                 <td>
-                                                    @if($usulan_saya->status_permohonan == 'pending' || $usulan_saya->status_permohonan == 'disapprove' )
-                                                    {{__('Anda Belum Bisa mencetak') }}
+                                                    @if($usulan_saya->status_permohonan == 'pending' )
+                                                        <span class="badge badge-warning">{{__('Anda Belum Bisa mencetak') }}</span>
+                                                    @elseif ($usulan_saya->status_permohonan == 'disapprove')
+                                                        <span class="badge badge-danger">{{__('tidak bisa mencetak karena berkas anda gagal') }}</span>
                                                     @else
-                                                    <button class="btn btn-danger mb-2"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                                                    <a href="{{ url('user/cetak_usulan_saya') }}" class="btn btn-success mb-2"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
                                                             <polyline points="6 9 6 2 18 2 18 9"></polyline>
                                                             <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
                                                             <rect x="6" y="14" width="12" height="8"></rect>
-                                                        </svg>Cetak</button>
+                                                        </svg>Cetak Usulan</a>
                                                     @endif
                                                 </td>
                                                 @endif

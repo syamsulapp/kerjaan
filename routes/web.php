@@ -38,11 +38,24 @@ Route::prefix('menu')->group(function () {
 Route::prefix('user')->group(function () {
     Route::get('/view', [Usersiola::class, 'view'])->name('user')->middleware('roleadmin');
     Route::get('/pilihan', [Usersiola::class, 'pilihan'])->name('user')->middleware(['roleadmin', 'status_permohonan']);
+
+    /** routes dibawah untuk upload berkas permohonan pemberhentian  */
+    Route::get('/upload_berkas_pemberhentian',[Usersiola::class, 'upload_berkas_pemberhentian'])->name('upload_berkas_pengangkatan')->middleware('roleadmin');
+
+    /** routes dibawah untuk upload berkas permohonan pengangkatan */
+    Route::get('/upload_berkas_pengangkatan',[Usersiola::class, 'upload_berkas_pengangkatan'])->name('upload_berkas_pengangkatan')->middleware('roleadmin');
+
+    /** Routes dibawah untuk insert data pemberhentian */
     Route::post('/insert-form_pemberhentian', [Usersiola::class, 'pemberhentian'])->name('insert-form_pemberhentian')->middleware('roleadmin');
+
+    /** Routes dibawah untuk insert data pengangkatan */
     Route::post('/insert-form_pengangkatan', [Usersiola::class, 'pengangkatan'])->name('insert-form_pengangkatan')->middleware('roleadmin');
 
+    /** routes dibawah ini untuk usulan saya dan cetak serah terima TCPDF */
     // routes usulan saya
     Route::get('/usulan_saya', [UsulanSaya::class, 'usulan'])->name('usulan_saya')->middleware('roleadmin');
+    Route::get('/cetak_usulan_saya',[UsulanSaya::class,'serah_terima'])->name('serah_terima')->middleware('roleadmin');
+
 
     // data profile
     Route::get('/view-profile', [ControllerProfile::class, 'view_profile'])->name('user')->middleware('roleadmin');
@@ -63,15 +76,17 @@ Route::prefix('admin')->group(function () {
     Route::put('/edit-data/{pemberhentian}/ubah', [Administrator::class, 'update_data_pemberhentian'])->name('pemberhentian')->middleware('role');
     /** ================= */
 
-
+    /** =============================== */
     /** routes dibawah ini khusus untuk menu pengangkatan  */
     Route::get('/pengangkatan', [Administrator::class, 'index_pengangkatan'])->name('pengangkatan')->middleware('role');
     // fungsi edit dan hapus untuk user yang sdh up permohonan
     Route::get('/edit-data-2/{pengangkatan}/view', [Administrator::class, 'edit_data_pengangkatan'])->name('edit-data-pengangkatan')->middleware('role');;
 
     Route::put('/edit-data-2/{pengangkatan}/ubah', [Administrator::class, 'update_data_pengangkatan'])->name('update-data-pengangkatan')->middleware('role');;
+    /** =============================== */
 
 
+    /** =============================== */
     /** routes dibawah ini untuk menu users management */
     Route::get('/users-management', [ControllerUsersManagement::class, 'index'])->middleware('role')->name('users-management');
     // users management view forms
@@ -87,6 +102,8 @@ Route::prefix('admin')->group(function () {
     Route::put('/users-management-form/{modifData}/update-data', [ControllerUsersManagement::class, 'update'])->middleware('role')->name('users-management-update-data');
     // delete
     Route::delete('/users-management-delete/{hapusData}/hapus', [ControllerUsersManagement::class, 'destroy'])->middleware('role')->name('users-management-delete');
+    /** =============================== */
+
 });
 
 require __DIR__ . '/auth.php';

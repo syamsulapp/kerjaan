@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use PDF;
 // model buat relasi ke table pengangkatan
 use App\Models\ModelsUsulanSaya;
 // model buat relasi ke table pemberhentian
@@ -38,8 +39,32 @@ class UsulanSaya extends Controller
                 $usulan = $usulan->all();
                 return view('layouts.tema.usulan.usulanview', compact('usulan'));
             }
+            /** secara default belum krim permohonan maka datanya kosong */
         } else if ($cek['user'] == 'belum') {
             return view('layouts.tema.usulan.usulanviewKosong');
         }
+    }
+
+    public function serah_terima(ModelsUsulanSaya $usulan, ModelsUsulanSaya2 $usulan2) {
+        $cetak = array(
+            'pemberhentian' => Auth::user()->kategori_permohonan,
+            'pengangkatan' => Auth::user()->kategori_permohonan,
+        );
+        if ($cetak['pemberhentian'] == 'pemberhentian') {
+            $cetak = $usulan2->all();
+            $tampilan = \View::make('layouts.tema.usulan.cetakusulanview',compact('cetak'));
+        } else if ($cetak['pengangkatan']  == 'pengangkatan') {
+            $cetak = $usulan->all();
+            $tampilan = \View::make('layouts.tema.usulan.cetakusulanview',compact('cetak'));
+        }
+
+        // logic TCPDF
+        $print = $tampilan->render();
+
+        PDF::SetTitle('Serah Terima');
+        PDF::AddPage();
+        PDF::writeHTML($print, true, false, true, false, '');
+
+        PDF::Output(uniqid().'_Serah Terima.pdf', 'D');
     }
 }

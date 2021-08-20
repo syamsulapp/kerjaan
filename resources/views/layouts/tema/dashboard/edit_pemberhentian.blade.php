@@ -44,7 +44,7 @@
                                                                 <h6>nama</h6>
                                                             </label>
                                                             <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                <input type="text" name="nama" class="form-control @error('nama') is-invalid @enderror" id="nama" placeholder="nama" value="{{ $data_pemberhentian->nama }}">
+                                                                <input type="text" name="nama" class="form-control @error('nama') is-invalid @enderror" id="nama" placeholder="nama" value="{{ $data_pemberhentian->nama }}" disabled>
                                                             </div>
                                                             @error('nama')
                                                             <div class="alert alert-danger">{{ $message }}</div>
@@ -55,7 +55,7 @@
                                                                 <h6>Provinsi</h6>
                                                             </label>
                                                             <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                <input type="text" name="provinsi" class="form-control @error('provinsi') is-invalid @enderror" id="provinsi" placeholder="provinsi" value="{{ $data_pemberhentian->provinsi }}">
+                                                                <input type="text" name="provinsi" class="form-control @error('provinsi') is-invalid @enderror" id="provinsi" placeholder="provinsi" value="{{ $data_pemberhentian->provinsi }}" disabled>
                                                             </div>
                                                             @error('provinsi')
                                                             <div class="alert alert-danger">{{ $message }}</div>
@@ -66,7 +66,7 @@
                                                                 <h6>kabupaten</h6>
                                                             </label>
                                                             <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                <input type="text" name="kabupaten" class="form-control @error('kabupaten') is-invalid @enderror" id="kabupaten" placeholder="kabupaten" value="{{ $data_pemberhentian->kabupaten }}">
+                                                                <input type="text" name="kabupaten" class="form-control @error('kabupaten') is-invalid @enderror" id="kabupaten" placeholder="kabupaten" value="{{ $data_pemberhentian->kabupaten }}" disabled>
                                                             </div>
                                                             @error('kabupaten')
                                                             <div class="alert alert-danger">{{ $message }}</div>
@@ -77,7 +77,7 @@
                                                                 <h6>penyebabkdh</h6>
                                                             </label>
                                                             <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                <input type="text" name="penyebabkdh" class="form-control @error('penyebabkdh') is-invalid @enderror" id="penyebabkdh" placeholder="penyebabkdh" value="{{ $data_pemberhentian->penyebabkdh }}">
+                                                                <input type="text" name="penyebabkdh" class="form-control @error('penyebabkdh') is-invalid @enderror" id="penyebabkdh" placeholder="penyebabkdh" value="{{ $data_pemberhentian->penyebabkdh }}" disabled>
                                                             </div>
                                                             @error('penyebabkdh')
                                                             <div class="alert alert-danger">{{ $message }}</div>
@@ -89,7 +89,7 @@
                                                                 <h6>objekkdh</h6>
                                                             </label>
                                                             <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                <input type="text" name="objekkdh" class="form-control @error('objekkdh') is-invalid @enderror" id="objekkdh" placeholder="objekkdh" value="{{ $data_pemberhentian->objekkdh }}">
+                                                                <input type="text" name="objekkdh" class="form-control @error('objekkdh') is-invalid @enderror" id="objekkdh" placeholder="objekkdh" value="{{ $data_pemberhentian->objekkdh }}" disabled>
                                                             </div>
                                                             @error('objekkdh')
                                                             <div class="alert alert-danger">{{ $message }}</div>
@@ -100,7 +100,7 @@
                                                                 <h6>jk</h6>
                                                             </label>
                                                             <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                <input type="text" name="jk" class="form-control @error('jk') is-invalid @enderror" id="jk" placeholder="jk" value="{{ $data_pemberhentian->jk }}">
+                                                                <input type="text" name="jk" class="form-control @error('jk') is-invalid @enderror" id="jk" placeholder="jk" value="{{ $data_pemberhentian->jk }}" disabled>
                                                             </div>
                                                             @error('jk')
                                                             <div class="alert alert-danger">{{ $message }}</div>
@@ -113,78 +113,140 @@
                                                                 <h4><b>KELENGKAPAN ADMINISTRASI</b></h4>
                                                             </div>
                                                         </div> <br>
+                                                        @if($data_pemberhentian->upload7 == 'null')
                                                         <!-- berkas ke 1 -->
                                                         <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                             <label for="fullName">
                                                                 <h6>File Scan KETERANGAN KEASLIAN DOKUMENT DARI BIRO PEMERINTAHAN/OTDA PROVINSI (<i> ASISTEN BIDANG PEMERINTAHAN</i>)</h6>
                                                             </label>
                                                             <br>
-                                                            <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload1) }}">File Scan KETERANGAN KEASLIAN DOKUMENT</a>
+                                                            <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload1) }}">Berkas 1</a>
                                                         </div>
                                                         <br>
-                                                        <!-- berkas ke 2 -->
+                                                            <!-- berkas ke 2 -->
                                                         <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                             <label for="fullName">
-                                                                <h6>File Scan FOTOCOPY KEPUTUSAN MENTERI DALAM NEGERI TENTANG PENGANGKATAN BUPATI DAN/ATAU WAKIL BUPATI ATAU WALIKOTA DAN/ATAU WAKIL WALIKOTA YANG BERSANGKUTAN</h6>
+                                                                <h6>Fotokopi Keputusan Menteri Dalam Negeri Tentang Pengangkatan Bupati Dan/Atau Wakil Bupati Atau Walikota Dan/Atau Wakil Walikota Yang Bersangkutan</h6>
                                                             </label>
                                                             <br>
-                                                            <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload2) }}">File Scan FOTOCOPY KEPUTUSAN MENTERI DALAM NEGERI</a>
+                                                            <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload2) }}">Berkas 2</a>
                                                         </div>
                                                         <br>
                                                         <!-- berkas ke 3 -->
                                                         <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                             <label for="fullName">
-                                                                <h6>File Scan FOTOCOPY BERITA ACARA PELANTIKAN
-                                                                    BUPATI DAN/ATAU WAKIL BUPATI ATAU WALIKOTA
-                                                                    DAN/ATAU WAKIL WALIKOTA YANG BERSANGKUTAN
+                                                                <h6>Fotokopi Berita Acara Pelantikan Bupati Dan/Atau Wakil Bupati Atau Walikota Dan/Atau Wakil Walikota Yang Bersangkutan;
                                                                 </h6>
                                                             </label>
-                                                            <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload3) }}">File Scan FOTOCOPY BERITA ACARA PELANTIKAN
-                                                                BUPATI DAN/ATAU WAKIL BUPATI</a>
+                                                            <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload3) }}">Berkas 3</a>
                                                         </div>
                                                         <!-- berkas ke 4 -->
                                                         <br>
                                                         <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                             <label for="fullName">
-                                                                <h6>File Scan SURAT RISALAH DAN BERITA ACARA
-                                                                    RAPAT PARIPURNA DPRD KABUPATEN/KOTA DALAM
-                                                                    RANGKA PENGUMUMAN PEMBERHENTIAN BUPATI DAN/ATAU WAKIL BUPATI DAN/ATAU WALIKOTA
-                                                                    DAN/ATAU WAKIL WALIKOTA KARENA
-                                                                    BERAKHIR MASA JABATANNYA
+                                                                <h6>Risalah Dan Berita Acara Rapat Paripurna DPRD Kabupaten/Kota Dalam Rangka Pengumuman Pemberhentian Bupati Dan/Atau Wakil Bupati Atau Walikota Dan/Atau Wakil Walikota Karena Berakhir Masa Jabatannya;
                                                                 </h6>
                                                             </label>
-                                                            <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload4) }}">File Scan SURAT RISALAH DAN BERITA ACARA
-                                                                RAPAT PARIPURNA DPRD</a>
+                                                            <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload4) }}">Berkas 4</a>
 
                                                         </div>
                                                         <!-- berkas ke 5 -->
                                                         <br>
                                                         <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                             <label for="fullName">
-                                                                <h6>File Scan SURAT USULAN PENGESAHAN
-                                                                    PEMBERHENTIAN BUPATI DAN/ATAU WAKIL BUPATI
-                                                                    ATAU WALIKOTA DAN/ATAU WAKIL WALIKOTA OLEH
-                                                                    PIMPINAN DPRD KABUPATEN/KOTA KEPADA MENDAGRI
-                                                                    MELALUI GUBERNUR</h6>
+                                                                <h6>Surat Usulan Pengesahan Pemberhentian Bupati Dan/Atau Wakil Bupati Atau Walikota Dan/Atau Wakil Walikota Oleh Pimpinan DPRD Kabupaten/Kota Kepada Mendagri Melalui Gubernur; </h6>
                                                             </label>
                                                             <br>
-                                                            <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload5) }}">File Scan SURAT USULAN PENGESAHAN
-                                                                PEMBERHENTIAN BUPATI DAN/ATAU WAKIL BUPATI
-                                                                ATAU WALIKOTA </a>
+                                                            <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload5) }}">Berkas 5 </a>
 
                                                         </div>
                                                         <!-- berkas ke 6 -->
                                                         <br>
                                                         <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                             <label for="fullName">
-                                                                <h6>File Scan SURAT USULAN PENGESAHAN
-                                                                    PEMBERHENTIAN BUPATI DAN/ATAU WAKIL BUPATI
-                                                                    ATAU WALIKOTA DAN/ATAU WAKIL WALIKOTA OLEH
-                                                                    GUBERNUR KEPADA MENDAGRI</h6>
+                                                                <h6>Surat Usulan Pengesahan Pemberhentian Bupati Dan/Atau Wakil Bupati Atau Walikota Dan/Atau Wakil Walikota Oleh Gubernur Kepada Mendagri. </h6>
                                                             </label>
                                                             <br>
-                                                            <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload6) }}">File Scan SURAT USULAN PENGESAHAN
-                                                                PEMBERHENTIAN</a>
+                                                            <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload6) }}">Berkas 6</a>
+
+                                                        </div>
+                                                        <br>
+                                                            <div class="col-xl-10 col-md-12 col-sm-12 col-12">
+                                                                <label for="fullName">
+                                                                    <h6>Kirim Status Berkas</h6>
+                                                                    <select class="form-control" name="kirim_status" id="kirim_status">
+                                                                        <option>disapprove</option>
+                                                                        <option>approve</option>
+                                                                    </select>
+                                                                </label>
+                                                            </div>
+                                                            <br>
+                                                        @elseif ($data_pemberhentian->upload7 != 'null')
+                                                        <!-- berkas ke 1 -->
+                                                            <div class="col-xl-10 col-md-12 col-sm-12 col-12">
+                                                                <label for="fullName">
+                                                                    <h6>File Scan KETERANGAN KEASLIAN DOKUMENT DARI BIRO PEMERINTAHAN/OTDA PROVINSI (<i> ASISTEN BIDANG PEMERINTAHAN</i>)</h6>
+                                                                </label>
+                                                                <br>
+                                                                <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload1) }}">Berkas 1</a>
+                                                            </div>
+                                                            <br>
+                                                            <!-- berkas ke 2 -->
+                                                            <div class="col-xl-10 col-md-12 col-sm-12 col-12">
+                                                                <label for="fullName">
+                                                                    <h6>Fotokopi Keputusan Menteri Dalam Negeri Tentang Pengangkatan Bupati Dan/Atau Wakil Bupati Atau Walikota Dan/Atau Wakil Walikota Yang Bersangkutan</h6>
+                                                                </label>
+                                                                <br>
+                                                                <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload2) }}">Berkas 2</a>
+                                                            </div>
+                                                            <br>
+                                                            <!-- berkas ke 3 -->
+                                                            <div class="col-xl-10 col-md-12 col-sm-12 col-12">
+                                                                <label for="fullName">
+                                                                    <h6>Fotokopi Berita Acara Pelantikan Bupati Dan/Atau Wakil Bupati Atau Walikota Dan/Atau Wakil Walikota Yang Bersangkutan;
+                                                                    </h6>
+                                                                </label>
+                                                                <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload3) }}">Berkas 3</a>
+                                                            </div>
+                                                            <!-- berkas ke 4 -->
+                                                            <br>
+                                                            <div class="col-xl-10 col-md-12 col-sm-12 col-12">
+                                                                <label for="fullName">
+                                                                    <h6>Risalah Dan Berita Acara Rapat Paripurna DPRD Kabupaten/Kota Dalam Rangka Pengumuman Pemberhentian Bupati Dan/Atau Wakil Bupati Atau Walikota Dan/Atau Wakil Walikota Karena Berakhir Masa Jabatannya;
+                                                                    </h6>
+                                                                </label>
+                                                                <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload4) }}">Berkas 4</a>
+
+                                                            </div>
+                                                            <!-- berkas ke 5 -->
+                                                            <br>
+                                                            <div class="col-xl-10 col-md-12 col-sm-12 col-12">
+                                                                <label for="fullName">
+                                                                    <h6>Surat Usulan Pengesahan Pemberhentian Bupati Dan/Atau Wakil Bupati Atau Walikota Dan/Atau Wakil Walikota Oleh Pimpinan DPRD Kabupaten/Kota Kepada Mendagri Melalui Gubernur; </h6>
+                                                                </label>
+                                                                <br>
+                                                                <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload5) }}">Berkas 5 </a>
+
+                                                            </div>
+                                                            <!-- berkas ke 6 -->
+                                                            <br>
+                                                            <div class="col-xl-10 col-md-12 col-sm-12 col-12">
+                                                                <label for="fullName">
+                                                                    <h6>Surat Usulan Pengesahan Pemberhentian Bupati Dan/Atau Wakil Bupati Atau Walikota Dan/Atau Wakil Walikota Oleh Gubernur Kepada Mendagri. </h6>
+                                                                </label>
+                                                                <br>
+                                                                <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload6) }}">Berkas 6</a>
+
+                                                            </div>
+                                                            <br>
+                                                        <!-- berkas ke 7 -->
+                                                        <br>
+                                                        <div class="col-xl-10 col-md-12 col-sm-12 col-12">
+                                                            <label for="fullName">
+                                                                <h6>Akta Kematian Dari Pejabat Berwenang;  </h6>
+                                                            </label>
+                                                            <br>
+                                                            <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload7) }}">Berkas 7</a>
 
                                                         </div>
                                                         <br>
@@ -198,6 +260,7 @@
                                                             </label>
                                                         </div>
                                                         <br>
+                                                        @endif
                                                         <a class="btn btn-primary d-inline" href="{{ url('admin/pemberhentian') }}" type="submit" di>kembali</a>
                                                         <button type="submit" class="btn btn-primary d-inline">{{ __('kirim') }}</button>
                                                     </form>

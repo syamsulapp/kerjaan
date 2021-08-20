@@ -41,6 +41,9 @@
                                             @endif
                                         </div>
                                     </div>
+{{--                                    <div class="alert alert-danger" role="alert">--}}
+
+{{--                                    </div>--}}
                                     @if(Auth::user()->status_kirim_permohonan == 'belum')
                                     <div class="widget-content widget-content-area">
                                         <div id="circle-basic" class="">
@@ -68,12 +71,9 @@
                                                         </label>
                                                     </div>
                                                     <button type="submit" class="btn btn-primary">{{ __('Pilih') }}</button>
+                                                    <br>
                                                     <form>
                                             </section>
-
-
-                                            </section>
-
                                         </div>
                                     </div>
                                     @else
