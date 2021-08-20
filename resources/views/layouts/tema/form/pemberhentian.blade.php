@@ -101,20 +101,6 @@
                                                         <div class="form-group mb-4">
                                                             <div class="row">
                                                                 <label class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
-                                                                    <h6>Kabupaten</h6>
-                                                                </label>
-                                                                <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                    <select class="form-control  basic" name="kabupaten">
-                                                                        @foreach($data["kabupaten"] as $data => $kabupaten)
-                                                                            <option value="{{ $kabupaten->kabupaten }}" selected >{{ $kabupaten->kabupaten }}</option>
-                                                                        @endforeach
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group mb-4">
-                                                            <div class="row">
-                                                                <label class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
                                                                     <h6>Jenis
                                                                         Kelamin</h6>
                                                                 </label>
@@ -141,7 +127,20 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        
+                                                        <div class="form-group mb-4">
+                                                            <div class="row">
+                                                                <label class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
+                                                                    <h6>Kabupaten</h6>
+                                                                </label>
+                                                                <div class="col-xl-5 col-lg-9 col-sm-10">
+                                                                    <select class="form-control  basic" name="kabupaten">
+                                                                        @foreach($data["kabupaten"] as $data => $kabupaten)
+                                                                            <option value="{{ $kabupaten->kabupaten }}" selected >{{ $kabupaten->kabupaten }}</option>
+                                                                        @endforeach
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         <div class="form-group mb-4">
                                                             <div class="row">
                                                                 <label class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
