@@ -32,7 +32,7 @@
                                     <div class="widget-header">
                                         <div class="row">
                                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                                <h4>Buat Permohonan Layanan Administrasi</h4>
+                                                <h4>Usulan Layanan Administrasi</h4>
                                             </div>
                                             @if($pesan = Session::get('sukses'))
                                             <div class="alert alert-success" role="alert">
@@ -57,17 +57,15 @@
                                                             <input type="radio" class="new-control-input" name="input" value="1">
                                                             <span class="new-control-indicator"></span>
                                                             <span class="new-radio-content">Penerbitan
-                                                                Kepmendagri tentang pemberhentian dan pengangkatan
-                                                                Bupati/Wali atau wali kota/wakil wali kota</span>
+                                                                Usul Pemberhentian kepala daerah Bupati/Wakil bupati atau wali kota/wakil wali kota</span>
                                                         </label>
                                                     </div> <br> <br>
                                                     <div class="n-chk">
                                                         <label class="new-control new-radio new-radio-text radio-classic-success">
                                                             <input type="radio" class="new-control-input" name="input" value="2">
                                                             <span class="new-control-indicator"></span>
-                                                            <span class="new-radio-content">Penerbitan Kepmendagri
-                                                                tentang Peresmian Pengangkatan dan Pemberhentian
-                                                                pimpinan anggota DPRD Provinsi</span>
+                                                            <span class="new-radio-content">Penerbitan
+                                                                Usul Pengangkatan kepala daerah Bupati/Wakil bupati atau wali kota/wakil wali kota</span>
                                                         </label>
                                                     </div>
                                                     <button type="submit" class="btn btn-primary">{{ __('Pilih') }}</button>
@@ -81,7 +79,7 @@
                                         <h4 class="alert-heading">Anda Sudah Mengirim Permohonan</h4>
                                         <p>silahkan cek status data anda.</p>
                                         <hr>
-                                        <p class="mb-0">{{ __('@') }} {{ now()->year }} {{ _('SIOLA KEMENDAGRI KOTA KENDARI')}} {{ __('reserved') }}.</p>
+                                        <p class="mb-0">{{ __('@') }} {{ now()->year }} {{ _('SIOLA_Prov KDH')}} {{ __('reserved') }}.</p>
                                     </div>
                                     @endif
                                 </div>

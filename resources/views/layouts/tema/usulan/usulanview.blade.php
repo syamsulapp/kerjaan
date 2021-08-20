@@ -38,11 +38,11 @@
                                         <thead>
                                             <tr>
                                                 <th>Nama</th>
-                                                <th>Tgl Registrasi</th>
-                                                <th>Nomor Registrasi</th>
-                                                <th>Layanan</th>
-                                                <th>Informasi Permohonan</th>
-                                                <th>Status Permohonan</th>
+                                                <th>Tgl Kirim Usulan</th>
+                                                <th>Nomor Usulan</th>
+                                                <th>Jenis Usulan</th>
+                                                <th>Keterangan</th>
+                                                <th>Status Usulan</th>
                                                 <th class="no-content">Actions</th>
                                             </tr>
                                         </thead>
