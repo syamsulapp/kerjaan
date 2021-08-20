@@ -134,7 +134,7 @@
                                                                 </label>
                                                                 <div class="col-xl-5 col-lg-9 col-sm-10">
                                                                     <select class="form-control  basic" name="objekkdh">
-                                                                        @foreach($data['objekkdh'] as $objek => $kdh)
+                                                                        @foreach($data["objekkdh"] as $objek => $kdh)
                                                                             <option value="{{ $kdh->objekkdh }}" selected >{{ $kdh->objekkdh }}</option>
                                                                         @endforeach
                                                                     </select>
@@ -148,7 +148,7 @@
                                                                 </label>
                                                                 <div class="col-xl-5 col-lg-9 col-sm-10">
                                                                     <select class="form-control  basic" name="kabupaten">
-                                                                        @foreach($data['kabupaten'] as $data => $kabupaten)
+                                                                        @foreach($data["kabupaten"] as $data => $kabupaten)
                                                                             <option value="{{ $kabupaten->kabupaten }}" selected >{{ $kabupaten->kabupaten }}</option>
                                                                         @endforeach
                                                                     </select>
