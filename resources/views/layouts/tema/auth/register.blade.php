@@ -12,7 +12,7 @@
                 <div class="form-container">
                     <div class="form-content">
 
-                        <h1 class="">{{ __('Daftar') }}<br /> {{ ('SIOLA_Prov') }} {{ ('Sulawesi Tenggara Kota Kendari') }}</h1>
+                        <h1 class="">{{ __('Daftar') }}<br /> {{ ('SIOLA_Prov') }} {{ ('KDH') }}</h1>
                         <p class="signup-link"> {{ __('Sudah Punya Akun') }}<a href="{{ route('login') }}"> {{ __('Silahkan Login') }}</a></p>
                         @if($errors->any())
                         <div class="alert alert-danger">
@@ -70,7 +70,7 @@
 
                             </div>
                         </form>
-                        <p class="terms-conditions">© {{ now()->year }} {{ ('SIOLA KEMENDAGRI Prov') }} {{ __('Sulawesi Tenggara') }} {{ ('Kota Kendari') }}</p>
+                        <p class="terms-conditions">© {{ now()->year }} {{ ('SIOLA_Prov') }} {{ __('KDH') }}</p>
 
                     </div>
                 </div>
