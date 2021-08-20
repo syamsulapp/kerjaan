@@ -116,20 +116,6 @@
                                                         <div class="form-group mb-4">
                                                             <div class="row">
                                                                 <label class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
-                                                                    <h6>Objek KDH</h6>
-                                                                </label>
-                                                                <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                    <select class="form-control  basic" name="objekkdh">
-                                                                        @foreach($data["objekkdh"] as $objek => $kdh)
-                                                                            <option value="{{ $kdh->objekkdh }}" selected >{{ $kdh->objekkdh }}</option>
-                                                                        @endforeach
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group mb-4">
-                                                            <div class="row">
-                                                                <label class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
                                                                     <h6>Kabupaten</h6>
                                                                 </label>
                                                                 <div class="col-xl-5 col-lg-9 col-sm-10">
@@ -141,6 +127,21 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <div class="form-group mb-4">
+                                                            <div class="row">
+                                                                <label class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
+                                                                    <h6>Objek KDH</h6>
+                                                                </label>
+                                                                <div class="col-xl-5 col-lg-9 col-sm-10">
+                                                                    <select class="form-control  basic" name="objekkdh">
+                                                                        @foreach($data["objekkdh"] as $objek => $kdh)
+                                                                            <option value="{{ $kdh->objekkdh }}" selected >{{ $kdh->objekkdh }}</option>
+                                                                        @endforeach
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                       
                                                         <div class="form-group mb-4">
                                                             <div class="row">
                                                                 <label class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
