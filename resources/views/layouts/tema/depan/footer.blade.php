@@ -12,24 +12,15 @@
                         <li><i class="bx bx-chevron-right"></i> Jum'at : 08.00 - 16.30 WIB</li>
                     </ul>
                     <br>
-                    <p><i>Dokumen Aplikasi ini sudah mendukung Tanda Tangan Elektronik yang diterbitkan oleh BSrE.</i>
-                    </p>
-                    <div class="social-links mt-3">
-                        <img src="{{ url('fronts/assets/img/logo-bsre.png') }}" width="150" height="72" alt="">
-                        <img src="{{ url('fronts/assets/img/iso_9001-2015.png') }}" width="150" height="58" alt="">
-                    </div>
                 </div>
 
                 <div class="col-lg-4 col-md-5 footer-contact">
                     <h4>Tempat Pelayanan</h4>
                     <p>
-                        <strong>Alamat :</strong>Gedung B Lt.1 Jl. Medan Merdeka Utara <br> No. 7 Jakarta Pusat 10110 <br>
+                        <strong>Alamat :</strong>Komp Bumi Praja Andonuhu Kota Kendari Sultra,  <br> Anduonohu, Poasia, Kota Kendari, 93231 <br>
                         <br><br>
-                        <strong>Layanan Registrasi :</strong> (021) 3450038 ext. 2655 / 2654 <br>
-                        <strong>Layanan Administrasi :</strong> (021) 3521468<br>
-                        <strong>Layanan Pengaduan Lapor Kemendagri :</strong> (021) 3843222 <br>
-                        <strong>Email Pengaduan :</strong> pengaduan@kemendagri.go.id <br>
-                        <strong>Website Pengaduan :</strong> kemendagri.lapor.go.id <br>
+                        <strong>Telp :</strong> (0401) 391609 <br>
+                        <strong>FAX :</strong> (0401) 3191611<br>
                     </p>
 
                 </div>
@@ -45,7 +36,7 @@
 
     <div class="container">
         <div class="copyright">
-            &copy; Copyright <strong><span>ULA Kemendagri</span></strong>.
+            &copy; Copyright <strong><span>SIOLA_prov KDH</span></strong>.
         </div>
         <div class="credits">
             <!-- All the links in the footer should remain intact. -->
