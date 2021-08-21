@@ -28,8 +28,6 @@
 </style>
 </head>
 <body>
-
-<h2>HTML Table</h2>
         @php
             $cek['cek_status_noreg_cetak'] = Auth::user()->noreg;
             @endphp
@@ -84,7 +82,7 @@
 <p><span style="color: #000000; font-family: Arial; font-size: small;">Nomor Registrasi</span></p>
 </td>
 <td colspan="2" valign="middle">
-<p><span style="color: #000000; font-family: Arial; font-size: small;"><strong>AB4C9C9</strong></span></p>
+<p><span style="color: #000000; font-family: Arial; font-size: small;"><strong>{{ $c->noreg }}</strong></span></p>
 </td>
 </tr>
 <tr>
@@ -92,7 +90,7 @@
 <p><span style="color: #000000; font-family: Arial; font-size: small;">Nama Pemohon</span></p>
 </td>
 <td colspan="2" valign="middle">
-<p><span style="color: #000000; font-family: Arial; font-size: small;">Bagian Pemerintahan Kabupaten Muna</span></p>
+<p><span style="color: #000000; font-family: Arial; font-size: small;">{{ __('Bagian Pemerintah')  }}{{ $c->kabupaten }}</span></p>
 </td>
 </tr>
 <tr>
@@ -100,7 +98,7 @@
 <p><span style="color: #000000; font-family: Arial; font-size: small;">Instansi</span></p>
 </td>
 <td colspan="2" valign="middle">
-<p><span style="color: #000000; font-family: Arial; font-size: small;">Sekretariat Daerah Kabupaten Muna</span></p>
+<p><span style="color: #000000; font-family: Arial; font-size: small;">{{ __('Sekertariat Daerah')  }}{{ $c->kabupaten  }}</span></p>
 </td>
 </tr>
 <tr>
@@ -118,7 +116,7 @@
 <p><span style="color: #000000; font-family: Arial; font-size: small;">Tanggal pengajuan</span></p>
 </td>
 <td colspan="2" valign="middle">
-<p><span style="color: #000000; font-family: Arial; font-size: small;">04 Juni 2021 <span class="Apple-converted-space">&nbsp; </span>13:50:45</span></p>
+<p><span style="color: #000000; font-family: Arial; font-size: small;">{{ $c->created_at }}</p>
 </td>
 </tr>
 <tr>
@@ -126,7 +124,7 @@
 <p><span style="color: #000000; font-family: Arial; font-size: small;">Layanan</span></p>
 </td>
 <td colspan="2" valign="middle">
-<p><span style="color: #000000; font-family: Arial; font-size: small;"><strong>REKOMENDASI GUBERNUR PERIHAL USULAN KEPUTUSAN MENTERI DALAM NEGERI TENTANG PEMBERHENTIAN DAN PENGANGKATAN BUPATI/WAKIL BUPATI ATAU WALIKOTA/WAKIL WALIKOTA</strong></span></p>
+<p><span style="color: #000000; font-family: Arial; font-size: small;"><strong>{{ $c->penyebabkdh }}</strong></span></p>
 </td>
 </tr>
 <tr>
