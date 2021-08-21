@@ -42,7 +42,7 @@
                                                     <!-- PEMBERHENTIAN -->
                                                     <div class="row">
                                                         <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                                            <h4><b>DATA PERMOHONAN  {{ $data['form_pilihan'] }}</b></h4>
+                                                            <h4><b>DATA Usulan Pemberhentian  {{ $data['form_pilihan'] }}</b></h4>
                                                         </div>
                                                     </div> <br> <br>
                                                     <?php
@@ -81,7 +81,7 @@
                                                                 <h6>nama</h6>
                                                             </label>
                                                             <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                <input type="text" disabled name="nama" class="form-control @error('nama') is-invalid @enderror" id="nama" placeholder="nama" value="{{ Auth::user()->name}}">
+                                                                <input type="text" name="nama" class="form-control @error('nama') is-invalid @enderror" id="nama" placeholder="nama" value="{{ Auth::user()->name}}" readonly>
                                                             </div>
                                                             @error('nama')
                                                             <div class="alert alert-danger">{{ $message }}</div>
@@ -92,7 +92,7 @@
                                                                 <h6>Provinsi</h6>
                                                             </label>
                                                             <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                <input type="text" disabled name="provinsi" class="form-control @error('provinsi') is-invalid @enderror" id="provinsi" placeholder="provinsi" value="{{ __('sulawesi tenggara') }}">
+                                                                <input type="text"  name="provinsi" class="form-control @error('provinsi') is-invalid @enderror" id="provinsi" placeholder="provinsi" value="{{ __('sulawesi tenggara') }}" readonly>
                                                             </div>
                                                             @error('provinsi')
                                                             <div class="alert alert-danger">{{ $message }}</div>
@@ -105,24 +105,10 @@
                                                                         Kelamin</h6>
                                                                 </label>
                                                                 <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                    <select class="form-control  basic" name="jk">
-                                                                        <option selected="selected">Laki-Laki
-                                                                        </option>
+                                                                    <select class="form-control  basic" name="jk" required>
+                                                                        <option selected disabled value="">Pilih</option>
+                                                                        <option>Laki-Laki</option>
                                                                         <option>Perempuan</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group mb-4">
-                                                            <div class="row">
-                                                                <label class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
-                                                                    <h6>Kabupaten</h6>
-                                                                </label>
-                                                                <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                    <select class="form-control  basic" name="kabupaten">
-                                                                        @foreach($data["kabupaten"] as $data => $kabupaten)
-                                                                            <option value="{{ $kabupaten->kabupaten }}" selected >{{ $kabupaten->kabupaten }}</option>
-                                                                        @endforeach
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -133,15 +119,30 @@
                                                                     <h6>Objek KDH</h6>
                                                                 </label>
                                                                 <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                    <select class="form-control  basic" name="objekkdh">
+                                                                    <select class="form-control  basic" name="objekkdh" required>
+                                                                        <option selected disabled value="" >Pilih</option>
                                                                         @foreach($data["objekkdh"] as $objek => $kdh)
-                                                                            <option value="{{ $kdh->objekkdh }}" selected >{{ $kdh->objekkdh }}</option>
+                                                                            <option value="{{ $kdh->objekkdh }}" >{{ $kdh->objekkdh }}</option>
                                                                         @endforeach
                                                                     </select>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                       
+                                                        <div class="form-group mb-4">
+                                                            <div class="row">
+                                                                <label class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
+                                                                    <h6>Kabupaten</h6>
+                                                                </label>
+                                                                <div class="col-xl-5 col-lg-9 col-sm-10">
+                                                                    <select class="form-control  basic" name="kabupaten" required>
+                                                                        <option selected disabled value="" >Pilih</option>
+                                                                        @foreach($data["kabupaten"] as $data => $kabupaten)
+                                                                            <option value="{{ $kabupaten->kabupaten }}" >{{ $kabupaten->kabupaten }}</option>
+                                                                        @endforeach
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         <div class="form-group mb-4">
                                                             <div class="row">
                                                                 <label class="col-form-label col-xl-2 col-sm-3 col-sm-2 pt-0">
@@ -149,7 +150,8 @@
                                                                         KDH</h6>
                                                                 </label>
                                                                 <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                    <select class="form-control  basic" name="penyebabkdh">
+                                                                    <select class="form-control  basic" name="penyebabkdh" required>
+                                                                        <option selected disabled value="">Pilih</option>
                                                                         <option value="1">Pengesahan Pemberhentian Bupati Dan/Atau Wakil Bupati Atau Walikota Dan/Atau Wakil Walikota Karena Berakhir Masa Jabatan</option>
                                                                         <option value="2">Pemberhentian Bupati Dan/Atau Wakil Bupati Atau Walikota Dan/Atau Wakil Walikota Karena   Meninggal Dunia : </option>
                                                                     </select>

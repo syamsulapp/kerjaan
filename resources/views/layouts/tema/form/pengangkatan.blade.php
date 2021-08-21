@@ -41,7 +41,7 @@
                                                     <!-- PENGANGKATAN -->
                                                     <div class="row">
                                                         <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                                            <h4><b>DATA PERMOHONAN {{$data['form']}}</b></h4>
+                                                            <h4><b>DATA Usulan Pengangkatan {{$data['form']}}</b></h4>
                                                         </div>
                                                     </div> <br> <br>
                                                     <?php
@@ -80,7 +80,7 @@
                                                                 <h6>nama</h6>
                                                             </label>
                                                             <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                <input type="text" name="nama" class="form-control @error('nama') is-invalid @enderror" id="nama" placeholder="nama" value="{{ Auth::user()->name}}">
+                                                                <input type="text" name="nama" class="form-control @error('nama') is-invalid @enderror" id="nama" placeholder="nama" value="{{ Auth::user()->name}}" readonly>
                                                             </div>
                                                             @error('nama')
                                                             <div class="alert alert-danger">{{ $message }}</div>
@@ -91,7 +91,7 @@
                                                                 <h6>Provinsi</h6>
                                                             </label>
                                                             <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                <input type="text" name="provinsi" class="form-control @error('provinsi') is-invalid @enderror" id="hEmail" placeholder="" value="{{ __('sulawesi tenggara') }}">
+                                                                <input type="text" name="provinsi" class="form-control @error('provinsi') is-invalid @enderror" id="hEmail" placeholder="" value="{{ __('sulawesi tenggara') }}" readonly>
                                                             </div>
                                                             @error('provinsi')
                                                             <div class="alert alert-danger">{{ $message }}</div>
@@ -103,7 +103,8 @@
                                                                     <h6>Kabupaten/Kota</h6>
                                                                 </label>
                                                                 <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                    <select class="form-control  basic" name="kabupaten">
+                                                                    <select class="form-control  basic" name="kabupaten" required>
+                                                                        <option selected disabled value="">Pilih</option>
                                                                         @foreach($data['kabupaten'] as $kabupaten)
                                                                             <option value="{{ $kabupaten->kabupaten }}">{{ $kabupaten->kabupaten }}</option>
                                                                         @endforeach
@@ -118,9 +119,9 @@
                                                                         Kelamin</h6>
                                                                 </label>
                                                                 <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                    <select class="form-control  basic" name="jk">
-                                                                        <option selected="selected">Laki-Laki
-                                                                        </option>
+                                                                    <select class="form-control  basic" name="jk" required>
+                                                                        <option selected disabled value="">Pilih</option>
+                                                                        <option>Laki-Laki</option>
                                                                         <option>Perempuan</option>
                                                                     </select>
                                                                 </div>
@@ -133,7 +134,8 @@
                                                                         KDH</h6>
                                                                 </label>
                                                                 <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                    <select class="form-control  basic" name="objekkdh">
+                                                                    <select class="form-control  basic" name="objekkdh" required>
+                                                                        <option disabled selected value="">Pilih</option>
                                                                         @foreach($data['objekkdh'] as $objek)
                                                                             <option value="{{ $objek->objekkdh }}">{{ $objek->objekkdh }}</option>
                                                                         @endforeach
@@ -148,7 +150,8 @@
                                                                         KDH</h6>
                                                                 </label>
                                                                 <div class="col-xl-5 col-lg-9 col-sm-10">
-                                                                    <select class="form-control  basic" name="penyebabkdh">
+                                                                    <select class="form-control  basic" name="penyebabkdh" required>
+                                                                        <option selected disabled value="">Pilih</option>
                                                                         <option value="1">Pengangkatan Pasangan Calon Bupati Dan Wakil Bupati Atau Walikota Dan Wakil Walikota Terpilih Hasil Pilkada</option>
                                                                         <option value="2">Pengangkatan Wakil Bupati Atau Wakil Walikota Hasil Pemilihan DPRD (Pengisian  Kekosongan) : </option>
                                                                     </select>
