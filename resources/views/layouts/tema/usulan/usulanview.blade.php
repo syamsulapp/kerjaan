@@ -51,7 +51,7 @@
                                         $cek['data_id'] = Auth::user()->noreg
                                         @endphp
                                         <tbody>
-                                            @foreach($usulan as $usulan_saya)
+                                            <!-- @foreach($usulan as $usulan_saya) -->
                                             <tr>
                                                 <!-- fungsi untuk datanya bisa sesuai pada masing2 session user -->
                                                 @if($cek['data_id'] == $usulan_saya->noreg)
@@ -84,7 +84,6 @@
                                                         </svg>Cetak Usulan</a>
                                                     @endif
                                                 </td>
-                                                @endif
                                             </tr>
                                             @endforeach
                                         </tbody>
