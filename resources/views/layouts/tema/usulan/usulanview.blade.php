@@ -1,4 +1,4 @@
-@extends('layouts.tema.app')
+@include('layouts.tema.app')
 
 @section('title','SIOLA_Prov KDH')
 
