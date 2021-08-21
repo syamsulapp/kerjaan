@@ -14,7 +14,7 @@
                 <div class="page-title">
                     <h3>
                         @if($status == 'admin')
-                        {{ __('SIOLA_Prov Sulewesi Tenggara Kota Kendari') }}
+                        {{ __('Administrator SIOLA_Prov KDH') }}
                         @else
                         {{ __('Usulan') }}
                         @endif

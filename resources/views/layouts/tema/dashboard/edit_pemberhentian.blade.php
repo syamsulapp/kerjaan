@@ -1,6 +1,6 @@
 @extends('layouts.tema.app')
 
-@section('title','SIOLA KEMENDAGRI')
+@section('title','SIOLA_Prov KDH')
 
 @include('layouts.tema.style.tampilan')
 
@@ -32,7 +32,7 @@
                                                     <!-- PEMBERHENTIAN -->
                                                     <div class="row">
                                                         <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                                            <h4><b>Detail Data Pemberhentian</b></h4>
+                                                            <h4><b>Detail Data Usulan Pemberhentian</b></h4>
                                                         </div>
                                                     </div> <br> <br>
                                                     <form action="{{ url('admin/edit-data') }}{{ ('/') }}{{ $data_pemberhentian->id}}{{('/')}}{{ ('ubah') }}" method="POST">

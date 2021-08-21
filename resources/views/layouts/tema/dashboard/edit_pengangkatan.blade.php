@@ -1,6 +1,6 @@
 @extends('layouts.tema.app')
 
-@section('title','SIOLA KEMENDAGRI')
+@section('title','SIOLA_Prov KDH')
 
 @include('layouts.tema.style.tampilan')
 
@@ -28,7 +28,7 @@
                                     <div class="widget-header">
                                         <div class="row">
                                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                                <h4>Detail Data Pengangkatan</h4>
+                                                <h4>Detail Data Usulan Pengangkatan</h4>
                                             </div>
                                         </div>
                                     </div>

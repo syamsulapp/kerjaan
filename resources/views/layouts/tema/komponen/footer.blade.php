@@ -1,10 +1,10 @@
 <div class="footer-wrapper col-xl-12">
                                 <div class="footer-section f-section-1">
-                                    <p class="">© {{ now()->year }} <a target="_blank" href="https://designreset.com">ULA Kemendagri</a>
+                                    <p class="">© {{ now()->year }} <a target="_blank" href="https://designreset.com">SIOLA_Prov KDH</a>
                                     </p>
                                 </div>
                                 <div class="footer-section f-section-2">
-                                    <p class="">ULA Kemendagri <svg width="24"
+                                    <p class="">Indonesia <svg width="24"
                                             height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                                             class="feather feather-heart">
