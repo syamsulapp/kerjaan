@@ -100,6 +100,7 @@
 
 <script src="{{ asset('plugins/table/datatable/datatables.js') }}"></script>
 <script>
+    $(document).ready(function(){
     $('#zero-config').DataTable({
         "dom": "<'dt--top-section'<'row'<'col-12 col-sm-6 d-flex justify-content-sm-start justify-content-center'l><'col-12 col-sm-6 d-flex justify-content-sm-end justify-content-center mt-sm-0 mt-3'f>>>" +
             "<'table-responsive'tr>" +
@@ -118,6 +119,7 @@
         "lengthMenu": [7, 10, 20, 50],
         "pageLength": 7
     });
+});
 </script>
 
 <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
