@@ -65,7 +65,7 @@
                                                     {{ __('Jenis Usulan: pengangkatan Objek KDH ') }} {{ $usulan_saya->objekkdh }}
                                                     @endif
                                                 </td>
-                                                <td>{{ $c->penyebabkdh }}</td>
+                                                <td>{{ $usulan_saya->penyebabkdh }}</td>
                                                 <td>
                                                     <!-- untuk cek usernya sdh di disetujui permohonannya atau tidak -->
                                                     @if($usulan_saya->status_permohonan == 'approve')
