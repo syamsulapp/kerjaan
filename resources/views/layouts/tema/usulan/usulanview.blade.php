@@ -101,7 +101,7 @@
 
                                 <div class="row layout-top-spacing" id="cancel-row">
 
-                                    <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
+                                    <div class="col-xl-14 col-lg-15 col-sm-14  layout-spacing">
                                         <div class="widget-content widget-content-area br-6">
                                             <table id="zero-config" class="table dt-table-hover" style="width:100%">
                                                 <thead>
