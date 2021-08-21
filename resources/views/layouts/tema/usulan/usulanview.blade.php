@@ -16,7 +16,7 @@
 
         <div class="content-container">
 
-            <div class="col-left layout-top-spacing">
+            <div class="layout-top-spacing">
                 <div class="col-left-content">
 
                     <div class="header-container">
