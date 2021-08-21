@@ -46,8 +46,11 @@
 </td>
 <td colspan="2" valign="top">
 <text align="center"><span style="color: #000000; font-family: 'Arial Narrow'; font-size: x-large;"><strong>TANDA TERIMA</strong></span></text>
+<p>
 <text align="center"><span style="color: #000000; font-family: 'Arial Narrow'; font-size: medium;"><strong>UNIT LAYANAN ADMINISTRASI</strong></span></text>
+<p>
 <text align="center"><span style="color: #000000; font-family: 'Arial Narrow'; font-size: medium;"><strong>BIRO PEMERINTAHAN DAN OTDA SETDA PROV. SULTRA</strong></span></text>
+<p>
 <text align="center"><span style="color: #000000; font-family: 'Arial Narrow'; font-size: xx-small;">Telp : Kompleks Bumi Praja Anduonohu Telp. 391 609 Fax (0401) 3191611 Kendari 93232</span></text>
 </td>
 </tr>
