@@ -21,7 +21,6 @@
 
                     <div class="header-container">
                         @include('layouts.tema.style.usertheme')
-
                     </div>
 
                     <div class="admin-data-content layout-top-spacing">
@@ -30,11 +29,12 @@
 
                             <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
                                 <div class="widget-content widget-content-area br-6">
-                                    <table id="zero-config" class="table dt-table-hover" style="width:100%">
-                                        <br>
+                                    <br>
                                         <div class="page-title">
                                             <h3>Histori Permohonan Layanan Administrasi Saya(64)</h3>
                                         </div>
+                                     <br>
+                                    <table id="zero-config" class="table dt-table-hover" style="width:100%">
                                         <thead>
                                             <tr>
                                                 <th>Nama</th>
@@ -95,7 +95,7 @@
                         </div>
 
                     </div>
-                    <!-- <div class="footer-wrapper col-xl-12">
+                    <div class="footer-wrapper col-xl-12">
                         <div class="footer-section f-section-1">
                             <p class="">© {{ now()->year }} <a target="_blank" href="https://designreset.com">SIOLA_Prov KDH</a>
                             </p>
@@ -106,7 +106,7 @@
                                     </path>
                                 </svg></p>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
 
