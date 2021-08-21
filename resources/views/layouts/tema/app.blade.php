@@ -72,7 +72,10 @@
 </script>
 <script src="{{ asset('assets/js/custom.js') }}"></script>
 <!-- END GLOBAL MANDATORY SCRIPTS -->
-
+<script>
+    checkall('todoAll', 'todochekbox');
+    $('[data-toggle="tooltip"]').tooltip()
+</script>
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 <script src="{{ asset('assets/js/scrollspyNav.js') }}"></script>
 <script src="{{ asset('plugins/jquery-step/jquery.steps.min.js') }}"></script>
