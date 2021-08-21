@@ -52,10 +52,9 @@
                                         @endphp
                                         <tbody>
                                             @foreach($usulan as $usulan_saya)
+                                            <!-- fungsi untuk datanya bisa sesuai pada masing2 session user -->
                                             @if($cek['data_id'] == $usulan_saya->noreg)
                                             <tr>
-                                                <!-- fungsi untuk datanya bisa sesuai pada masing2 session user -->
-                                                
                                                 <td>{{ $usulan_saya->nama }}</td>
                                                 <td>{{ $usulan_saya->created_at }}</td>
                                                 <td><span class="badge badge-info">{{ $usulan_saya->noreg }}</span></td>
