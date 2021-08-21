@@ -95,7 +95,7 @@
                         </div>
 
                     </div>
-                    <div class="footer-wrapper col-xl-12">
+                    <!-- <div class="footer-wrapper col-xl-12">
                         <div class="footer-section f-section-1">
                             <p class="">© {{ now()->year }} <a target="_blank" href="https://designreset.com">SIOLA_Prov KDH</a>
                             </p>
@@ -106,7 +106,7 @@
                                     </path>
                                 </svg></p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
