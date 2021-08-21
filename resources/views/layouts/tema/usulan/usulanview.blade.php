@@ -84,6 +84,7 @@
                                                         </svg>Cetak Usulan</a>
                                                     @endif
                                                 </td>
+                                                
                                             </tr>
                                             @endforeach
                                         </tbody>
