@@ -8,7 +8,7 @@
     <title>Serah Terima</title>
 </head>
 
-<img src="{{ asset('assets/img/logosultra.png') }}" alt="logo-sultra" width="200" height="200">
+
 <style>
     table {
         font-family: arial, sans-serif;
@@ -26,49 +26,22 @@
         background-color: #dddddd;
     }
 </style>
-</head>
+
 <body>
         @php
             $cek['cek_status_noreg_cetak'] = Auth::user()->noreg;
             @endphp
-<!-- <table>
-    <tr>
-        <th>nama</th>
-        <th>Nomor Registrasi</th>
-        <th>Nama Pemohon</th>
-        <th>Instansi</th>
-        <th>Informasi Pemohon</th>
-        <th>Tanggal Pengajuan</th>
-        <th>Layanan</th>
-        <th>Yang Menyerahkan</th>
-    </tr>
-    <tr>
-        @foreach($cetak as $c)
+
+
+@foreach($cetak as $c)
             @if($cek['cek_status_noreg_cetak'] == $c->noreg)
-                <th> {{ $c->nama }}</th>
-                <th> {{ $c->noreg }}</th>
-                <th>{{ __('Bagian Pemerintah')  }}{{ $c->kabupaten }}</th>
-                <th>{{ __('Sekertariat Daerah')  }}{{ $c->kabupaten  }}</th>
-                <th>{{ $c->kategori_permohonan }}
-                    <br>
-                    {{ __('objek kdh:') }} {{ $c->objekkdh }}
-                    {{ __('kabupaten :') }} {{ $c->kabupaten }} {{ $c->provinsi }}
-                </th>
-                <th>{{ $c->created_at }}</th>
-                <th>{{ $c->penyebabkdh }}</th>
-                <th>{{ __('kepala daerah') }}</th>
-            @endif
-        @endforeach
-    </tr>
-</table> -->
-
-
-
+	
 <table cellspacing="0" cellpadding="0">
 <tbody>
 <tr>
 <td valign="top">
 <p>&nbsp;</p>
+	<img src="{{ asset('assets/img/logosultra.png') }}" alt="logo-sultra" width="200" height="200">
 </td>
 <td colspan="2" valign="top">
 <p align="center"><span style="color: #000000; font-family: 'Arial Narrow'; font-size: x-large;"><strong>TANDA TERIMA</strong></span></p>
@@ -90,7 +63,7 @@
 <p><span style="color: #000000; font-family: Arial; font-size: small;">Nama Pemohon</span></p>
 </td>
 <td colspan="2" valign="middle">
-<p><span style="color: #000000; font-family: Arial; font-size: small;">{{ __('Bagian Pemerintah')  }}{{ $c->kabupaten }}</span></p>
+<p><span style="color: #000000; font-family: Arial; font-size: small;">{{ __('Bagian Pemerintah ')  }}{{ $c->kabupaten }}</span></p>
 </td>
 </tr>
 <tr>
@@ -98,7 +71,7 @@
 <p><span style="color: #000000; font-family: Arial; font-size: small;">Instansi</span></p>
 </td>
 <td colspan="2" valign="middle">
-<p><span style="color: #000000; font-family: Arial; font-size: small;">{{ __('Sekertariat Daerah')  }}{{ $c->kabupaten  }}</span></p>
+<p><span style="color: #000000; font-family: Arial; font-size: small;">{{ __('Sekertariat Daerah ')  }}{{ $c->kabupaten  }}</span></p>
 </td>
 </tr>
 <tr>
@@ -107,8 +80,8 @@
 </td>
 <td colspan="2" valign="middle">
 <p><span style="color: #000000; font-family: Arial; font-size: small;">Jenis Usulan : Pengangkatan</span></p>
-<p><span style="color: #000000; font-family: Arial; font-size: small;">Objek KDH<span class="Apple-converted-space">&nbsp; </span>: Bupati/Wakil Bupati</span></p>
-<p><span style="color: #000000; font-family: Arial; font-size: small;">Kabupaten Muna Provinsi Sulawesi Tenggara</span></p>
+<p><span style="color: #000000; font-family: Arial; font-size: small;">{{ __('Objek KDH :') }}<span class="Apple-converted-space">&nbsp; </span>:  {{ $c->objekkdh }}</span></p>
+<p><span style="color: #000000; font-family: Arial; font-size: small;">{{ __('kabupaten :') }} {{ $c->kabupaten }} {{ $c->provinsi }} Provinsi Sulawesi Tenggara</span></p>
 </td>
 </tr>
 <tr>
@@ -116,7 +89,7 @@
 <p><span style="color: #000000; font-family: Arial; font-size: small;">Tanggal pengajuan</span></p>
 </td>
 <td colspan="2" valign="middle">
-<p><span style="color: #000000; font-family: Arial; font-size: small;">{{ $c->created_at }}</p>
+<p><span style="color: #000000; font-family: Arial; font-size: small;">{{ $c->created_at }}</span></p>
 </td>
 </tr>
 <tr>
@@ -151,8 +124,9 @@
 </td>
 </tr>
 </tbody>
+	
+	@endif
+        @endforeach
 </table>
 
-</body>
-</html>
 
