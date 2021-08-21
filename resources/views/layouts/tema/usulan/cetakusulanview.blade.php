@@ -125,11 +125,11 @@
 </tr>
 <tr>
 <td colspan="3" valign="top">
-<p><span style="color: #000000; font-family: Arial; font-size: small;"><u>CATATAN PENTING!</u></span></p>
-<p><span style="color: #000000; font-family: Arial; font-size: small;">1. Hasil Dokumen Asli dapat diambil secara langsung di Biro Pemerintahan dan OTDA Prov.<span class="Apple-converted-space">&nbsp; </span>Sultra/Badan Penghubung Kabupaten/Kota <u>setelah status permohonan Upload Dokumen Jadi</u>. </span></p>
-<p><span style="color: #000000; font-family: Arial; font-size: small;">2. Persyaratan pengambilan dokumen : <span class="Apple-converted-space">&nbsp; &nbsp;</span></span></p>
-<p><span style="color: #000000; font-family: Arial; font-size: small;"><span class="Apple-converted-space">&nbsp; &nbsp; </span>- Tanda Terima / Tanda Bukti Registrasi ini.<span class="Apple-converted-space">&nbsp; &nbsp;</span></span></p>
-<p><span style="color: #000000; font-family: Arial; font-size: small;"><span class="Apple-converted-space">&nbsp; &nbsp; </span>- Surat Tugas dari Bagian Tata Pemerintahan/Badan Penghubung Kabupaten/Kota.</span></p>
+<span style="color: #000000; font-family: Arial; font-size: small;"><u>CATATAN PENTING!</u></span>
+<p><span style="color: #000000; font-family: Arial; font-size: small;">1. Hasil Dokumen Asli dapat diambil secara langsung di Biro Pemerintahan dan OTDA Prov.<span class="Apple-converted-space">&nbsp; </span>Sultra/Badan Penghubung Kabupaten/Kota <u>setelah status permohonan Upload Dokumen Jadi</u>. </span>
+<p><span style="color: #000000; font-family: Arial; font-size: small;">2. Persyaratan pengambilan dokumen : <span class="Apple-converted-space">&nbsp; &nbsp;</span></span>
+<br><span style="color: #000000; font-family: Arial; font-size: small;"><span class="Apple-converted-space">&nbsp; &nbsp; </span>- Tanda Terima / Tanda Bukti Registrasi ini.<span class="Apple-converted-space">&nbsp; &nbsp;</span></span>
+<br><span style="color: #000000; font-family: Arial; font-size: small;"><span class="Apple-converted-space">&nbsp; &nbsp; </span>- Surat Tugas dari Bagian Tata Pemerintahan/Badan Penghubung Kabupaten/Kota.</span>
 <p>&nbsp;</p>
 </td>
 </tr>
