@@ -108,15 +108,23 @@
                                                     <tr>
                                                         <th>No</th>
                                                         <th>Nama</th>
-                                                        <th>Email</th>
+                                                        <th>Tgl Registrasi</th>
+                                                        <th>Nomor Registrasi</th>
+                                                        <th>Layanan</th>
+                                                        <th>Informasi Permohonan</th>
+                                                        <th>Status Permohonan</th>
                                                         <th class="no-content">Actions</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td>No</td>
-                                                        <td>System Architect</td>
-                                                        <td>Edinburgh</td>
+                                                        <th>No</th>
+                                                        <th>Nama</th>
+                                                        <th>Tgl Registrasi</th>
+                                                        <th>Nomor Registrasi</th>
+                                                        <th>Layanan</th>
+                                                        <th>Informasi Permohonan</th>
+                                                        <th>Status Permohonan</th>
                                                         <td>
                                                             <button class="btn btn-danger mb-2"><svg viewBox="0 0 24 24"
                                                                     width="24" height="24" stroke="currentColor"
