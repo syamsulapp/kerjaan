@@ -41,7 +41,7 @@
 <tr>
 <td valign="top">
 <p>&nbsp;</p>
-	<img src="{{ asset('assets/img/logosultra.png') }}" alt="logo-sultra" width="200" height="200">
+	<img src="{{ asset('fronts/assets/img/favicon.png') }}" alt="logo-sultra" width="200" height="200">
 </td>
 <td colspan="2" valign="top">
 <p align="center"><span style="color: #000000; font-family: 'Arial Narrow'; font-size: x-large;"><strong>TANDA TERIMA</strong></span></p>
