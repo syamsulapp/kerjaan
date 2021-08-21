@@ -44,7 +44,7 @@
 	<img src="https://siolaprovkdh.greentech.id/fronts/assets/img/favicon.png" alt="logo-sultra" width="200" height="200">
 </td>
 <td colspan="2" valign="top">
-<p><text align="center"><span style="color: #000000; font-family: 'Arial Narrow'; font-size: x-large;"><strong>TANDA TERIMA</strong></span></text></p>
+<text align="center"><span style="color: #000000; font-family: 'Arial Narrow'; font-size: x-large;"><strong>TANDA TERIMA</strong></span></text>
 <br>
 <text align="center"><span style="color: #000000; font-family: 'Arial Narrow'; font-size: medium;"><strong>UNIT LAYANAN ADMINISTRASI</strong></span></text>
 <br>
