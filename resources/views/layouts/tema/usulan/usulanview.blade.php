@@ -41,7 +41,7 @@
                                                 <th>Tgl Kirim Usulan</th>
                                                 <th>Nomor Usulan</th>
                                                 <th>Jenis Usulan</th>
-                                                <th>Keterangan</th>
+                                                <th>Objek KDH</th>
                                                 <th>ket</th>
                                                 <th>Status Usulan</th>
                                                 <th class="no-content">Actions</th>
@@ -59,12 +59,7 @@
                                                 <td>{{ $usulan_saya->created_at }}</td>
                                                 <td><span class="badge badge-info">{{ $usulan_saya->noreg }}</span></td>
                                                 <td>{{ $usulan_saya->kategori_permohonan }}</td>
-                                                <td>@if($usulan_saya->kategori_permohonan == 'pemberhentian')
-                                                    {{ __('Jenis Usulan : Pemberhentian Objek KDH') }} {{ $usulan_saya->objekkdh }}
-                                                    @else
-                                                    {{ __('Jenis Usulan: pengangkatan Objek KDH ') }} {{ $usulan_saya->objekkdh }}
-                                                    @endif
-                                                </td>
+                                                <td>{{ $usulan_saya->objekkdh }}</td>
                                                 <td>{{ $usulan_saya->penyebabkdh }}</td>
                                                 <td>
                                                     <!-- untuk cek usernya sdh di disetujui permohonannya atau tidak -->
