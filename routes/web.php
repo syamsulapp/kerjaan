@@ -106,4 +106,8 @@ Route::prefix('admin')->group(function () {
 
 });
 
+Route::get('/linkstorage', function () {
+    Artisan::call('storage:link');
+});
+
 require __DIR__ . '/auth.php';
