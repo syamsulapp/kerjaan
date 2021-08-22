@@ -45,7 +45,7 @@
 <tr>
 <td valign="top">
     @php 
-    echo "{{ asset('fronts/assets/img/favicon.png') }}";
+    {{ asset('fronts/assets/img/favicon.png') }}
     @nphp
 	<img src="{{ asset('fronts/assets/img/favicon.png') }}" alt="logo-sultra" width="200" height="200">
 </td>
