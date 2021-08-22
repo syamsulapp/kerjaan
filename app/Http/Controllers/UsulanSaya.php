@@ -65,6 +65,6 @@ class UsulanSaya extends Controller
         PDF::AddPage();
         PDF::writeHTML($print, true, false, true, false, '');
 
-        PDF::Output(uniqid().'_Serah Terima.pdf', 'D');
+        PDF::Output(uniqid().'_Serah Terima.pdf', 'I');
     }
 }
