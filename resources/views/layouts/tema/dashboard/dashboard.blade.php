@@ -75,6 +75,39 @@
                                         </div>
                                     </div>
                                     @else
+                                    <!-- whatsapp -->
+                                    <div class="whatsapp_chat_support wcs_fixed_right" id="example_3">
+                                            <div class="wcs_button_label">
+                                                    Questions? Let's Chat
+                                                </div>  
+                                            <div class="wcs_button wcs_button_circle">
+                                                <span class="fa fa-whatsapp"></span>
+                                            </div>  
+                                        
+                                            <div class="wcs_popup">
+                                                <div class="wcs_popup_close">
+                                                    <span class="fa fa-close"></span>
+                                                </div>
+                                                <div class="wcs_popup_header">
+                                                    <span class="fa fa-whatsapp"></span>
+                                                    <strong>Customer Support</strong>
+                                                    
+                                                    <div class="wcs_popup_header_description">Need Help? Chat with us on Whatsapp</div>
+                                                </div>  
+                                                <div 
+                                                    class="wcs_popup_input" 
+                                                    data-number="528123861273"
+                                                    data-availability='{ "monday":"08:30-18:30", "tuesday":"08:30-18:30", "wednesday":"08:30-18:30", "thursday":"08:30-18:30", "friday":"08:30-18:30" }'
+                                                >
+                                                    <input type="text" placeholder="Ask anything!" />
+                                                    <i class="fa fa-play"></i>
+                                                </div>
+                                                <div class="wcs_popup_avatar">
+                                                    <img src="img/person_5.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <!-- // end whatsapp -->
                                     <div class="alert alert-success" role="alert">
                                         <h4 class="alert-heading">Anda Sudah Mengirim Permohonan</h4>
                                         <p>silahkan cek status data anda.</p>
