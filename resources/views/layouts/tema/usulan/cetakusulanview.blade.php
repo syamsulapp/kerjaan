@@ -17,7 +17,7 @@
     }
 
     td, th {
-        /* border: 1px solid #dddddd; */
+        border: 1px solid #dddddd;
         text-align: left;
         padding: 8px;
     }
@@ -44,7 +44,7 @@
 <tr>
 <td valign="top">
 
-	<img src="{{asset('fronts/assets/img/favicon.png')}}"  width="200" height="200">
+	<img src="{{ asset('fronts/assets/img/logos.jpg') }}"  width="200" height="200">
 </td>
 <td colspan="2" valign="top">
 <div class="text">
