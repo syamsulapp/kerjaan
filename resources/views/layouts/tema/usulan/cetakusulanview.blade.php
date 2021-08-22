@@ -89,7 +89,7 @@
 <td colspan="2" valign="middle">
 <p><span style="color: #000000; font-family: Arial; font-size: small;">Jenis Usulan : {{ $c->kategori_permohonan }} </span></p>
 <p><span style="color: #000000; font-family: Arial; font-size: small;">{{ __('Objek KDH :') }}<span class="Apple-converted-space">&nbsp; </span>  {{ $c->objekkdh }}</span></p>
-<p><span style="color: #000000; font-family: Arial; font-size: small;">{{ __('kabupaten :') }} {{ $c->kabupaten }} {{ $c->provinsi }} Provinsi Sulawesi Tenggara</span></p>
+<p><span style="color: #000000; font-family: Arial; font-size: small;">{{ $c->kabupaten }} : {{ $c->provinsi }}</span></p>
 </td>
 </tr>
 <tr>
