@@ -44,8 +44,10 @@
 <tbody>
 <tr>
 <td valign="top">
-<h1>hey you</h1>
-	<img src="https://siolaprovkdh.greentech.id/fronts/assets/img/favicon.png" alt="logo-sultra" width="200" height="200">
+    @php 
+    echo "{{ asset('fronts/assets/img/favicon.png') }}";
+    @nphp
+	<img src="{{ asset('fronts/assets/img/favicon.png') }}" alt="logo-sultra" width="200" height="200">
 </td>
 <td colspan="2" valign="top">
 <div class="text">
