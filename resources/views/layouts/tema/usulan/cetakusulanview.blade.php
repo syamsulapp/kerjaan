@@ -26,8 +26,8 @@
         background-color: #dddddd;
     }
 
-    text {
-        align-items: center;
+    .text {
+        text-align: center;
     }
 </style>
 
@@ -48,7 +48,7 @@
 	<img src="https://siolaprovkdh.greentech.id/fronts/assets/img/favicon.png" alt="logo-sultra" width="200" height="200">
 </td>
 <td colspan="2" valign="top">
-<center>
+<div class="text">
 <text><span style=" color: #000000; font-family: 'Arial Narrow'; font-size: x-large;"><strong>TANDA TERIMA</strong></span></text>
 <br>
 <text ><span style="color: #000000; font-family: 'Arial Narrow'; font-size: medium;"><strong>UNIT LAYANAN ADMINISTRASI</strong></span></text>
@@ -56,7 +56,7 @@
 <text><span style="color: #000000; font-family: 'Arial Narrow'; font-size: medium;"><strong>BIRO PEMERINTAHAN DAN OTDA SETDA PROV. SULTRA</strong></span></text>
 <br>
 <text><span style="color: #000000; font-family: 'Arial Narrow'; font-size: xx-small;">Telp : Kompleks Bumi Praja Anduonohu Telp. 391 609 Fax (0401) 3191611 Kendari 93232</span></text>
-</center>
+</div>
 <p></p>
 </td>
 </tr>
