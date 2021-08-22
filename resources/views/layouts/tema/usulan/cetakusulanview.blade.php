@@ -115,7 +115,8 @@
 <p><span style="color: #000000; font-family: Arial; font-size: small;">Yang Menyerahkan,</span></p>
 </td>
 <td valign="middle">
-<p><span style="color: #000000; font-family: Arial; font-size: small;">Kendari,<span class="Apple-converted-space">&nbsp; </span>04 Juni 2021</span></p>
+<span style="color: #000000; font-family: Arial; font-size: small;">Kendari,<span class="Apple-converted-space">&nbsp; </span>04 Juni 2021</span>
+<br>
 <p><span style="color: #000000; font-family: Arial; font-size: small;">Yang Menerima,</span></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
