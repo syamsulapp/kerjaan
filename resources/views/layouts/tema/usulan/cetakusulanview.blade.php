@@ -12,7 +12,7 @@
 <style>
     table {
         font-family: arial, sans-serif;
-        /* border-collapse: collapse; */
+        border-collapse: collapse; 
         width: 100%;
     }
 
@@ -39,14 +39,12 @@
 
 @foreach($cetak as $c)
             @if($cek['cek_status_noreg_cetak'] == $c->noreg)
-	
 <table cellspacing="0" cellpadding="0">
 <tbody>
 <tr>
 <td valign="top">
-    {{ asset('fronts/assets/img/favicon.png') }}
-    
-	<img src="{{ asset('fronts/assets/img/favicon.png') }}" alt="logo-sultra" width="200" height="200">
+
+	<img src="{{asset('fronts/assets/img/favicon.png')}}"  width="200" height="200">
 </td>
 <td colspan="2" valign="top">
 <div class="text">
@@ -58,7 +56,6 @@
 <br>
 <text><span style="color: #000000; font-family: 'Arial Narrow'; font-size: xx-small;">Telp : Kompleks Bumi Praja Anduonohu Telp. 391 609 Fax (0401) 3191611 Kendari 93232</span></text>
 </div>
-<p></p>
 </td>
 </tr>
 <tr>
