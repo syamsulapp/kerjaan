@@ -102,8 +102,8 @@
                                                     <div class="wcs_popup_person_container">
                                                         <div 
                                                             class="wcs_popup_person" 
-                                                            data-number="528123861273"
-                                                            data-availability='{ "monday":"08:30-18:30", "tuesday":"08:30-18:30", "wednesday":"08:30-18:30", "thursday":"08:30-18:30", "friday":"08:30-18:30" }'
+                                                            data-number="62811400081"
+                                                            data-availability='{ "monday":"08:30-18:30", "tuesday":"08:30-18:30", "wednesday":"08:30-18:30", "thursday":"08:30-18:30", "friday":"08:30-18:30" ,"sunday": "08:30-18:30"}'
                                                         >
                                                             <div class="wcs_popup_person_img"><img src="{{ asset('img/person_5.jpg') }}" alt=""></div>
                                                             <div class="wcs_popup_person_content">
