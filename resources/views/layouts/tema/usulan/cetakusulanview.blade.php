@@ -44,7 +44,7 @@
 <tr>
 <td valign="top">
 
-	<img src="{{ asset('fronts/assets/img/logo.jpg') }}"  width="200" height="200">
+	<div class="text"><img src="{{ asset('fronts/assets/img/logo.jpg') }}"  width="80" height="80"> </div>
 </td>
 <td colspan="2" valign="top">
 <div class="text">
@@ -113,7 +113,7 @@
 <p><span style="color: #000000; font-family: Arial; font-size: small;">Yang Menyerahkan,</span></p>
 </td>
 <td valign="middle">
-<span style="color: #000000; font-family: Arial; font-size: small;">Kendari,<span class="Apple-converted-space">&nbsp; </span>04 Juni 2021</span>
+<span style="color: #000000; font-family: Arial; font-size: small;">Kendari,<span class="Apple-converted-space">&nbsp; </span>{{ date('d-m-Y') }}</span>
 <br>
 <span style="color: #000000; font-family: Arial; font-size: small;">Yang Menerima,</span>
 <p>&nbsp;</p>
@@ -137,5 +137,3 @@
 	@endif
         @endforeach
 </table>
-
-
