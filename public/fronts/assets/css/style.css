@@ -2228,3 +2228,10 @@ section {
   font-size: 13px;
   color: #fff;
 }
+
+div.ex3 {
+  background-color: lightblue;
+  width: 110px;
+  height: 110px;
+  overflow: auto;
+}

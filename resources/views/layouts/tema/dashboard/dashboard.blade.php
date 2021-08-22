@@ -99,7 +99,7 @@
                                                         <br>
                                                         <div class="wcs_popup_header_description">Anda cukup memilih admin kabupaten kota </div>
                                                     </div>  
-                                                    <div data-spy="scroll" class="wcs_popup_person_container">
+                                                    <div class="wcs_popup_person_container ex3">
                                                         <div 
                                                             class="wcs_popup_person" 
                                                             data-number="62811400081"
