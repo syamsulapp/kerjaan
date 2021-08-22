@@ -50,7 +50,9 @@
 
     <!-- Style of the plugin -->
     <!-- whatsapp css -->
-        <link rel="stylesheet" href="{{ asset('plugin/whatsapp-chat-support.css') }}">
+        <link rel="stylesheet" href="{{ asset('plugin/whatsapp-chat-support.css') }}">\
+
+        <link rel="stylesheet" href="{{ asset('plugin/components/Font Awesome/css/font-awesome.min.css') }}">
 </head>
 
 
