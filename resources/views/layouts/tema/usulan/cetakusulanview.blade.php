@@ -117,7 +117,7 @@
 <td valign="middle">
 <span style="color: #000000; font-family: Arial; font-size: small;">Kendari,<span class="Apple-converted-space">&nbsp; </span>04 Juni 2021</span>
 <br>
-<p><span style="color: #000000; font-family: Arial; font-size: small;">Yang Menerima,</span></p>
+<span style="color: #000000; font-family: Arial; font-size: small;">Yang Menerima,</span>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
