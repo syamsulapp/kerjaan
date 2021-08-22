@@ -51,16 +51,6 @@
     <!-- Style of the plugin -->
     <!-- whatsapp -->
         <link rel="stylesheet" href="{{ asset('plugin/whatsapp-chat-support.css') }}">
-        
-        
-        <!-- jQuery 1.8+ -->
-        <script src="{{ asset('plugin/components/jQuery/jquery-1.11.3.min.js') }}"></script>
-        
-        
-        <!-- Plugin JS file -->
-        <script src="{{ asset('plugin/components/moment/moment.min.js') }}"></script>
-        <script src="{{ asset('plugin/components/moment/moment-timezone-with-data.min.js') }}"></script> <!-- spanish language (es) -->
-        <script src="{{ asset('plugin/whatsapp-chat-support.js') }}"></script>
 </head>
 
 
@@ -135,6 +125,15 @@
     });
 
 </script>
+
+<!-- js whatsapp -->
+<!-- jQuery 1.8+ -->
+<script src="{{ asset('plugin/components/jQuery/jquery-1.11.3.min.js') }}"></script>
+        
+<!-- Plugin JS file -->
+<script src="{{ asset('plugin/components/moment/moment.min.js') }}"></script>
+<script src="{{ asset('plugin/components/moment/moment-timezone-with-data.min.js') }}"></script> <!-- spanish language (es) -->
+<script src="{{ asset('plugin/whatsapp-chat-support.js') }}"></script>
 
 <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 
