@@ -87,9 +87,9 @@
 <p><span style="color: #000000; font-family: Arial; font-size: small;">Informasi Pemohon</span></p>
 </td>
 <td colspan="2" valign="middle">
-<span style="color: #000000; font-family: Arial; font-size: small;">Jenis Usulan : {{ $c->kategori_permohonan }} </span>
-<br><span style="color: #000000; font-family: Arial; font-size: small;">{{ __('Objek KDH :') }}<span class="Apple-converted-space">&nbsp; </span>  {{ $c->objekkdh }}
-<br><span style="color: #000000; font-family: Arial; font-size: small;">{{ $c->kabupaten }} : {{ $c->provinsi }}</span>
+<p><span style="color: #000000; font-family: Arial; font-size: small;">Jenis Usulan : {{ $c->kategori_permohonan }} </span></p>
+<p><span style="color: #000000; font-family: Arial; font-size: small;">{{ __('Objek KDH :') }}<span class="Apple-converted-space">&nbsp; </span>  {{ $c->objekkdh }}</span></p>
+<p><span style="color: #000000; font-family: Arial; font-size: small;">{{ $c->kabupaten }} : {{ $c->provinsi }}</span></p>
 </td>
 </tr>
 <tr>
