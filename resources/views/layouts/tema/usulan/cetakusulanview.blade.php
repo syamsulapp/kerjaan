@@ -44,7 +44,7 @@
 <tr>
 <td valign="top">
 
-	<img src="{{ asset('fronts/assets/img/logos.jpg') }}"  width="200" height="200">
+	<img src="{{ asset('fronts/assets/img/logo.jpg') }}"  width="200" height="200">
 </td>
 <td colspan="2" valign="top">
 <div class="text">
