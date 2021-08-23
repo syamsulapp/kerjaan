@@ -114,8 +114,6 @@
                                                                 <div class="wcs_popup_person_status">I'm Online</div>
                                                             </div>  
                                                         </div>
-
-
                                             
                                                         <div 
                                                             class="wcs_popup_person" 
