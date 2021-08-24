@@ -381,7 +381,7 @@
                                                                         <span class="alert alert-danger">{{ $message }}</span>
                                                                         @enderror
                                                                     </div>
-                                                                    <!-- berkas ke 10 tidak di pake-->
+                                                                    <!-- berkas ke 10 tidak di pake lagi -->
                                                                     <!-- <br>
                                                                     <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                         <label for="fullName">

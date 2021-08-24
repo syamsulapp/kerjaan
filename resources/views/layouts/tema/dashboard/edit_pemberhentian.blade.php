@@ -150,7 +150,7 @@
                                                             <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload4) }}">Berkas 4</a>
 
                                                         </div>
-                                                        <!-- berkas ke 5 -->
+                                                        <!-- berkas ke 5  sampe sini sj -->
                                                         <br>
                                                         <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                             <label for="fullName">
@@ -218,7 +218,7 @@
                                                                 <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload5) }}">Berkas 5 </a>
 
                                                             </div>
-                                                        <!-- berkas ke 6 -->
+                                                        <!-- berkas ke 6 sampe sini sj -->
                                                         <br>
                                                         <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                             <label for="fullName">

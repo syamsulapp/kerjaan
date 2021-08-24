@@ -76,24 +76,28 @@ class Administrator extends Controller
     public function hapus_data_pemberhentian(Pemberhentian $hapusDataPemberhentian) {
         Pemberhentian::destroy($hapusDataPemberhentian->id);
         
+        // hapus data user untuk dan suruh ulangi upload (pemberhentian)
         DB::table('users')
         ->where('noreg', $hapusDataPemberhentian->noreg)
         ->update(['status_kirim_permohonan' => 'belum']);
         
+        // hapus data user untuk dan suruh ulangi upload (pemberhentian)
         DB::table('users')
         ->where('noreg', $hapusDataPemberhentian->noreg)
         ->update(['kategori_permohonan' => 'default']);
-
+        
         return redirect('/admin/pemberhentian')->with('sukses','data berhasil di hapus');
     }
-
+    
     public function hapus_data_pengangkatan(Pengangkatan $hapusDataPengangkatan) {
         Pengangkatan::destroy($hapusDataPengangkatan->id);
-
+        
+        // hapus data user untuk dan suruh ulangi upload (pengangkatan)
         DB::table('users')
         ->where('noreg', $hapusDataPengangkatan->noreg)
         ->update(['status_kirim_permohonan' => 'belum']);
         
+        // hapus data user untuk dan suruh ulangi upload (pengangkatan)
         DB::table('users')
         ->where('noreg', $hapusDataPengangkatan->noreg)
         ->update(['kategori_permohonan' => 'default']);

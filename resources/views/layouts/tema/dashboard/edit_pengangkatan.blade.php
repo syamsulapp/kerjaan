@@ -318,7 +318,7 @@
                                                                 <a class="btn btn-primary" href="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload12) }}">Berkas 12</a>
                                                             </div>
                                                             <br>
-                                                            <!-- berkas ke 13 tidak di pake 
+                                                            <!-- berkas ke 13 tidak di pake lagi
                                                             <br>
                                                             <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                 <label for="fullName">
