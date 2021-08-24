@@ -31,7 +31,7 @@
                                 <div class="widget-content widget-content-area br-6">
                                     <br>
                                         <div class="page-title">
-                                            <h3>   Histori Permohonan Layanan Administrasi Saya</h3>
+                                            <h3> Histori Saya</h3>
                                         </div>
                                      <br>
                                     <table id="zero-config" class="table dt-table-hover" style="width:100%">

@@ -84,7 +84,7 @@
                                     <!-- whatsapp -->
                                     <div class="whatsapp_chat_support wcs_fixed_right" id="example">
                                                 <div class="wcs_button_label">
-                                                    Questions? Let's Chat
+                                                 Butuh Konsultasi? klik disini.
                                                 </div>  
                                                 <div class="wcs_button wcs_button_circle">
                                                     <span class="fa fa-whatsapp"></span>
@@ -95,11 +95,13 @@
                                                         <span class="fa fa-close"></span>
                                                     </div>
                                                     <div class="wcs_popup_header">
-                                                        <strong>Need Help? Chat with us</strong>
+                                                        <strong>Layanan Konsultasi</strong>
                                                         <br>
-                                                        <div class="wcs_popup_header_description">Click one of our representatives below</div>
+                                                        <div class="wcs_popup_header_description">Anda cukup memilih admin kabupaten kota </div>
                                                     </div>  
-                                                    <div class="wcs_popup_person_container">
+                                                    <div class="wcs_popup_person_container ex3">
+                                                      
+
                                                         <div 
                                                             class="wcs_popup_person" 
                                                             data-number="62811400081"
