@@ -75,7 +75,7 @@
                                                     @if($usulan_saya->status_permohonan == 'pending' )
                                                         <span class="badge badge-warning">{{__('Anda Belum Bisa mencetak') }}</span>
                                                     @elseif ($usulan_saya->status_permohonan == 'disapprove')
-                                                        <span class="badge badge-danger">{{__('tidak bisa mencetak karena berkas anda gagal') }}</span>
+                                                        <span class="badge badge-danger">{{ $usulan_saya->keterangan }}</span>
                                                     @else
                                                     <a href="{{ url('user/cetak_usulan_saya') }}" class="btn btn-success mb-2"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
                                                             <polyline points="6 9 6 2 18 2 18 9"></polyline>

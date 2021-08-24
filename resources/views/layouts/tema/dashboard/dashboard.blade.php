@@ -74,6 +74,69 @@
                                             </section>
                                         </div>
                                     </div>
+                                    <!-- whatsapp -->
+                                    <div class="whatsapp_chat_support wcs_fixed_right" id="example">
+                                                <div class="wcs_button_label">
+                                                 Butuh Konsultasi? klik disini.
+                                                </div>  
+                                                <div class="wcs_button wcs_button_circle">
+                                                    <span class="fa fa-whatsapp"></span>
+                                                </div>  
+                                            
+                                                <div class="wcs_popup">
+                                                    <div class="wcs_popup_close">
+                                                        <span class="fa fa-close"></span>
+                                                    </div>
+                                                    <div class="wcs_popup_header">
+                                                        <strong>Layanan Konsultasi</strong>
+                                                        <br>
+                                                        <div class="wcs_popup_header_description">Anda cukup memilih admin kabupaten kota </div>
+                                                    </div>  
+                                                    <div class="wcs_popup_person_container ex3">
+                                                      
+
+                                                        <div 
+                                                            class="wcs_popup_person" 
+                                                            data-number="62811400081"
+                                                            data-availability='{ "monday":"08:30-18:30", "tuesday":"08:30-18:30", "wednesday":"08:30-18:30", "thursday":"08:30-18:30", "friday":"08:30-18:30" ,"sunday": "08:30-18:30"}'
+                                                        >
+                                                            <div class="wcs_popup_person_img"><img src="{{ asset('img/person_5.jpg') }}" alt=""></div>
+                                                            <div class="wcs_popup_person_content">
+                                                                <div class="wcs_popup_person_name">Mia Smith</div>
+                                                                <div class="wcs_popup_person_description">Sales Support</div>
+                                                                <div class="wcs_popup_person_status">I'm Online</div>
+                                                            </div>  
+                                                        </div>
+                                            
+                                                        <div 
+                                                            class="wcs_popup_person" 
+                                                            data-number="528123861273"
+                                                            data-availability='{ "monday":"08:30-18:30", "tuesday":"08:30-18:30", "wednesday":"08:30-18:30", "thursday":"08:30-18:30", "friday":"08:30-18:30" }'
+                                                        >
+                                                            <div class="wcs_popup_person_img"><img src="{{ asset('img/person_6.jpg') }}" alt=""></div>
+                                                            <div class="wcs_popup_person_content">
+                                                                <div class="wcs_popup_person_name">James Brown</div>
+                                                                <div class="wcs_popup_person_description">Customer Support</div>
+                                                                <div class="wcs_popup_person_status">I'm Online</div>
+                                                            </div>
+                                                        </div>
+                                            
+                                                        <div 
+                                                            class="wcs_popup_person" 
+                                                            data-number="528123861273"
+                                                            data-availability='{ "monday":"08:30-18:30", "tuesday":"08:30-18:30", "wednesday":"08:30-18:30", "thursday":"08:30-18:30", "friday":"08:30-18:30" }'
+                                                        >
+                                                            <div class="wcs_popup_person_img"><img src="{{ asset('img/person_7.jpg') }}" alt=""></div>
+                                                            <div class="wcs_popup_person_content">
+                                                                <div class="wcs_popup_person_name">Robert Miller</div>
+                                                                <div class="wcs_popup_person_description">Techincal Support</div>
+                                                                <div class="wcs_popup_person_status">I'm Online</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                    <!-- // end whatsapp -->
                                     @else
                                     <div class="alert alert-success" role="alert">
                                         <h4 class="alert-heading">Anda Sudah Mengirim Permohonan</h4>

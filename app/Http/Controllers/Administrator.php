@@ -62,6 +62,10 @@ class Administrator extends Controller
             ->where('id', $request->id)
             ->update(['status_permohonan' => $request->kirim_status]);
 
+        DB::table('table_pemberhentian')
+        ->where('id', $request->id)
+        ->update(['keterangan' => $request->kirim_alasan]);
+
         return redirect('/admin/pemberhentian')->with(['sukses' => 'anda sdh mengirim status ke user yang bersangkutan']);
     }
     public function update_data_pengangkatan(Request $request, Pemberhentian $pemberhentian)
@@ -69,6 +73,10 @@ class Administrator extends Controller
         DB::table('table_pengangkatan')
             ->where('id', $request->id)
             ->update(['status_permohonan' => $request->kirim_status]);
+
+        DB::table('table_pengangkatan')
+            ->where('id', $request->id)
+            ->update(['keterangan' => $request->kirim_alasan]);
 
         return redirect('/admin/pengangkatan')->with(['sukses' => 'anda sdh mengirim status ke user yang bersangkutan']);
     }

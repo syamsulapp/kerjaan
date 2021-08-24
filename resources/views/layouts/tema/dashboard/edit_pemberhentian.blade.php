@@ -233,12 +233,16 @@
                                                             <label for="fullName">
                                                                 <h6>Kirim Status Berkas</h6>
                                                                 <select class="form-control" name="kirim_status" id="kirim_status">
-                                                                    <option>disapprove</option>
-                                                                    <option>approve</option>
+                                                                    <option onclick="diTolak()">disapprove</option>
+                                                                    <option onclick="diTerima()">approve</option>
                                                                 </select>
                                                             </label>
                                                         </div>
                                                         <br>
+                                                        <div class="form-group">
+                                                                <label for="exampleFormControlTextarea1">Kirim Alasan</label>
+                                                                <textarea id="kirim_alasan" name="kirim_alasan" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                            </div>
                                                         @endif
                                                         <a class="btn btn-primary d-inline" href="{{ url('admin/pemberhentian') }}" type="submit" di>kembali</a>
                                                         <button type="submit" class="btn btn-primary d-inline">{{ __('kirim') }}</button>
@@ -256,3 +260,13 @@
         </div>
     </div>
 </div>
+<script>
+
+    function diTolak() {
+        document.getElementById("kirim_alasan").disabled = false;
+    }
+    function diTerima() {
+        document.getElementById("kirim_alasan").disabled = true;
+    }
+</script>
+@endsection

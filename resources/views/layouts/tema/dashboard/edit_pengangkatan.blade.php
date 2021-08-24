@@ -327,18 +327,25 @@
                                                                 <br>
                                                                 <a class="btn btn-primary" href="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload13) }}">Berkas 13</a>
                                                             </div> -->
+
+
                                                             <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                 <label for="fullName">
                                                                     <h6>Kirim Status Berkas</h6>
                                                                     <select class="form-control" name="kirim_status" id="kirim_status">
-                                                                        <option>disapprove</option>
-                                                                        <option>approve</option>
+                                                                        <option onclick="diTolak()">disapprove</option>
+                                                                        <option onclick="diTerima()">approve</option>
                                                                     </select>
                                                                 </label>
                                                             </div>
                                                             <br>
+                                                            
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlTextarea1">Kirim Alasan</label>
+                                                                <textarea id="kirim_alasan" name="kirim_alasan" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                            </div>
                                                             @endif
-                                                        <a class="btn btn-primary d-inline" href="{{ url('admin/pengangkatan') }}" type="submit" di>kembali</a>
+                                                            <a class="btn btn-primary d-inline" href="{{ url('admin/pengangkatan') }}" type="submit" di>kembali</a>
                                                         <button class="btn btn-primary">kirim</button>
                                                     </form>
                                                 </div>
@@ -354,5 +361,15 @@
         </div>
     </div>
 </div>
+
+<script>
+
+    function diTolak() {
+        document.getElementById("kirim_alasan").disabled = false;
+    }
+    function diTerima() {
+        document.getElementById("kirim_alasan").disabled = true;
+    }
+</script>
 
 @endsection
