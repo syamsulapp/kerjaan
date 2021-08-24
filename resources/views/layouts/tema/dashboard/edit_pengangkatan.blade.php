@@ -101,7 +101,7 @@
                                                                 <h4><b>KELENGKAPAN ADMINISTRASI</b></h4>
                                                             </div>
                                                         </div> <br>
-                                                        @if($data_pengangkatan->upload11 == 'null')
+                                                        @if($data_pengangkatan->upload10 == 'null')
                                                             <!-- berkas ke 1 -->
                                                             <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                 <label for="fullName">
@@ -124,7 +124,7 @@
                                                             <!-- berkas ke 3 -->
                                                             <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                 <label for="fullName">
-                                                                    <h6>Surat Usulan Parpol/Gabungan Parpol Pengusung (Kesepakatan Bersama Parpol/Gabungan Parpol Pengusung Tingkat DPP), Yang Mengusulkan 2 (Dua) Orang Calon Wakil Bupati Atau Wakil Walikota Kepada DPRD Kabupaten/Kota Melalui Bupati/Walikota (Jika Calon Berasal Dari Parpol Atau Gabungan Parpol);
+                                                                    <h6>Fotokopi keputusan menteri dalam negeri tentang pengangkatan penjabat Bupati/Walikota( Dalam Hal Daerah Dipimpin Oleh Pejabat)
                                                                     </h6>
                                                                 </label>
                                                                 <br>
@@ -134,7 +134,7 @@
                                                             <!-- berkas ke 4 -->
                                                             <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                 <label for="fullName">
-                                                                    <h6>Surat Usulan Bupati/Walikota, Yang Mengusulkan 2 (Dua) Orang Calon Wakil Bupati Atau Wakil Walikota Kepada DPRD Kabupaten/Kota (Jika Berasal Dari Calon Perseorangan);
+                                                                    <h6>Surat Usulan Parpol/gabungan parpol pengusung (kesepakatan bersama Parpol/Gabungan Parpol Pengusung Tingkat DPP) yang masih memiliki kursi Di DPRD, dengan mengusulkan 2 (dua) Pasangan Calon Kepada DPRD Kabupaten/kota
                                                                     </h6>
                                                                 </label>
                                                                 <br>
@@ -144,7 +144,7 @@
                                                             <br>
                                                             <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                 <label for="fullName">
-                                                                    <h6>Risalah Rapat Paripurna DPRD Kabupaten/Kota Dalam Rangka Pemilihan Wakil Bupati Atau Wakil Walikota;
+                                                                    <h6>Risalah Rapat Paripurna DPRD Kabupaten/Kota Dalam Rangka Pemilihan Wakil Bupati dan  Wakil Bupati Atau Walikota Dan Wakil Walikota;
                                                                     </h6>
                                                                 </label>
                                                                 <br>
@@ -154,7 +154,7 @@
                                                             <br>
                                                             <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                 <label for="fullName">
-                                                                    <h6>Berita Acara DPRD Kabupaten/Kota Tentang Hasil Pemilihan Wakil Bupati Atau Wakil Walikota;</h6>
+                                                                    <h6>Berita Acara DPRD Kabupaten/Kota Tentang Hasil Pemilihan Wakil Bupati dan Wakil Bupati Atau Walikota Dan Wakil Walikota;</h6>
                                                                 </label>
                                                                 <br>
                                                                 <a class="btn btn-primary" href="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload6) }}">Berkas 6</a>
@@ -163,7 +163,7 @@
                                                             <br>
                                                             <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                 <label for="fullName">
-                                                                    <h6>Keputusan DPRD Kabupaten/Kota Tentang Hasil Pemilihan Wakil Bupati Atau Wakil Walikota; </h6>
+                                                                    <h6>Keputusan DPRD Kabupaten/Kota Tentang Hasil Pemilihan Wakil Bupati dan Wakil Bupati Atau Walikota Dan Wakil Walikota;</h6>
                                                                 </label>
                                                                 <br>
                                                                 <a class="btn btn-primary" href="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload7) }}">Berkas 7</a>
@@ -172,7 +172,7 @@
                                                             <br>
                                                             <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                 <label for="fullName">
-                                                                    <h6>Tata Tertib DPRD Kabupaten/Kota Yang Mengatur Mekanisme Pemilihan Wakil Bupati Atau Wakil Walikota; </h6>
+                                                                    <h6>Tata Tertib DPRD Kabupaten/Kota Yang Mengatur Mekanisme Pemilihan Wakil Bupati dan Wakil Bupati Atau Walikota Dan Wakil Walikota;</h6>
                                                                 </label>
                                                                 <br>
                                                                 <a class="btn btn-primary" href="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload8) }}">Berkas 8</a>
@@ -181,20 +181,20 @@
                                                             <br>
                                                             <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                 <label for="fullName">
-                                                                    <h6>Surat Usulan Pimpinan DPRD Kabupaten/Kota Kepada Mendagri Melalui Gubernur;</h6>
+                                                                    <h6>Surat Usulan Pimpinan DPRD Kabupaten/Kota Kepada Mendagri Melalui Gubernur</h6>
                                                                 </label>
                                                                 <br>
                                                                 <a class="btn btn-primary" href="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload9) }}">Berkas 9</a>
                                                             </div>
-                                                            <!-- berkas ke 10 -->
-                                                            <br>
+                                                            <!-- berkas ke 10 tidak di pake  -->
+                                                            <!-- <br>
                                                             <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                 <label for="fullName">
                                                                     <h6>Surat Usulan Gubernur Kepada Mendagri. </h6>
                                                                 </label>
                                                                 <br>
                                                                 <a class="btn btn-primary" href="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload10) }}">Berkas 10</a>
-                                                            </div>
+                                                            </div> -->
                                                             <br>
                                                                 <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                     <label for="fullName">
@@ -317,7 +317,8 @@
                                                                 <br>
                                                                 <a class="btn btn-primary" href="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload12) }}">Berkas 12</a>
                                                             </div>
-                                                            <!-- berkas ke 13 -->
+                                                            <br>
+                                                            <!-- berkas ke 13 tidak di pake 
                                                             <br>
                                                             <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                 <label for="fullName">
@@ -325,7 +326,7 @@
                                                                 </label>
                                                                 <br>
                                                                 <a class="btn btn-primary" href="{{ url('/storage/dokumen_pengangkatan/' .$data_pengangkatan->noreg . '/' . $data_pengangkatan->upload13) }}">Berkas 13</a>
-                                                            </div>
+                                                            </div> -->
                                                             <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                 <label for="fullName">
                                                                     <h6>Kirim Status Berkas</h6>

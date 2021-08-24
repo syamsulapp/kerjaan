@@ -113,7 +113,7 @@
                                                                 <h4><b>KELENGKAPAN ADMINISTRASI</b></h4>
                                                             </div>
                                                         </div> <br>
-                                                        @if($data_pemberhentian->upload7 == 'null')
+                                                        @if($data_pemberhentian->upload6 == 'null')
                                                         <!-- berkas ke 1 -->
                                                         <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                             <label for="fullName">
@@ -160,16 +160,6 @@
                                                             <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload5) }}">Berkas 5 </a>
 
                                                         </div>
-                                                        <!-- berkas ke 6 -->
-                                                        <br>
-                                                        <div class="col-xl-10 col-md-12 col-sm-12 col-12">
-                                                            <label for="fullName">
-                                                                <h6>Surat Usulan Pengesahan Pemberhentian Bupati Dan/Atau Wakil Bupati Atau Walikota Dan/Atau Wakil Walikota Oleh Gubernur Kepada Mendagri. </h6>
-                                                            </label>
-                                                            <br>
-                                                            <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload6) }}">Berkas 6</a>
-
-                                                        </div>
                                                         <br>
                                                             <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                 <label for="fullName">
@@ -181,7 +171,7 @@
                                                                 </label>
                                                             </div>
                                                             <br>
-                                                        @elseif ($data_pemberhentian->upload7 != 'null')
+                                                        @elseif ($data_pemberhentian->upload6 != 'null')
                                                         <!-- berkas ke 1 -->
                                                             <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                 <label for="fullName">
@@ -228,25 +218,14 @@
                                                                 <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload5) }}">Berkas 5 </a>
 
                                                             </div>
-                                                            <!-- berkas ke 6 -->
-                                                            <br>
-                                                            <div class="col-xl-10 col-md-12 col-sm-12 col-12">
-                                                                <label for="fullName">
-                                                                    <h6>Surat Usulan Pengesahan Pemberhentian Bupati Dan/Atau Wakil Bupati Atau Walikota Dan/Atau Wakil Walikota Oleh Gubernur Kepada Mendagri. </h6>
-                                                                </label>
-                                                                <br>
-                                                                <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload6) }}">Berkas 6</a>
-
-                                                            </div>
-                                                            <br>
-                                                        <!-- berkas ke 7 -->
+                                                        <!-- berkas ke 6 -->
                                                         <br>
                                                         <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                             <label for="fullName">
                                                                 <h6>Akta Kematian Dari Pejabat Berwenang;  </h6>
                                                             </label>
                                                             <br>
-                                                            <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload7) }}">Berkas 7</a>
+                                                            <a class="btn btn-primary" href="{{ url('/storage/dokumen_pemberhentian/' .$data_pemberhentian->noreg . '/' . $data_pemberhentian->upload6) }}">Berkas 6</a>
 
                                                         </div>
                                                         <br>

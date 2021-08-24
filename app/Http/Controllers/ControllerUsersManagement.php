@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use App\Models\ModelsUsersManagement;
 use Illuminate\Support\Facades\Hash;
 
+use App\Models\Pemberhentian;
+use App\Models\Pengangkatan;
+use Illuminate\Support\Facades\Auth;
+
 class ControllerUsersManagement extends Controller
 {
     /**
@@ -129,10 +133,9 @@ class ControllerUsersManagement extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ModelsUsersManagement $hapusData)
+    public function destroy(ModelsUsersManagement $hapusData, Pemberhentian $pemberhentian, Pengangkatan $pengangkatan)
     {
         ModelsUsersManagement::destroy($hapusData->id);
-
         return redirect('/admin/users-management')->with('sukses', 'Data User Berhasil Di Hapus');
     }
 }

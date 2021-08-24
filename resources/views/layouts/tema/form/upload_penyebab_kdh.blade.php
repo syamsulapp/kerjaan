@@ -69,7 +69,7 @@
                                                <!-- berkas ke 1 -->
                                                <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                 <label for="fullName">
-                                                    <h6>File Scan KETERANGAN KEASLIAN DOKUMENT DARI BIRO PEMERINTAHAN/OTDA PROVINSI (<i> ASISTEN BIDANG PEMERINTAHAN</i>)</h6>
+                                                    <h6>Surat keterangan keaslian dokumen dari bagian pemerintah Kabupaten/Kota</h6>
                                                 </label>
                                                 <div class="col-xl-10 col-lg-9 col-sm-10">
                                                     <input type="file" name="upload1" class="form-control-file @error('upload1') is-invalid @enderror" id="exampleFormControlFile1" value="{{ old('upload1') }}" required>
@@ -137,8 +137,97 @@
                                                 <span class="alert alert-danger">{{ $message }}</span>
                                                 @enderror
                                             </div>
-                                            <!-- berkas ke 6 -->
+                                            <!-- berkas ke 6 tidak di pake -->
                                             <br>
+                                            <!-- <div class="col-xl-10 col-md-12 col-sm-12 col-12">
+                                                <label for="fullName">
+                                                    <h6>Surat Usulan Pengesahan Pemberhentian Bupati Dan/Atau Wakil Bupati Atau Walikota Dan/Atau Wakil Walikota Oleh Gubernur Kepada Mendagri. </h6>
+                                                </label>
+                                                <div class="col-xl-10 col-lg-9 col-sm-10">
+                                                    <input type="file" name="upload6" class="form-control-file @error('upload6') is-invalid @enderror" id="exampleFormControlFile1" value="{{ old('upload6') }}" required>
+                                                </div>
+                                                <br>
+                                                @error('upload6')
+                                                <span class="alert alert-danger">{{ $message }}</span>
+                                                @enderror
+                                            </div> -->
+                                            <a class="btn btn-primary d-inline" href="{{ url('user/view') }}" type="submit" di>kembali</a>
+                                            <button type="submit" class="btn btn-primary">{{ __('Kirim') }}</button>
+                                        <!-- jika users memilih opsi kedua maka berikut-->
+                                    @elseif ($data['penyebabkdh'] == '2')
+                                        <!-- berkas ke 1 -->
+                                            <div class="col-xl-10 col-md-12 col-sm-12 col-12">
+                                                <label for="fullName">
+                                                    <h6>Surat keterangan keaslian dokumen dari bagian pemerintah Kabupaten/Kota</h6>
+                                                </label>
+                                                <div class="col-xl-10 col-lg-9 col-sm-10">
+                                                    <input type="file" name="upload1" class="form-control-file @error('upload1') is-invalid @enderror" id="exampleFormControlFile1" value="{{ old('upload1') }}" required>
+                                                </div>
+                                                <br>
+                                                @error('upload1')
+                                                <span class="alert alert-danger">{{ $message }}</span>
+                                                @enderror
+                                            </div>
+                                            <br>
+                                            <!-- berkas ke 2 -->
+                                            <div class="col-xl-10 col-md-12 col-sm-12 col-12">
+                                                <label for="fullName">
+                                                    <h6>Fotokopi Keputusan Menteri Dalam Negeri Tentang Pengangkatan Bupati Dan/Atau Wakil Bupati Atau Walikota Dan/Atau Wakil Walikota Yang Bersangkutan; </h6>
+                                                </label>
+                                                <div class="col-xl-10 col-lg-9 col-sm-10">
+                                                    <input type="file" name="upload2" class="form-control-file  @error('upload2') is-invalid @enderror" id="exampleFormControlFile1" value="{{ old('upload2') }}" required>
+                                                </div>
+                                                <br>
+                                                @error('upload2')
+                                                <span class="alert alert-danger">{{ $message }}</span>
+                                                @enderror
+                                            </div>
+                                            <br>
+                                            <!-- berkas ke 3 -->
+                                            <div class="col-xl-10 col-md-12 col-sm-12 col-12">
+                                                <label for="fullName">
+                                                    <h6>Fotokopi Berita Acara Pelantikan Bupati Dan/Atau Wakil Bupati Atau Walikota Dan/Atau Wakil Walikota Yang Bersangkutan;
+                                                    </h6>
+                                                </label>
+                                                <div class="col-xl-10 col-lg-9 col-sm-10">
+                                                    <input type="file" name="upload3" class="form-control-file @error('upload3') is-invalid @enderror" id="exampleFormControlFile1" value="{{ old('upload3') }}" required>
+                                                </div>
+                                                <br>
+                                                @error('upload3')
+                                                <span class="alert alert-danger">{{ $message }}</span>
+                                                @enderror
+                                            </div>
+                                            <!-- berkas ke 4 -->
+                                            <br>
+                                            <div class="col-xl-10 col-md-12 col-sm-12 col-12">
+                                                <label for="fullName">
+                                                    <h6>Risalah Dan Berita Acara Rapat Paripurna DPRD Kabupaten/Kota Dalam Rangka Pengumuman Pemberhentian Bupati Dan/Atau Wakil Bupati Atau Walikota Dan/Atau Wakil Walikota Karena Berakhir Masa Jabatannya;
+                                                    </h6>
+                                                </label>
+                                                <div class="col-xl-10 col-lg-9 col-sm-10">
+                                                    <input type="file" name="upload4" class="form-control-file  @error('upload4') is-invalid @enderror" id="exampleFormControlFile1" value="{{ old('upload4') }}" required>
+                                                </div>
+                                                <br>
+                                                @error('upload4')
+                                                <span class="alert alert-danger">{{ $message }}</span>
+                                                @enderror
+                                            </div>
+                                            <!-- berkas ke 5 -->
+                                            <br>
+                                            <div class="col-xl-10 col-md-12 col-sm-12 col-12">
+                                                <label for="fullName">
+                                                    <h6>Surat Usulan Pengesahan Pemberhentian Bupati Dan/Atau Wakil Bupati Atau Walikota Dan/Atau Wakil Walikota Oleh Pimpinan DPRD Kabupaten/Kota Kepada Mendagri Melalui Gubernur;</h6>
+                                                </label>
+                                                <div class="col-xl-10 col-lg-9 col-sm-10">
+                                                    <input type="file" name="upload5" class="form-control-file @error('upload5') is-invalid @enderror" id="exampleFormControlFile1" value="{{ old('upload5') }}" required>
+                                                </div>
+                                                <br>
+                                                @error('upload5')
+                                                <span class="alert alert-danger">{{ $message }}</span>
+                                                @enderror
+                                            </div>
+                                            <!-- berkas ke 6 tidak di gunakan -->
+                                            <!-- <br>
                                             <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                 <label for="fullName">
                                                     <h6>Surat Usulan Pengesahan Pemberhentian Bupati Dan/Atau Wakil Bupati Atau Walikota Dan/Atau Wakil Walikota Oleh Gubernur Kepada Mendagri. </h6>
@@ -150,114 +239,25 @@
                                                 @error('upload6')
                                                 <span class="alert alert-danger">{{ $message }}</span>
                                                 @enderror
-                                            </div>
-                                                   <a class="btn btn-primary d-inline" href="{{ url('user/view') }}" type="submit" di>kembali</a>
-                                                   <button type="submit" class="btn btn-primary">{{ __('Kirim') }}</button>
-                                               <!-- jika users memilih opsi kedua maka berikut-->
-                                           @elseif ($data['penyebabkdh'] == '2')
-                                               <!-- berkas ke 1 -->
-                                                   <div class="col-xl-10 col-md-12 col-sm-12 col-12">
-                                                       <label for="fullName">
-                                                           <h6>File Scan KETERANGAN KEASLIAN DOKUMENT DARI BIRO PEMERINTAHAN/OTDA PROVINSI (<i> ASISTEN BIDANG PEMERINTAHAN</i>)</h6>
-                                                       </label>
-                                                       <div class="col-xl-10 col-lg-9 col-sm-10">
-                                                           <input type="file" name="upload1" class="form-control-file @error('upload1') is-invalid @enderror" id="exampleFormControlFile1" value="{{ old('upload1') }}" required>
-                                                       </div>
-                                                       <br>
-                                                       @error('upload1')
-                                                       <span class="alert alert-danger">{{ $message }}</span>
-                                                       @enderror
-                                                   </div>
-                                                   <br>
-                                                   <!-- berkas ke 2 -->
-                                                   <div class="col-xl-10 col-md-12 col-sm-12 col-12">
-                                                       <label for="fullName">
-                                                           <h6>Fotokopi Keputusan Menteri Dalam Negeri Tentang Pengangkatan Bupati Dan/Atau Wakil Bupati Atau Walikota Dan/Atau Wakil Walikota Yang Bersangkutan; </h6>
-                                                       </label>
-                                                       <div class="col-xl-10 col-lg-9 col-sm-10">
-                                                           <input type="file" name="upload2" class="form-control-file  @error('upload2') is-invalid @enderror" id="exampleFormControlFile1" value="{{ old('upload2') }}" required>
-                                                       </div>
-                                                       <br>
-                                                       @error('upload2')
-                                                       <span class="alert alert-danger">{{ $message }}</span>
-                                                       @enderror
-                                                   </div>
-                                                   <br>
-                                                   <!-- berkas ke 3 -->
-                                                   <div class="col-xl-10 col-md-12 col-sm-12 col-12">
-                                                       <label for="fullName">
-                                                           <h6>Fotokopi Berita Acara Pelantikan Bupati Dan/Atau Wakil Bupati Atau Walikota Dan/Atau Wakil Walikota Yang Bersangkutan;
-                                                           </h6>
-                                                       </label>
-                                                       <div class="col-xl-10 col-lg-9 col-sm-10">
-                                                           <input type="file" name="upload3" class="form-control-file @error('upload3') is-invalid @enderror" id="exampleFormControlFile1" value="{{ old('upload3') }}" required>
-                                                       </div>
-                                                       <br>
-                                                       @error('upload3')
-                                                       <span class="alert alert-danger">{{ $message }}</span>
-                                                       @enderror
-                                                   </div>
-                                                   <!-- berkas ke 4 -->
-                                                   <br>
-                                                   <div class="col-xl-10 col-md-12 col-sm-12 col-12">
-                                                       <label for="fullName">
-                                                           <h6>Risalah Dan Berita Acara Rapat Paripurna DPRD Kabupaten/Kota Dalam Rangka Pengumuman Pemberhentian Bupati Dan/Atau Wakil Bupati Atau Walikota Dan/Atau Wakil Walikota Karena Berakhir Masa Jabatannya;
-                                                           </h6>
-                                                       </label>
-                                                       <div class="col-xl-10 col-lg-9 col-sm-10">
-                                                           <input type="file" name="upload4" class="form-control-file  @error('upload4') is-invalid @enderror" id="exampleFormControlFile1" value="{{ old('upload4') }}" required>
-                                                       </div>
-                                                       <br>
-                                                       @error('upload4')
-                                                       <span class="alert alert-danger">{{ $message }}</span>
-                                                       @enderror
-                                                   </div>
-                                                   <!-- berkas ke 5 -->
-                                                   <br>
-                                                   <div class="col-xl-10 col-md-12 col-sm-12 col-12">
-                                                       <label for="fullName">
-                                                           <h6>Surat Usulan Pengesahan Pemberhentian Bupati Dan/Atau Wakil Bupati Atau Walikota Dan/Atau Wakil Walikota Oleh Pimpinan DPRD Kabupaten/Kota Kepada Mendagri Melalui Gubernur;</h6>
-                                                       </label>
-                                                       <div class="col-xl-10 col-lg-9 col-sm-10">
-                                                           <input type="file" name="upload5" class="form-control-file @error('upload5') is-invalid @enderror" id="exampleFormControlFile1" value="{{ old('upload5') }}" required>
-                                                       </div>
-                                                       <br>
-                                                       @error('upload5')
-                                                       <span class="alert alert-danger">{{ $message }}</span>
-                                                       @enderror
-                                                   </div>
-                                                   <!-- berkas ke 6 -->
-                                                   <br>
-                                                   <div class="col-xl-10 col-md-12 col-sm-12 col-12">
-                                                       <label for="fullName">
-                                                           <h6>Surat Usulan Pengesahan Pemberhentian Bupati Dan/Atau Wakil Bupati Atau Walikota Dan/Atau Wakil Walikota Oleh Gubernur Kepada Mendagri. </h6>
-                                                       </label>
-                                                       <div class="col-xl-10 col-lg-9 col-sm-10">
-                                                           <input type="file" name="upload6" class="form-control-file @error('upload6') is-invalid @enderror" id="exampleFormControlFile1" value="{{ old('upload6') }}" required>
-                                                       </div>
-                                                       <br>
-                                                       @error('upload6')
-                                                       <span class="alert alert-danger">{{ $message }}</span>
-                                                       @enderror
-                                                   </div>
-                                                <!-- berkas ke 7 -->
+                                            </div> -->
+                                        <!-- berkas ke 7 -->
                                             <br>
                                             <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                 <label for="fullName">
                                                     <h6>Akta Kematian Dari Pejabat Berwenang;   </h6>
                                                 </label>
                                                 <div class="col-xl-10 col-lg-9 col-sm-10">
-                                                    <input type="file" name="upload7" class="form-control-file @error('upload7') is-invalid @enderror" id="exampleFormControlFile1" value="{{ old('upload7') }}" required>
+                                                    <input type="file" name="upload6" class="form-control-file @error('upload6') is-invalid @enderror" id="exampleFormControlFile1" value="{{ old('upload6') }}" required>
                                                 </div>
                                                 <br>
-                                                @error('upload7')
+                                                @error('upload6')
                                                 <span class="alert alert-danger">{{ $message }}</span>
                                                 @enderror
                                             </div>
                                             <br>
                                                 <a class="btn btn-primary d-inline" href="{{ url('user/view') }}" type="submit" di>kembali</a>
                                                 <button type="submit" class="btn btn-primary">{{ __('Kirim') }}</button>
-                                           </form>
+                                            </form>
                                                         @endif
                                                     </div>
                                                 </section>

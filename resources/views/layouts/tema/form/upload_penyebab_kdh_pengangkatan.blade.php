@@ -67,7 +67,7 @@
                                                                 <!-- berkas 1 -->
                                                             <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                 <label for="fullName">
-                                                                    <h6>Surat Keterangan Keaslian Dokumen Dari Biro Pemerintahan/Otda Provinsi (Asisten Bidang Pemerintahan); </h6>
+                                                                    <h6>Surat Keterangan Keaslian Dokumen Dari Bagian pemerintahan Kabupaten/kota </h6>
                                                                 </label>
                                                                 <div class="col-xl-10 col-lg-9 col-sm-10">
                                                                     <input type="file" name="upload1" class="form-control-file @error('upload1') is-invalid @enderror" id="exampleFormControlFile1" required>
@@ -234,7 +234,7 @@
                                                                 <span class="alert alert-danger">{{ $message }}</span>
                                                                 @enderror
                                                             </div>
-                                                            <!-- berkas ke 13 -->
+                                                            <!-- berkas ke 13 tidak di gunakan
                                                             <br>
                                                             <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                 <label for="fullName">
@@ -246,8 +246,8 @@
                                                                 <br>
                                                                 @error('upload13')
                                                                 <span class="alert alert-danger">{{ $message }}</span>
-                                                                @enderror
-                                                            </div>
+                                                                @enderror -->
+                                                            <!-- </div> -->
                                                             <br>
                                                                     <a class="btn btn-primary d-inline" href="{{ url('user/pilihan') }}" type="submit" di>kembali</a>
                                                                     <button class="btn btn-primary">kirim</button>
@@ -256,7 +256,7 @@
                                                                 <!-- berkas 1 -->
                                                                     <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                         <label for="fullName">
-                                                                            <h6>Surat Keterangan Keaslian Dokumen Dari Biro Pemerintahan/Otda Provinsi (Asisten Bidang Pemerintahan); </h6>
+                                                                            <h6>Surat Keterangan Keaslian Dokumen Dari Bagian Pemerintahan Kabupaten/kota </h6>
                                                                         </label>
                                                                         <div class="col-xl-10 col-lg-9 col-sm-10">
                                                                             <input type="file" name="upload1" class="form-control-file @error('upload1') is-invalid @enderror" id="exampleFormControlFile1" required>
@@ -284,7 +284,7 @@
                                                                     <!-- berkas ke 3 -->
                                                                     <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                         <label for="fullName">
-                                                                            <h6>Surat Usulan Parpol/Gabungan Parpol Pengusung (Kesepakatan Bersama Parpol/Gabungan Parpol Pengusung Tingkat DPP), Yang Mengusulkan 2 (Dua) Orang Calon Wakil Bupati Atau Wakil Walikota Kepada DPRD Kabupaten/Kota Melalui Bupati/Walikota (Jika Calon Berasal Dari Parpol Atau Gabungan Parpol);
+                                                                            <h6>Fotokopi keputusan menteri dalam negeri tentang pengangkatan penjabat Bupati/Walikota( Dalam Hal Daerah Dipimpin Oleh Pejabat)
                                                                             </h6>
                                                                         </label>
                                                                         <div class="col-xl-10 col-lg-9 col-sm-10">
@@ -299,7 +299,7 @@
                                                                     <!-- berkas ke 4 -->
                                                                     <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                         <label for="fullName">
-                                                                            <h6>Surat Usulan Bupati/Walikota, Yang Mengusulkan 2 (Dua) Orang Calon Wakil Bupati Atau Wakil Walikota Kepada DPRD Kabupaten/Kota (Jika Berasal Dari Calon Perseorangan);
+                                                                            <h6>Surat Usulan Parpol/gabungan parpol pengusung (kesepakatan bersama Parpol/Gabungan Parpol Pengusung Tingkat DPP) yang masih memiliki kursi Di DPRD, dengan mengusulkan 2 (dua) Pasangan Calon Kepada DPRD Kabupaten/kota
                                                                             </h6>
                                                                         </label>
                                                                         <div class="col-xl-10 col-lg-9 col-sm-10">
@@ -314,7 +314,7 @@
                                                                     <br>
                                                                     <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                         <label for="fullName">
-                                                                            <h6>Risalah Rapat Paripurna DPRD Kabupaten/Kota Dalam Rangka Pemilihan Wakil Bupati Atau Wakil Walikota;
+                                                                            <h6>Risalah Rapat Paripurna DPRD Kabupaten/Kota Dalam Rangka Pemilihan Wakil Bupati dan  Wakil Bupati Atau Walikota Dan Wakil Walikota;
                                                                             </h6>
                                                                         </label>
                                                                         <div class="col-xl-10 col-lg-9 col-sm-10">
@@ -329,7 +329,7 @@
                                                                     <br>
                                                                     <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                         <label for="fullName">
-                                                                            <h6>Berita Acara DPRD Kabupaten/Kota Tentang Hasil Pemilihan Wakil Bupati Atau Wakil Walikota;</h6>
+                                                                            <h6>Berita Acara DPRD Kabupaten/Kota Tentang Hasil Pemilihan Wakil Bupati dan Wakil Bupati Atau Walikota Dan Wakil Walikota;</h6>
                                                                         </label>
                                                                         <div class="col-xl-10 col-lg-9 col-sm-10">
                                                                             <input type="file" name="upload6" class="form-control-file @error('upload6') is-invalid @enderror" id="exampleFormControlFile1" required>
@@ -343,7 +343,7 @@
                                                                     <br>
                                                                     <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                         <label for="fullName">
-                                                                            <h6>Keputusan DPRD Kabupaten/Kota Tentang Hasil Pemilihan Wakil Bupati Atau Wakil Walikota; </h6>
+                                                                            <h6>Keputusan DPRD Kabupaten/Kota Tentang Hasil Pemilihan Wakil Bupati dan Wakil Bupati Atau Walikota Dan Wakil Walikota; </h6>
                                                                         </label>
                                                                         <div class="col-xl-10 col-lg-9 col-sm-10">
                                                                             <input type="file" name="upload7" class="form-control-file @error('upload7') is-invalid @enderror" id="exampleFormControlFile1" required>
@@ -357,7 +357,7 @@
                                                                     <br>
                                                                     <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                         <label for="fullName">
-                                                                            <h6>Tata Tertib DPRD Kabupaten/Kota Yang Mengatur Mekanisme Pemilihan Wakil Bupati Atau Wakil Walikota;  </h6>
+                                                                            <h6>Tata Tertib DPRD Kabupaten/Kota Yang Mengatur Mekanisme Pemilihan Wakil Bupati dan Wakil Bupati Atau Walikota Dan Wakil Walikota;  </h6>
                                                                         </label>
                                                                         <div class="col-xl-10 col-lg-9 col-sm-10">
                                                                             <input type="file" name="upload8" class="form-control-file @error('upload8') is-invalid @enderror" id="exampleFormControlFile1" required>
@@ -371,7 +371,7 @@
                                                                     <br>
                                                                     <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                         <label for="fullName">
-                                                                            <h6>Surat Usulan Pimpinan DPRD Kabupaten/Kota Kepada Mendagri Melalui Gubernur; dan  </h6>
+                                                                            <h6>Surat Usulan Pimpinan DPRD Kabupaten/Kota Kepada Mendagri Melalui Gubernur  </h6>
                                                                         </label>
                                                                         <div class="col-xl-10 col-lg-9 col-sm-10">
                                                                             <input type="file" name="upload9" class="form-control-file @error('upload9') is-invalid @enderror" id="exampleFormControlFile1" required>
@@ -381,8 +381,8 @@
                                                                         <span class="alert alert-danger">{{ $message }}</span>
                                                                         @enderror
                                                                     </div>
-                                                                    <!-- berkas ke 10 -->
-                                                                    <br>
+                                                                    <!-- berkas ke 10 tidak di pake-->
+                                                                    <!-- <br>
                                                                     <div class="col-xl-10 col-md-12 col-sm-12 col-12">
                                                                         <label for="fullName">
                                                                             <h6>Surat Usulan Gubernur Kepada Mendagri.  </h6>
@@ -394,7 +394,7 @@
                                                                         @error('upload10')
                                                                         <span class="alert alert-danger">{{ $message }}</span>
                                                                         @enderror
-                                                                    </div>
+                                                                    </div> -->
                                                                 <br>
                                                                     <a class="btn btn-primary d-inline" href="{{ url('user/pilihan') }}" type="submit" di>kembali</a>
                                                                     <button class="btn btn-primary">kirim</button>
